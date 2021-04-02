@@ -16815,3 +16815,1306 @@
 2021-04-02 15:09:19,056 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 00000000 n wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
 2021-04-02 15:09:19,056 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 00000000 n wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
 2021-04-02 15:09:19,056 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] NM parsing issue: line doesn't match pattern: 00000000 n wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+2021-04-02 16:00:32,051 [INFO] MainUpdater:2644 - connection check result : 10
+2021-04-02 16:00:32,053 [INFO] MainUpdater:2644 - connection check result : 10
+2021-04-02 16:00:32,171 [INFO] MicroXplorer:385 - Change Database Path : 
+2021-04-02 16:00:32,172 [INFO] MicroXplorer:415 - Change Database Version : DB.6.0.10
+2021-04-02 16:00:32,172 [WARN] ThirdParty:783 - waiting for thirdparty lock release [close project]
+2021-04-02 16:00:32,172 [INFO] ThirdParty:785 - entering critical section [close project]
+2021-04-02 16:00:32,172 [INFO] ThirdParty:796 - exiting critical section [close project]
+2021-04-02 16:00:32,174 [INFO] PinOutPanel:1434 - setPackage(No Configuration,No Configuration)
+2021-04-02 16:00:32,177 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 591134184 Bytes (1073741824)
+2021-04-02 16:00:32,177 [INFO] MicroXplorer:385 - Change Database Path : 
+2021-04-02 16:00:32,177 [INFO] MicroXplorer:415 - Change Database Version : DB.6.0.10
+2021-04-02 16:00:32,177 [INFO] OpenFileManager:274 - Change cursor
+2021-04-02 16:00:32,178 [WARN] ThirdParty:204 - Use empty third party IP manager
+2021-04-02 16:00:32,201 [INFO] RulesReader:52 - Compatibility file has been processed (228 Rules)
+2021-04-02 16:00:42,209 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-04-02 16:00:42,210 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-04-02 16:00:42,210 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,211 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,212 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,212 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,212 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,212 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,212 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,212 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,216 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,217 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,218 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,219 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-04-02 16:00:42,236 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.0.0: no header file found
+2021-04-02 16:00:42,237 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.4.0.0: no header file found
+2021-04-02 16:00:42,237 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.0.0: no header file found
+2021-04-02 16:00:42,278 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.8.2.0: no header file found
+2021-04-02 16:00:42,279 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.8.2.0: no header file found
+2021-04-02 16:00:42,279 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.8.2.0: no header file found
+2021-04-02 16:00:42,294 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-04-02 16:00:42,294 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-04-02 16:00:42,330 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-04-02 16:00:42,330 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-04-02 16:00:42,330 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-04-02 16:00:42,341 [INFO] RtosManager:464 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2021-04-02 16:00:42,341 [INFO] RtosManager:464 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2021-04-02 16:00:42,341 [INFO] RtosManager:464 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2021-04-02 16:00:42,341 [INFO] RtosManager:464 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2021-04-02 16:00:42,341 [WARN] ModelIntegratedComponent:182 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-04-02 16:00:42,342 [WARN] ApiManager:294 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-04-02 16:00:42,343 [WARN] ApiManager:294 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-04-02 16:00:42,343 [WARN] ApiManager:294 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-04-02 16:00:42,343 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.1.0: no header file found
+2021-04-02 16:00:42,344 [WARN] ApiManager:294 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.2: no header file found
+2021-04-02 16:00:42,345 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.2.0: no header file found
+2021-04-02 16:00:43,452 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 903141816 Bytes (1073741824)
+2021-04-02 16:00:43,454 [WARN] ThirdParty:749 - waiting for thirdparty lock release [change project]
+2021-04-02 16:00:43,454 [INFO] ThirdParty:751 - entering critical section [change project]
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 3.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 4.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 1.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 1.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-04-02 16:00:43,454 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 8.2.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.0.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 8.3.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 1.0.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 6.0.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.2.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 5.2.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.1.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.2
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 4.7.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.16.1
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-04-02 16:00:43,455 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-04-02 16:00:43,456 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-04-02 16:00:43,456 [INFO] ThirdParty:939 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.2.0
+2021-04-02 16:00:43,456 [INFO] ThirdParty:757 - exiting critical section [change project]
+2021-04-02 16:00:43,672 [INFO] PinOutPanel:1434 - setPackage(No Configuration,No Configuration)
+2021-04-02 16:00:43,675 [INFO] PinOutPanel:1434 - setPackage(STM32G474RETx,LQFP64)
+2021-04-02 16:00:43,860 [INFO] UtilMem:74 - Before build in PCC Used Memory: 477439112 Bytes (1073741824)
+2021-04-02 16:00:43,982 [INFO] SharedServices:72 - Folder for power plug-in: /home/chris/.stm32cubemx/plugins/power
+2021-04-02 16:00:44,001 [INFO] SharedServices:72 - Folder for power plug-in: /home/chris/.stm32cubemx/plugins/power
+2021-04-02 16:00:44,033 [INFO] SharedServices:72 - Folder for power plug-in: /home/chris/.stm32cubemx/plugins/power
+2021-04-02 16:00:44,037 [INFO] SharedServices:72 - Folder for power plug-in: /home/chris/.stm32cubemx/plugins/power
+2021-04-02 16:00:44,068 [INFO] UtilMem:74 - After build in PCC Used Memory: 573908104 Bytes (1073741824)
+2021-04-02 16:00:44,079 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,079 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,079 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,079 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,080 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,081 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,082 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,082 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,082 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,082 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,083 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,083 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,084 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,084 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,084 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,084 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,085 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,085 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,085 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,085 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,086 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,086 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,086 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,087 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,087 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,088 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,088 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,088 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,089 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,089 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,089 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,090 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,090 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,090 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,090 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,091 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,091 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,091 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,092 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,092 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,092 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,093 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,093 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,094 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,094 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,094 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,095 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,095 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,095 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,096 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,096 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,096 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,096 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,097 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,097 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,097 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,097 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,097 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,098 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,098 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,098 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,099 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,099 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,100 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,100 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,101 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,101 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,102 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,103 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,103 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,104 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-04-02 16:00:44,129 [INFO] OpenFileManager:294 - Restore cursor
+2021-04-02 16:01:35,663 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x235,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:01:59,608 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x235,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:02:11,651 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:03:38,718 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Exception in thread "AWT-EventQueue-0" java.awt.IllegalComponentStateException: component must be showing on the screen to determine its location
+2021-04-02 16:03:38,719 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.getLocationOnScreen_NoTreeLock(Component.java:2062)
+2021-04-02 16:03:38,720 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.getLocationOnScreen(Component.java:2036)
+2021-04-02 16:03:38,720 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.JPopupMenu.show(JPopupMenu.java:948)
+2021-04-02 16:03:38,720 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.plaf.basic.BasicComboPopup.show(BasicComboPopup.java:211)
+2021-04-02 16:03:38,720 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.plaf.basic.BasicComboPopup.togglePopup(BasicComboPopup.java:1170)
+2021-04-02 16:03:38,720 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.plaf.basic.BasicComboPopup$Handler.mousePressed(BasicComboPopup.java:858)
+2021-04-02 16:03:38,720 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.processMouseEvent(Component.java:6536)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.processEvent(Component.java:6304)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Container.processEvent(Container.java:2239)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.dispatchEvent(Component.java:4711)
+2021-04-02 16:03:38,721 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.plaf.basic.BasicTableUI$Handler.repostEvent(BasicTableUI.java:948)
+2021-04-02 16:03:38,722 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.plaf.basic.BasicTableUI$Handler.adjustSelection(BasicTableUI.java:1110)
+2021-04-02 16:03:38,722 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(BasicTableUI.java:1038)
+2021-04-02 16:03:38,722 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:280)
+2021-04-02 16:03:38,722 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:279)
+2021-04-02 16:03:38,723 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:279)
+2021-04-02 16:03:38,723 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:279)
+2021-04-02 16:03:38,723 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.processMouseEvent(Component.java:6536)
+2021-04-02 16:03:38,723 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+2021-04-02 16:03:38,724 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.processEvent(Component.java:6304)
+2021-04-02 16:03:38,724 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Container.processEvent(Container.java:2239)
+2021-04-02 16:03:38,724 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+2021-04-02 16:03:38,724 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+2021-04-02 16:03:38,724 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.dispatchEvent(Component.java:4711)
+2021-04-02 16:03:38,724 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4532)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.Component.dispatchEvent(Component.java:4711)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue.access$500(EventQueue.java:97)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue$3.run(EventQueue.java:709)
+2021-04-02 16:03:38,725 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue$3.run(EventQueue.java:703)
+2021-04-02 16:03:38,726 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.security.AccessController.doPrivileged(Native Method)
+2021-04-02 16:03:38,726 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+2021-04-02 16:03:38,726 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+2021-04-02 16:03:38,726 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue$4.run(EventQueue.java:733)
+2021-04-02 16:03:38,727 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue$4.run(EventQueue.java:731)
+2021-04-02 16:03:38,727 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.security.AccessController.doPrivileged(Native Method)
+2021-04-02 16:03:38,727 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+2021-04-02 16:03:38,728 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+2021-04-02 16:03:38,728 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+2021-04-02 16:03:38,728 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+2021-04-02 16:03:38,728 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+2021-04-02 16:03:38,728 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+2021-04-02 16:03:38,728 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+2021-04-02 16:03:38,729 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+2021-04-02 16:03:52,601 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 539970192 Bytes (1073741824)
+2021-04-02 16:03:52,721 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 550455952 Bytes (1073741824)
+2021-04-02 16:03:53,175 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 584010384 Bytes (1073741824)
+2021-04-02 16:03:53,344 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:03:53,344 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:03:53,344 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:03:53,344 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:03:53,344 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:03:53,345 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:03:53,345 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:03:53,582 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:03:53,622 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:03:53,652 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/gpio.tmp_save
+2021-04-02 16:03:53,690 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/gpio.tmp
+2021-04-02 16:03:53,793 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:03:53,806 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:03:53,815 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:03:53,873 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:03:53,876 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:03:53,917 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:03:53,924 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:03:54,116 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:03:54,118 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:03:54,162 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:03:54,172 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:03:54,214 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:03:54,226 [WARN] IPConfigManager:2967 - IP not found : TIM
+2021-04-02 16:03:54,226 [WARN] CodeGenerator:3177 - IP not found : null
+2021-04-02 16:03:54,229 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:03:54,270 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:03:54,272 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:03:54,342 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:03:54,789 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 130mS.
+2021-04-02 16:03:54,791 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:03:55,010 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:03:55,013 [INFO] ApiDbMcu:456 - Load IP Config File for FATFS
+2021-04-02 16:03:55,016 [INFO] ApiDbMcu:456 - Load IP Config File for FREERTOS
+2021-04-02 16:03:55,020 [INFO] ApiDbMcu:456 - Load IP Config File for USBPD
+2021-04-02 16:03:55,025 [INFO] ApiDbMcu:456 - Load IP Config File for USB_Device
+2021-04-02 16:03:57,340 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 2549mS.
+2021-04-02 16:03:57,341 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:03:57,341 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:09:35,694 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x361,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:09:38,592 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 709985960 Bytes (1073741824)
+2021-04-02 16:09:38,732 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 720471720 Bytes (1073741824)
+2021-04-02 16:09:39,172 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 746686264 Bytes (1073741824)
+2021-04-02 16:09:39,316 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:09:39,317 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:09:39,317 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:09:39,317 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:09:39,317 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:09:39,317 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:09:39,317 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:09:39,602 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:09:39,638 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:09:39,646 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/gpio.tmp_save
+2021-04-02 16:09:39,682 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/gpio.tmp
+2021-04-02 16:09:39,746 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:09:39,747 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:09:39,755 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:09:39,807 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:09:39,808 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:09:39,849 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:09:39,852 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:09:39,921 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:09:39,922 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:09:39,958 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:09:39,960 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:09:40,002 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:09:40,012 [WARN] IPConfigManager:2967 - IP not found : TIM
+2021-04-02 16:09:40,013 [WARN] CodeGenerator:3177 - IP not found : null
+2021-04-02 16:09:40,015 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:09:40,056 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:09:40,057 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:09:40,137 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:09:40,482 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 19mS.
+2021-04-02 16:09:40,483 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:09:41,144 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:09:42,298 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1815mS.
+2021-04-02 16:09:42,299 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 16:09:42,299 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:09:57,996 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 443685840 Bytes (1073741824)
+2021-04-02 16:09:58,120 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 454171600 Bytes (1073741824)
+2021-04-02 16:09:58,568 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 539106256 Bytes (1073741824)
+2021-04-02 16:09:58,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:09:58,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:09:58,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:09:58,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:09:58,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:09:58,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:09:58,700 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:09:58,890 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:09:58,925 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:09:58,933 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:09:58,971 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:09:58,973 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:09:59,008 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:09:59,072 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:09:59,076 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:09:59,240 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:09:59,242 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:09:59,280 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:09:59,281 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:09:59,283 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:09:59,342 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:09:59,344 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:09:59,381 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:09:59,388 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:09:59,436 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:09:59,437 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:09:59,474 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:09:59,478 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:09:59,536 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:09:59,537 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:09:59,573 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:09:59,575 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:09:59,616 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:09:59,627 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:09:59,669 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:09:59,670 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:09:59,725 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:10:00,059 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 21mS.
+2021-04-02 16:10:00,061 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:10:00,480 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:10:01,586 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1525mS.
+2021-04-02 16:10:01,586 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:10:01,587 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:17:34,118 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:17:38,243 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 494447688 Bytes (1073741824)
+2021-04-02 16:17:38,366 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 504933448 Bytes (1073741824)
+2021-04-02 16:17:38,831 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 532196424 Bytes (1073741824)
+2021-04-02 16:17:38,975 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:17:38,975 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:17:38,975 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:17:38,975 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:17:38,975 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:17:38,976 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:17:38,976 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:17:39,185 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:17:39,222 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:17:39,235 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:17:39,280 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:17:39,282 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:17:39,320 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:17:39,381 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:17:39,384 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:17:39,448 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:17:39,463 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:17:39,511 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:17:39,512 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:17:39,516 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:17:39,579 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:17:39,581 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:17:39,620 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:17:39,628 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:17:39,752 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:17:39,754 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:17:39,793 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:17:39,798 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:17:39,859 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:17:39,861 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:17:39,896 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:17:39,899 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:17:39,940 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:17:39,953 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:17:39,994 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:17:39,996 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:17:40,052 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:17:40,453 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 84mS.
+2021-04-02 16:17:40,454 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:17:40,641 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:17:42,271 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1817mS.
+2021-04-02 16:17:42,271 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:17:42,272 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:24:28,659 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:24:43,842 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 666159200 Bytes (1073741824)
+2021-04-02 16:24:43,988 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 676397208 Bytes (1073741824)
+2021-04-02 16:24:44,476 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 704462520 Bytes (1073741824)
+2021-04-02 16:24:44,686 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:24:44,686 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:24:44,686 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:24:44,686 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:24:44,686 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:24:44,687 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:24:44,687 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:24:44,898 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:24:44,937 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:24:44,949 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:24:44,992 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:24:44,994 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:24:45,038 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:24:45,109 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:24:45,113 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:24:45,183 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:24:45,185 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:24:45,311 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:24:45,312 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:24:45,315 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:24:45,375 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:24:45,377 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:24:45,419 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:24:45,427 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:24:45,565 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:24:45,566 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:24:45,676 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:24:45,679 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:24:45,733 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:24:45,734 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:24:45,780 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:24:45,784 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:24:45,829 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:24:45,919 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:24:45,980 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:24:45,982 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:24:46,039 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:24:46,450 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 90mS.
+2021-04-02 16:24:46,451 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:24:46,630 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:24:48,126 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1675mS.
+2021-04-02 16:24:48,127 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 16:24:48,127 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:28:57,635 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 733219784 Bytes (1073741824)
+2021-04-02 16:28:57,819 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 743705888 Bytes (1073741824)
+2021-04-02 16:28:58,317 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 772017096 Bytes (1073741824)
+2021-04-02 16:28:58,505 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:28:58,505 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:28:58,505 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:28:58,505 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:28:58,505 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:28:58,505 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:28:58,506 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:28:58,800 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:28:58,837 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:28:58,848 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:28:58,887 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:28:58,888 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:28:58,927 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:28:59,003 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:28:59,005 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:28:59,065 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:28:59,066 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:28:59,104 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:28:59,104 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:28:59,107 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:28:59,162 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:28:59,163 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:28:59,201 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:28:59,209 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:28:59,254 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:28:59,255 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:28:59,292 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:28:59,295 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:28:59,349 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:28:59,350 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:28:59,384 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:28:59,386 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:28:59,428 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:28:59,439 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:28:59,478 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:28:59,479 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:28:59,636 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:29:00,167 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 23mS.
+2021-04-02 16:29:00,168 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:29:00,468 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:29:01,608 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1440mS.
+2021-04-02 16:29:01,608 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:29:01,609 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:37:09,342 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 806081344 Bytes (1073741824)
+2021-04-02 16:37:09,606 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 816568368 Bytes (1073741824)
+2021-04-02 16:37:10,289 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 845725992 Bytes (1073741824)
+2021-04-02 16:37:10,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:37:10,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:37:10,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:37:10,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:37:10,473 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:37:10,474 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:37:10,474 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:37:10,815 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:37:10,851 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:37:10,861 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:37:10,902 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:37:10,903 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:37:10,942 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:37:11,007 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:37:11,010 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:37:11,083 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:37:11,084 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:37:11,123 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:37:11,123 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:37:11,126 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:37:11,187 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:37:11,189 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:37:11,228 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:37:11,237 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:37:11,288 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:37:11,289 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:37:11,326 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:37:11,330 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:37:11,386 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:37:11,387 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:37:11,427 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:37:11,429 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:37:11,480 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:37:11,494 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:37:11,539 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:37:11,540 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:37:11,598 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:37:12,082 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 17mS.
+2021-04-02 16:37:12,084 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:37:12,271 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:37:14,286 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 2202mS.
+2021-04-02 16:37:14,287 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 16:37:14,288 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:38:11,569 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 701419648 Bytes (1073741824)
+2021-04-02 16:38:11,676 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 711905408 Bytes (1073741824)
+2021-04-02 16:38:12,204 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 740739208 Bytes (1073741824)
+2021-04-02 16:38:12,382 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:38:12,382 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:38:12,383 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:38:12,383 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:38:12,383 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:38:12,383 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:38:12,384 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:38:12,660 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:38:12,697 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:38:12,708 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:38:12,748 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:38:12,750 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:38:12,789 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:38:12,857 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:38:12,861 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:38:12,926 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:38:12,928 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:38:12,970 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:38:12,971 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:38:12,974 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:38:13,032 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:38:13,035 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:38:13,073 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:38:13,089 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:38:13,144 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:38:13,147 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:38:13,185 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:38:13,189 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:38:13,245 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:38:13,247 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:38:13,282 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:38:13,284 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:38:13,324 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:38:13,346 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:38:13,387 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:38:13,388 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:38:13,442 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:38:14,089 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 18mS.
+2021-04-02 16:38:14,091 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:38:14,324 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:38:15,769 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1678mS.
+2021-04-02 16:38:15,769 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:38:15,770 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:42:55,233 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,714x290,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:43:02,861 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:43:07,969 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 663814304 Bytes (1073741824)
+2021-04-02 16:43:08,116 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 674826392 Bytes (1073741824)
+2021-04-02 16:43:08,744 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 703660192 Bytes (1073741824)
+2021-04-02 16:43:08,912 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:43:08,912 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:43:08,912 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:43:08,912 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:43:08,913 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:43:08,913 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:43:08,913 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:43:09,128 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:43:09,256 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:43:09,284 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:43:09,332 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:43:09,334 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:43:09,373 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:43:09,460 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:43:09,466 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:43:09,532 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:43:09,536 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:43:09,577 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:43:09,577 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:43:09,581 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:43:09,642 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:43:09,644 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:43:09,685 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:43:09,693 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:43:09,745 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:43:09,748 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:43:09,788 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:43:09,792 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:43:09,859 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:43:09,861 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:43:09,899 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:43:09,902 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:43:09,947 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:43:09,962 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:43:10,007 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:43:10,009 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:43:10,074 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:43:10,889 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 109mS.
+2021-04-02 16:43:10,891 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:43:11,110 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:43:12,712 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1821mS.
+2021-04-02 16:43:12,713 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:43:12,713 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:49:43,758 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 600166384 Bytes (1073741824)
+2021-04-02 16:49:43,900 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 610652144 Bytes (1073741824)
+2021-04-02 16:49:44,442 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 639490504 Bytes (1073741824)
+2021-04-02 16:49:44,671 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:49:44,671 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:49:44,671 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:49:44,672 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:49:44,673 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:49:44,673 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:49:44,674 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:49:44,894 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:49:44,935 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:49:44,948 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:49:44,991 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:49:44,994 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:49:45,148 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:49:45,256 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:49:45,261 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:49:45,342 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:49:45,344 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:49:45,386 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:49:45,387 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:49:45,392 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:49:45,462 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:49:45,463 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:49:45,513 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:49:45,526 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:49:45,585 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:49:45,588 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:49:45,631 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:49:45,635 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:49:45,699 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:49:45,701 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:49:45,754 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:49:45,758 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:49:45,799 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:49:45,813 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:49:45,861 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:49:45,864 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:49:45,926 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:49:46,792 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 150mS.
+2021-04-02 16:49:46,794 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:49:47,011 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:49:48,832 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 2038mS.
+2021-04-02 16:49:48,833 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 16:49:48,833 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:51:38,631 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 543678688 Bytes (1073741824)
+2021-04-02 16:51:38,777 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 554690776 Bytes (1073741824)
+2021-04-02 16:51:39,273 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 628091096 Bytes (1073741824)
+2021-04-02 16:51:39,442 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:51:39,442 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:51:39,442 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:51:39,442 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:51:39,442 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:51:39,443 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:51:39,443 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:51:39,709 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:51:39,747 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:51:39,756 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:51:39,798 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:51:39,799 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:51:39,838 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:51:39,899 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:51:39,917 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:51:39,979 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:51:39,980 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:51:40,019 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:51:40,019 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:51:40,021 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:51:40,079 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:51:40,080 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:51:40,119 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:51:40,126 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:51:40,180 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:51:40,181 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:51:40,221 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:51:40,225 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:51:40,300 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:51:40,301 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:51:40,348 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:51:40,351 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:51:40,398 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:51:40,410 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:51:40,453 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:51:40,454 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:51:40,509 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:51:41,201 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 18mS.
+2021-04-02 16:51:41,202 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:51:41,433 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:51:42,861 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1659mS.
+2021-04-02 16:51:42,864 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 3mS.
+2021-04-02 16:51:42,864 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:53:01,557 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,714x290,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:53:10,080 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 777454048 Bytes (1073741824)
+2021-04-02 16:53:10,200 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 787939808 Bytes (1073741824)
+2021-04-02 16:53:10,751 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 816777688 Bytes (1073741824)
+2021-04-02 16:53:11,089 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:53:11,089 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:53:11,089 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:53:11,089 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:53:11,089 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:53:11,089 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:53:11,090 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:53:11,361 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:53:11,396 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:53:11,406 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:53:11,445 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:53:11,447 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:53:11,487 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:53:11,552 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:53:11,554 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:53:11,614 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:53:11,615 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:53:11,652 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:53:11,652 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:53:11,655 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:53:11,708 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:53:11,709 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:53:11,763 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:53:11,769 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:53:11,817 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:53:11,819 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:53:11,856 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:53:11,859 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:53:11,913 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:53:11,914 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:53:11,948 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:53:11,950 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:53:11,987 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:53:11,998 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:53:12,041 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:53:12,042 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:53:12,094 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:53:12,617 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 19mS.
+2021-04-02 16:53:12,618 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:53:13,072 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:53:14,250 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1632mS.
+2021-04-02 16:53:14,250 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:53:14,251 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:55:19,321 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 619046408 Bytes (1073741824)
+2021-04-02 16:55:19,453 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 630054416 Bytes (1073741824)
+2021-04-02 16:55:19,989 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 658892296 Bytes (1073741824)
+2021-04-02 16:55:20,129 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:55:20,129 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:55:20,129 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:55:20,129 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:55:20,129 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:55:20,129 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:55:20,130 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:55:20,318 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:55:20,352 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:55:20,361 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:55:20,398 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:55:20,399 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:55:20,433 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:55:20,493 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:55:20,496 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:55:20,554 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:55:20,555 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:55:20,678 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:55:20,679 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:55:20,682 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:55:20,739 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:55:20,740 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:55:20,778 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:55:20,784 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:55:20,832 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:55:20,833 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:55:20,868 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:55:20,872 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:55:20,926 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:55:20,927 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:55:20,962 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:55:20,964 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:55:21,003 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:55:21,015 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:55:21,055 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:55:21,056 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:55:21,112 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:55:21,451 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 16mS.
+2021-04-02 16:55:21,452 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:55:22,026 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:55:23,383 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1931mS.
+2021-04-02 16:55:23,384 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 16:55:23,384 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:57:37,215 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-04-02 16:57:43,874 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 635061664 Bytes (1073741824)
+2021-04-02 16:57:43,986 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 645184192 Bytes (1073741824)
+2021-04-02 16:57:44,481 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 674179056 Bytes (1073741824)
+2021-04-02 16:57:44,684 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 16:57:44,684 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 16:57:44,684 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 16:57:44,684 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 16:57:44,684 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 16:57:44,684 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 16:57:44,685 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 16:57:44,877 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 16:57:44,913 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 16:57:44,921 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 16:57:44,964 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 16:57:44,965 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 16:57:45,002 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 16:57:45,058 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:57:45,061 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 16:57:45,121 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 16:57:45,122 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 16:57:45,160 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 16:57:45,160 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 16:57:45,164 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 16:57:45,221 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 16:57:45,222 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 16:57:45,260 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 16:57:45,268 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 16:57:45,321 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 16:57:45,323 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 16:57:45,362 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 16:57:45,366 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 16:57:45,425 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 16:57:45,426 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 16:57:45,461 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 16:57:45,463 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 16:57:45,503 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 16:57:45,519 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 16:57:45,561 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 16:57:45,562 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 16:57:45,622 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 16:57:46,054 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 17mS.
+2021-04-02 16:57:46,056 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 16:57:46,246 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 16:57:48,374 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 2318mS.
+2021-04-02 16:57:48,375 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 16:57:48,375 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:05:22,118 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 635381712 Bytes (1073741824)
+2021-04-02 17:05:22,269 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 646041376 Bytes (1073741824)
+2021-04-02 17:05:22,759 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 674869408 Bytes (1073741824)
+2021-04-02 17:05:22,900 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:05:22,901 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:05:22,901 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:05:22,901 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:05:22,901 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:05:22,901 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:05:22,902 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:05:23,101 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:05:23,137 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:05:23,146 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:05:23,274 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:05:23,276 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:05:23,314 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:05:23,372 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:05:23,374 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:05:23,433 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:05:23,434 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:05:23,471 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:05:23,472 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:05:23,474 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:05:23,529 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:05:23,531 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:05:23,567 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:05:23,575 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:05:23,624 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:05:23,625 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:05:23,660 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:05:23,663 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:05:23,716 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:05:23,717 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:05:23,751 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:05:23,753 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:05:23,796 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:05:23,807 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:05:23,847 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:05:23,848 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:05:23,902 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:05:24,238 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 15mS.
+2021-04-02 17:05:24,240 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:05:24,784 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:05:25,973 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1733mS.
+2021-04-02 17:05:25,973 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:05:25,974 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:15:37,921 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 579800808 Bytes (1073741824)
+2021-04-02 17:15:38,182 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:15:38,183 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:15:38,183 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:15:38,183 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:15:38,183 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:15:38,183 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:15:38,183 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:15:38,406 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:15:38,446 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:15:38,456 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:15:38,498 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:15:38,499 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:15:38,537 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:15:38,676 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:15:38,678 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:15:38,738 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:15:38,739 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:15:38,778 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:15:38,778 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:15:38,781 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:15:38,845 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:15:38,847 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:15:38,892 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:15:38,901 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:15:38,952 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:15:38,954 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:15:38,997 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:15:39,000 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:15:39,056 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:15:39,057 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:15:39,093 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:15:39,095 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:15:39,136 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:15:39,157 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:15:39,197 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:15:39,198 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:15:39,252 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:15:39,815 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 19mS.
+2021-04-02 17:15:39,819 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:15:40,047 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:15:41,471 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1652mS.
+2021-04-02 17:15:41,471 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:15:41,472 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:27:54,544 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 406906840 Bytes (1073741824)
+2021-04-02 17:27:54,661 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 417459360 Bytes (1073741824)
+2021-04-02 17:27:55,331 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 448394392 Bytes (1073741824)
+2021-04-02 17:27:55,478 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:27:55,478 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:27:55,478 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:27:55,478 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:27:55,478 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:27:55,478 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:27:55,479 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:27:55,677 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:27:55,713 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:27:55,726 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:27:55,771 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:27:55,774 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:27:55,812 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:27:55,875 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:27:55,879 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:27:55,952 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:27:55,955 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:27:55,998 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:27:55,998 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:27:56,001 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:27:56,068 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:27:56,070 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:27:56,112 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:27:56,122 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:27:56,173 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:27:56,175 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:27:56,215 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:27:56,219 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:27:56,275 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:27:56,277 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:27:56,313 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:27:56,316 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:27:56,359 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:27:56,371 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:27:56,413 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:27:56,415 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:27:56,477 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:27:57,080 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 138mS.
+2021-04-02 17:27:57,081 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:27:57,275 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:27:59,320 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 2239mS.
+2021-04-02 17:27:59,320 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:27:59,321 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:30:27,615 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 851646360 Bytes (1073741824)
+2021-04-02 17:30:27,756 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 862132112 Bytes (1073741824)
+2021-04-02 17:30:28,216 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 891493120 Bytes (1073741824)
+2021-04-02 17:30:28,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:30:28,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:30:28,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:30:28,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:30:28,699 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:30:28,700 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:30:28,700 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:30:28,897 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:30:28,932 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:30:28,941 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:30:28,984 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:30:28,986 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:30:29,024 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:30:29,089 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:30:29,091 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:30:29,151 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:30:29,152 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:30:29,194 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:30:29,194 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:30:29,197 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:30:29,250 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:30:29,252 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:30:29,290 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:30:29,297 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:30:29,343 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:30:29,344 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:30:29,384 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:30:29,389 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:30:29,444 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:30:29,445 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:30:29,483 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:30:29,485 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:30:29,523 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:30:29,533 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:30:29,576 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:30:29,577 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:30:29,631 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:30:30,153 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 17mS.
+2021-04-02 17:30:30,154 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:30:30,337 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:30:32,416 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 2262mS.
+2021-04-02 17:30:32,417 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:30:32,418 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 17:31:30,973 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 740007376 Bytes (1073741824)
+2021-04-02 17:31:31,100 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 750762344 Bytes (1073741824)
+2021-04-02 17:31:31,644 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 780641568 Bytes (1073741824)
+2021-04-02 17:31:31,793 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:31:31,793 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:31:31,793 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:31:31,793 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:31:31,793 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:31:31,793 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:31:31,794 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:31:32,044 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:31:32,084 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:31:32,104 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:31:32,146 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:31:32,148 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:31:32,186 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:31:32,240 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:31:32,242 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:31:32,300 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:31:32,302 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:31:32,339 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:31:32,339 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:31:32,341 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:31:32,399 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:31:32,400 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:31:32,438 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:31:32,446 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:31:32,493 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:31:32,494 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:31:32,532 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:31:32,535 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:31:32,588 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:31:32,589 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:31:32,621 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:31:32,623 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:31:32,660 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:31:32,670 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:31:32,709 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:31:32,710 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:31:32,765 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:31:33,406 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 25mS.
+2021-04-02 17:31:33,409 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:31:33,656 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:31:34,814 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1405mS.
+2021-04-02 17:31:34,815 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:31:34,816 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:41:27,715 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 644814280 Bytes (1073741824)
+2021-04-02 17:41:27,869 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 655404032 Bytes (1073741824)
+2021-04-02 17:41:28,350 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 684310792 Bytes (1073741824)
+2021-04-02 17:41:28,530 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:41:28,530 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:41:28,530 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:41:28,531 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:41:28,531 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:41:28,531 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:41:28,531 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:41:28,721 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:41:28,758 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:41:28,767 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:41:28,805 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:41:28,807 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:41:28,842 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:41:28,914 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:41:28,921 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:41:28,993 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:41:28,996 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:41:29,039 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:41:29,040 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:41:29,042 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:41:29,102 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:41:29,103 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:41:29,157 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:41:29,166 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:41:29,227 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:41:29,228 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:41:29,356 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:41:29,360 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:41:29,433 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:41:29,434 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:41:29,469 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:41:29,471 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:41:29,511 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:41:29,522 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:41:29,561 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:41:29,562 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:41:29,614 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:41:30,098 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 16mS.
+2021-04-02 17:41:30,101 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:41:30,310 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:41:31,636 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1535mS.
+2021-04-02 17:41:31,637 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:41:31,637 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:42:02,814 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 716156528 Bytes (1073741824)
+2021-04-02 17:42:02,925 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 727164536 Bytes (1073741824)
+2021-04-02 17:42:03,475 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 756002416 Bytes (1073741824)
+2021-04-02 17:42:03,728 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:42:03,728 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:42:03,729 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:42:03,729 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:42:03,729 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:42:03,729 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:42:03,730 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:42:03,978 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:42:04,028 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:42:04,054 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:42:04,108 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:42:04,110 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:42:04,158 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:42:04,332 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:42:04,336 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:42:04,415 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:42:04,417 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:42:04,464 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:42:04,465 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:42:04,469 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:42:04,533 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:42:04,535 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:42:04,575 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:42:04,585 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:42:04,644 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:42:04,646 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:42:04,690 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:42:04,695 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:42:04,960 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:42:04,961 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:42:05,015 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:42:05,017 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:42:05,062 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:42:05,079 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:42:05,126 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:42:05,128 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:42:05,263 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:42:05,612 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 15mS.
+2021-04-02 17:42:05,614 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:42:06,012 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:42:07,476 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1862mS.
+2021-04-02 17:42:07,478 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:42:07,479 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:44:03,436 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 779821160 Bytes (1073741824)
+2021-04-02 17:44:03,579 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 791355496 Bytes (1073741824)
+2021-04-02 17:44:04,110 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 819667048 Bytes (1073741824)
+2021-04-02 17:44:04,264 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:44:04,264 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:44:04,264 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:44:04,264 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:44:04,264 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:44:04,264 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:44:04,264 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:44:04,547 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:44:04,582 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:44:04,592 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:44:04,633 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:44:04,634 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:44:04,671 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:44:04,724 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:44:04,726 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:44:04,785 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:44:04,786 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:44:04,823 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:44:04,824 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:44:04,826 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:44:04,882 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:44:04,883 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:44:04,921 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:44:04,928 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:44:04,978 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:44:04,979 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:44:05,018 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:44:05,022 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:44:05,083 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:44:05,084 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:44:05,121 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:44:05,123 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:44:05,162 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:44:05,173 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:44:05,211 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:44:05,213 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:44:05,276 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:44:06,012 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 57mS.
+2021-04-02 17:44:06,015 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:44:06,239 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:44:07,444 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 1429mS.
+2021-04-02 17:44:07,444 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:44:07,444 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.
+2021-04-02 17:44:43,750 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 473599768 Bytes (1073741824)
+2021-04-02 17:44:43,932 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 485133600 Bytes (1073741824)
+2021-04-02 17:44:44,677 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 523544816 Bytes (1073741824)
+2021-04-02 17:44:45,251 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DAC
+2021-04-02 17:44:45,251 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM6_7G4
+2021-04-02 17:44:45,252 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-04-02 17:44:45,252 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-04-02 17:44:45,252 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC
+2021-04-02 17:44:45,252 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-04-02 17:44:45,253 [INFO] CodeGenerator:639 - code generatio: config db path: /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.common.mx_6.1.1.202012091304//db/
+2021-04-02 17:44:45,434 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp_save
+2021-04-02 17:44:45,468 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/license.tmp
+2021-04-02 17:44:45,477 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c_save
+2021-04-02 17:44:45,514 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/gpio.c
+2021-04-02 17:44:45,517 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h_save
+2021-04-02 17:44:45,552 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/gpio.h
+2021-04-02 17:44:45,602 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:44:45,605 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c_save
+2021-04-02 17:44:45,663 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/dac.c
+2021-04-02 17:44:45,665 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h_save
+2021-04-02 17:44:45,703 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/dac.h
+2021-04-02 17:44:45,704 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-04-02 17:44:45,707 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c_save
+2021-04-02 17:44:45,769 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/tim.c
+2021-04-02 17:44:45,771 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h_save
+2021-04-02 17:44:45,810 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/tim.h
+2021-04-02 17:44:45,819 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c_save
+2021-04-02 17:44:45,978 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_it.c
+2021-04-02 17:44:45,979 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h_save
+2021-04-02 17:44:46,020 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_it.h
+2021-04-02 17:44:46,023 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c_save
+2021-04-02 17:44:46,089 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/stm32g4xx_hal_msp.c
+2021-04-02 17:44:46,090 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp_save
+2021-04-02 17:44:46,131 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/MXTmpFiles/system.tmp
+2021-04-02 17:44:46,133 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h_save
+2021-04-02 17:44:46,188 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/stm32g4xx_hal_conf.h
+2021-04-02 17:44:46,198 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h_save
+2021-04-02 17:44:46,244 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Inc/main.h
+2021-04-02 17:44:46,246 [INFO] CodeEngine:229 - oldGeneratedFile, /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c_save
+2021-04-02 17:44:46,310 [INFO] CodeEngine:247 - Generated code: /home/chris/DSP_GuitarPedal/G474RE_Main/Core/Src/main.c
+2021-04-02 17:44:46,759 [INFO] ProjectBuilder:2328 - Time for Copy HAL[1] : 88mS.
+2021-04-02 17:44:46,760 [INFO] ProjectBuilder:3259 - Project Generator version: 3.11.2
+2021-04-02 17:44:46,935 [INFO] ConfigFileManager:1238 - The Die is : DIE469
+2021-04-02 17:44:50,090 [INFO] ProjectBuilder:3425 - Time for Generating toolchain IDE Files: 3330mS.
+2021-04-02 17:44:50,092 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 1mS.
+2021-04-02 17:44:50,092 [INFO] ProjectBuilder:2207 - Time for Copy CMSIS : 0mS.

@@ -1,6 +1,6 @@
-15:20:02 **** Incremental Build of configuration Debug for project G474_CppUTest ****
+18:34:47 **** Incremental Build of configuration Debug for project G474_CppUTest ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-15:20:02 Build Finished. 0 errors, 0 warnings. (took 272ms)
+18:34:47 Build Finished. 0 errors, 0 warnings. (took 276ms)
 

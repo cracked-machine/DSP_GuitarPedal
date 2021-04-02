@@ -34,9 +34,29 @@
 // c++ std lib
 #include <iostream>
 #include <memory>
+#include <algorithm>
 
-//
+// STM HAL Framework
+#include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal_tim.h"
+#include "stm32g4xx_hal_tim_ex.h"
+#include "stm32g4xx_hal_dac.h"
+#include "stm32g4xx_hal_dac_ex.h"
+#include "stm32g4xx_hal_gpio.h"
+#include "stm32g4xx_hal_gpio_ex.h"
+
+// STM32Cube generated HAL init code
+#include "tim.h"
+#include "dac.h"
+#include "gpio.h"
+
+// Application sources
 #include "dsp_buffer.hpp"
+#include "sine_lookup_table.hpp"
+
+size_t x = 0;
+uint8_t *it = (uint8_t*)sine_lut.begin();
+
 
 #ifdef __cplusplus
 	extern "C"
@@ -65,12 +85,30 @@
 */
 		run_all_tests();
 		std::cout << "Running Loop" << std::endl;
+
+		HAL_TIM_Base_Start_IT(&htim6);
+		HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+
+
+
 		while(1)
 		{
 
 		}
 
 	}
+
+
+	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+	{
+		uint8_t index = x++ & (sine_lut.size()-1);
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_lut[index]);
+	}
+
+
+
+
 
 #ifdef __cplusplus
 	}

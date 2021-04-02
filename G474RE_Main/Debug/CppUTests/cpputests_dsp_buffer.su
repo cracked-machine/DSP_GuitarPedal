@@ -21,7 +21,7 @@ cpputests_dsp_buffer.cpp:74:1:virtual Utest* TEST_DspBufferGroup_DspBuffer_set24
 cpputests_dsp_buffer.cpp:74:1:TEST_DspBufferGroup_DspBuffer_set24BitSample_PositionOverSize_TestShell::TEST_DspBufferGroup_DspBuffer_set24BitSample_PositionOverSize_TestShell()	16	static
 cpputests_dsp_buffer.cpp:74:1:virtual void TEST_DspBufferGroup_DspBuffer_set24BitSample_PositionOverSize_Test::testBody()	104	static
 dsp_buffer.hpp:40:11:dsp_double_buffer<T, size>::dsp_double_buffer() [with T = short unsigned int; unsigned int size = 10]	24	static
-dsp_buffer.hpp:86:9:uint8_t dsp_double_buffer<T, size>::set24BitSample(uint32_t*, uint32_t*, size_t) [with T = short unsigned int; unsigned int size = 10]	32	static
+dsp_buffer.hpp:93:9:uint8_t dsp_double_buffer<T, size>::set24BitSample(uint32_t*, uint32_t*, size_t) [with T = short unsigned int; unsigned int size = 10]	32	static
 array:175:7:constexpr std::array<_Tp, _Nm>::size_type std::array<_Tp, _Nm>::size() const [with _Tp = short unsigned int; unsigned int _Nm = 10]	16	static
 array:116:7:void std::array<_Tp, _Nm>::fill(const value_type&) [with _Tp = short unsigned int; unsigned int _Nm = 10]	24	static
 array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = short unsigned int; unsigned int _Nm = 10]	16	static
