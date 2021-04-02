@@ -97,13 +97,13 @@ size_t sine_lut_index = 0;
 		sine_lut_index = count & ( sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		dspbuf.setRx24BitSample( 	&sine_lut[sine_lut_index],
+		dspbuf.writeRxSample( 	&sine_lut[sine_lut_index],
 									&sine_lut[sine_lut_index],
 									3 ,
 									DBUF_ALLIGN_8B_R);
 
 		// retrieve data from dsp Rx buffer #1
-		dspbuf.getRx24BitSample( 	&left_sample,
+		dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
 									3,
 									DBUF_ALLIGN_8B_R);
@@ -119,7 +119,6 @@ size_t sine_lut_index = 0;
 
 		//increment the counter
 		count++;
-
 
 	}
 

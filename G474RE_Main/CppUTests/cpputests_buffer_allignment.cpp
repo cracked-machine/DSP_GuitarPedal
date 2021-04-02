@@ -93,13 +93,13 @@ TEST(BUfferAllignmentGroup, DspBufferRx_Allign8BitRight)
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.setRx24BitSample( 	&test_sine_lut[test_sine_lut_index],
+		test_dspbuf.writeRxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
 									3 ,
 									DBUF_ALLIGN_8B_R);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.getRx24BitSample( 	&left_sample,
+		test_dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
 									3,
 									DBUF_ALLIGN_8B_R);
@@ -139,13 +139,13 @@ TEST(BUfferAllignmentGroup, DspBufferTx_Allign8BitRight)
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.setTx24BitSample( 	&test_sine_lut[test_sine_lut_index],
+		test_dspbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
 									3 ,
 									DBUF_ALLIGN_8B_R);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.getTx24BitSample( 	&left_sample,
+		test_dspbuf.readTxSample( 	&left_sample,
 									&right_sample,
 									3,
 									DBUF_ALLIGN_8B_R);
@@ -185,13 +185,13 @@ TEST(BUfferAllignmentGroup, DspBufferRx_Allign24BitLeft)
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.setRx24BitSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
+		test_dspbuf.writeRxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
 									3 ,
 									DBUF_ALLIGN_24B_L);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.getRx24BitSample( 	&left_sample,
+		test_dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
 									3,
 									DBUF_ALLIGN_24B_L);
@@ -231,13 +231,13 @@ TEST(BUfferAllignmentGroup, DspBufferTx_Allign24BitLeft)
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.setTx24BitSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
+		test_dspbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
 									3 ,
 									DBUF_ALLIGN_24B_L);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.getTx24BitSample( 	&left_sample,
+		test_dspbuf.readTxSample( 	&left_sample,
 									&right_sample,
 									3,
 									DBUF_ALLIGN_24B_L);

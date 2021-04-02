@@ -42,6 +42,8 @@ typedef enum
 
 } DBAllignTypedef;
 
+
+
 template <class T, size_t size>
 class dsp_double_buffer
 {
@@ -57,11 +59,11 @@ public:
 	T* getRxBuf();
 	T* getTxBuf();
 
-	uint8_t getRx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
-	uint8_t setRx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t readRxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t writeRxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
 
-	uint8_t getTx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
-	uint8_t setTx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t readTxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t writeTxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
 
 private:
 
@@ -83,7 +85,7 @@ private:
  *
  */
 template <class T, size_t size>
-uint8_t dsp_double_buffer<T, size>::getRx24BitSample(	int *left_sample,
+uint8_t dsp_double_buffer<T, size>::readRxSample(	int *left_sample,
 														int *right_sample,
 														size_t pos,
 														DBAllignTypedef allignment)
@@ -115,7 +117,7 @@ uint8_t dsp_double_buffer<T, size>::getRx24BitSample(	int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t dsp_double_buffer<T, size>::setTx24BitSample(int *left_sample,
+uint8_t dsp_double_buffer<T, size>::writeTxSample(int *left_sample,
 												int *right_sample,
 												size_t pos,
 												DBAllignTypedef allignment)
@@ -148,7 +150,7 @@ uint8_t dsp_double_buffer<T, size>::setTx24BitSample(int *left_sample,
  *
  */
 template <class T, size_t size>
-uint8_t dsp_double_buffer<T, size>::getTx24BitSample(	int *left_sample,
+uint8_t dsp_double_buffer<T, size>::readTxSample(	int *left_sample,
 														int *right_sample,
 														size_t pos,
 														DBAllignTypedef allignment)
@@ -178,7 +180,7 @@ uint8_t dsp_double_buffer<T, size>::getTx24BitSample(	int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t dsp_double_buffer<T, size>::setRx24BitSample(int *left_sample,
+uint8_t dsp_double_buffer<T, size>::writeRxSample(int *left_sample,
 												int *right_sample,
 												size_t pos,
 												DBAllignTypedef allignment)

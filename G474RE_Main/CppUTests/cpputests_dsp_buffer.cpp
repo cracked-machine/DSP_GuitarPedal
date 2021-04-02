@@ -50,75 +50,75 @@ TEST_GROUP(DspBufferGroup)
 };
 
 // Tx Buffer Tests
-TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionZero)  // pass
+TEST(DspBufferGroup, DspBuffer_writeTxSample_PositionZero)  // pass
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_FALSE(buf.setTx24BitSample(&left_sample, &right_sample, 0, DBUF_ALLIGN_8B_R));
+	CHECK_FALSE(buf.writeTxSample(&left_sample, &right_sample, 0, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionHalfSize)  // pass
+TEST(DspBufferGroup, DspBuffer_writeTxSample_PositionHalfSize)  // pass
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_FALSE(buf.setTx24BitSample(&left_sample, &right_sample, size / 2, DBUF_ALLIGN_8B_R));
+	CHECK_FALSE(buf.writeTxSample(&left_sample, &right_sample, size / 2, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionAtSize)  // fail
+TEST(DspBufferGroup, DspBuffer_writeTxSample_PositionAtSize)  // fail
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_TRUE(buf.setTx24BitSample(&left_sample, &right_sample, size, DBUF_ALLIGN_8B_R));
+	CHECK_TRUE(buf.writeTxSample(&left_sample, &right_sample, size, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionOverSize)  // fail
+TEST(DspBufferGroup, DspBuffer_writeTxSample_PositionOverSize)  // fail
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_TRUE(buf.setTx24BitSample(&left_sample, &right_sample, size+1, DBUF_ALLIGN_8B_R));
+	CHECK_TRUE(buf.writeTxSample(&left_sample, &right_sample, size+1, DBUF_ALLIGN_8B_R));
 }
 
 // Rx Buffer Tests
-TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionZero)  // pass
+TEST(DspBufferGroup, DspBuffer_writeRxSample_PositionZero)  // pass
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_FALSE(buf.setRx24BitSample(&left_sample, &right_sample, 0, DBUF_ALLIGN_8B_R));
+	CHECK_FALSE(buf.writeRxSample(&left_sample, &right_sample, 0, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionHalfSize)  // pass
+TEST(DspBufferGroup, DspBuffer_writeRxSample_PositionHalfSize)  // pass
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_FALSE(buf.setRx24BitSample(&left_sample, &right_sample, size / 2, DBUF_ALLIGN_8B_R));
+	CHECK_FALSE(buf.writeRxSample(&left_sample, &right_sample, size / 2, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionAtSize)  // fail
+TEST(DspBufferGroup, DspBuffer_writeRxSample_PositionAtSize)  // fail
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_TRUE(buf.setRx24BitSample(&left_sample, &right_sample, size, DBUF_ALLIGN_8B_R));
+	CHECK_TRUE(buf.writeRxSample(&left_sample, &right_sample, size, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionOverSize)  // fail
+TEST(DspBufferGroup, DspBuffer_writeRxSample_PositionOverSize)  // fail
 {
 	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
 	int left_sample = 0;
 	int right_sample = 0;
-	CHECK_TRUE(buf.setRx24BitSample(&left_sample, &right_sample, size+1, DBUF_ALLIGN_8B_R));
+	CHECK_TRUE(buf.writeRxSample(&left_sample, &right_sample, size+1, DBUF_ALLIGN_8B_R));
 }
