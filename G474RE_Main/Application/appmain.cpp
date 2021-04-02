@@ -30,6 +30,7 @@
 // header
 #include <cpputests_main.hpp>
 #include "appmain.hpp"
+#include "sine_lookup_table.hpp"
 
 // c++ std lib
 #include <iostream>
@@ -52,44 +53,31 @@
 
 // Application sources
 #include "dsp_buffer.hpp"
-#include "sine_lookup_table.hpp"
+#include "cpputests_dsp_buffer.hpp"
 
-size_t x = 0;
-uint8_t *it = (uint8_t*)sine_lut.begin();
+size_t count = 0;
+size_t sine_lut_index = 0;
+
 
 
 #ifdef __cplusplus
 	extern "C"
 	{
 #endif
-	size_t size = 10;
-	dsp_double_buffer<uint16_t, 10> my_buf;
+	const size_t dsp_buf_size = 8;
+	dsp_double_buffer<uint16_t, dsp_buf_size> dspbuf;
 
 	void appmain()
 	{
 
-		uint16_t *tmpRx = my_buf.getRxBuf();
+		uint16_t *tmpRx = dspbuf.getRxBuf();
 		std::cout << tmpRx[0] << std::endl;
 
-
-
-		//std::cout << my_buf._rxBuf[0] << std::endl;
-
-/*
-		buf = std::unique_ptr<int[]>(new int[size]);
-		//std::unique_ptr<int[]> buf(new int[size]);
-		for (size_t i = 0; i < size; ++i) {
-			buf[i] = (i == 0) ? 1 : i * buf[i-1];
-		}
-		int *bufarray = buf.get();
-*/
 		run_all_tests();
 		std::cout << "Running Loop" << std::endl;
 
 		HAL_TIM_Base_Start_IT(&htim6);
 		HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
-
-
 
 		while(1)
 		{
@@ -101,9 +89,38 @@ uint8_t *it = (uint8_t*)sine_lut.begin();
 
 	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
-		uint8_t index = x++ & (sine_lut.size()-1);
+
+ 		int left_sample = 0;
+		int right_sample = 0;
+
+		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
+		sine_lut_index = count & ( sine_lut.size() - 1 );
+
+		// send data into Rx buffer #1
+		dspbuf.setRx24BitSample( 	&sine_lut[sine_lut_index],
+									&sine_lut[sine_lut_index],
+									3 ,
+									DBUF_ALLIGN_8B_R);
+
+		// retrieve data from dsp Rx buffer #1
+		dspbuf.getRx24BitSample( 	&left_sample,
+									&right_sample,
+									3,
+									DBUF_ALLIGN_8B_R);
+
+
+		HAL_DAC_SetValue(	&hdac1,
+							DAC_CHANNEL_1,
+							DAC_ALIGN_8B_R,
+							left_sample);
+
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-		HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_lut[index]);
+		//HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_lut[sine_lut_index]);
+
+		//increment the counter
+		count++;
+
+
 	}
 
 

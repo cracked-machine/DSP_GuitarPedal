@@ -30,7 +30,17 @@
 #ifndef DSP_BUFFER_HPP_
 #define DSP_BUFFER_HPP_
 
+#include <assert.h>
 
+
+
+typedef enum
+{
+	DBUF_ALLIGN_8B_R	= 4,		// 16-bit data right packed in 32-bit frame xxxxAABB
+	DBUF_ALLIGN_16B_L	= 16,		// 16-bit data left packed in 32-bit frame AABBxxxx
+	DBUF_ALLIGN_24B_L	= 16		// 24-bit data left packed in 32-bit frame AABBCCxx
+
+} DBAllignTypedef;
 
 template <class T, size_t size>
 class dsp_double_buffer
@@ -39,6 +49,7 @@ class dsp_double_buffer
 public:
 	explicit dsp_double_buffer()
 	{
+		//assert(!size % 4);
 		_rxBuf.fill(0);
 		_txBuf.fill(0);
 	}
@@ -46,9 +57,11 @@ public:
 	T* getRxBuf();
 	T* getTxBuf();
 
-	uint8_t get24BitSample(uint32_t *left_sample, uint32_t *right_sample, size_t pos);
-	uint8_t set24BitSample(uint32_t *left_sample, uint32_t *right_sample, size_t pos);
+	uint8_t getRx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t setRx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
 
+	uint8_t getTx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t setTx24BitSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
 
 private:
 
@@ -58,15 +71,22 @@ private:
 };
 
 /*
- * @brief
+ * @brief Pull data from the specified Rx buffer
  *
- * @param
- * @retval
+ * @param	left_sample 	- the output left channel sample
+ * 			right_smaple 	- the output right channel sample
+ * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
+ * 			//TODO use enums to represent two halves of ping pong buffer instead
+ *
+ * @retval	1 if pos param is pos+ 3 larger than buffer size
+ * 			0 if pos param valid
  *
  */
 template <class T, size_t size>
-uint8_t dsp_double_buffer<T, size>::get24BitSample(	uint32_t *left_sample,
-													uint32_t *right_sample, size_t pos)
+uint8_t dsp_double_buffer<T, size>::getRx24BitSample(	int *left_sample,
+														int *right_sample,
+														size_t pos,
+														DBAllignTypedef allignment)
 {
 	if(pos + 3 > _rxBuf.size())
 	{
@@ -74,24 +94,94 @@ uint8_t dsp_double_buffer<T, size>::get24BitSample(	uint32_t *left_sample,
 	}
 	else
 	{
-		//restore signed 24 bit sample from 16-bit buffers
-		left_sample = (uint32_t*) ( _rxBuf[pos + 0] << 16 ) | _rxBuf[pos + 1];
-		right_sample = (uint32_t*) ( _rxBuf[pos + 2] << 16 ) | _rxBuf[pos + 3];
+		*left_sample = (int) (( _rxBuf[pos + 0] << allignment ) | _rxBuf[pos + 1]);
+		*right_sample = (int) (( _rxBuf[pos + 2] << allignment ) | _rxBuf[pos + 3]);
+		return 0;
+	}
+
+}
+
+
+
+/*
+ * @brief 	Push data to the specified Tx buffer
+ *
+ * @param	left_sample 	- the input left channel sample
+ * 			right_smaple 	- the input right channel sample
+ * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
+ * 			//TODO use enums to represent two halves of ping pong buffer instead
+ *
+ * @retval	1 if pos param is pos+ 3 larger than buffer size
+ * 			0 if pos param valid
+ */
+template <class T, size_t size>
+uint8_t dsp_double_buffer<T, size>::setTx24BitSample(int *left_sample,
+												int *right_sample,
+												size_t pos,
+												DBAllignTypedef allignment)
+{
+	if(pos + 3 > _txBuf.size())
+	{
+		return 1;
+	}
+	else
+	{
+		//restore to buffer
+		_txBuf[pos + 0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+		_txBuf[pos + 1] = (*left_sample) & 0xFFFF;
+		_txBuf[pos + 2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+		_txBuf[pos + 3] = (*right_sample) & 0xFFFF;
+		return 0;
+	}
+}
+
+/*
+ * @brief Pull data from the specified Tx buffer
+ *
+ * @param	left_sample 	- the output left channel sample
+ * 			right_smaple 	- the output right channel sample
+ * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
+ * 			//TODO use enums to represent two halves of ping pong buffer instead
+ *
+ * @retval	1 if pos param is pos+ 3 larger than buffer size
+ * 			0 if pos param valid
+ *
+ */
+template <class T, size_t size>
+uint8_t dsp_double_buffer<T, size>::getTx24BitSample(	int *left_sample,
+														int *right_sample,
+														size_t pos,
+														DBAllignTypedef allignment)
+{
+	if(pos + 3 > _txBuf.size())
+	{
+		return 1;
+	}
+	else
+	{
+		*left_sample = (int) (( _txBuf[pos + 0] << allignment ) | _txBuf[pos + 1]);
+		*right_sample = (int) (( _txBuf[pos + 2] << allignment ) | _txBuf[pos + 3]);
 		return 0;
 	}
 
 }
 
 /*
- * @brief
+ * @brief 	Push data to the specified Rx buffer
  *
- * @param
- * @retval
+ * @param	left_sample 	- the input left channel sample
+ * 			right_smaple 	- the input right channel sample
+ * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
+ * 			//TODO use enums to represent two halves of ping pong buffer instead
  *
+ * @retval	1 if pos param is pos+ 3 larger than buffer size
+ * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t dsp_double_buffer<T, size>::set24BitSample(uint32_t *left_sample,
-												uint32_t *right_sample, size_t pos)
+uint8_t dsp_double_buffer<T, size>::setRx24BitSample(int *left_sample,
+												int *right_sample,
+												size_t pos,
+												DBAllignTypedef allignment)
 {
 	if(pos + 3 > _rxBuf.size())
 	{
@@ -100,19 +190,20 @@ uint8_t dsp_double_buffer<T, size>::set24BitSample(uint32_t *left_sample,
 	else
 	{
 		//restore to buffer
-		_txBuf[pos + 0] = ( (*left_sample) >> 16 ) & 0xFFFF;
-		_txBuf[pos + 1] = (*left_sample) & 0xFFFF;
-		_txBuf[pos + 2] = ( (*right_sample) >> 16 ) & 0xFFFF;
-		_txBuf[pos + 3] = (*right_sample) & 0xFFFF;
+		_rxBuf[pos + 0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+		_rxBuf[pos + 1] = (*left_sample) & 0xFFFF;
+		_rxBuf[pos + 2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+		_rxBuf[pos + 3] = (*right_sample) & 0xFFFF;
 		return 0;
 	}
 }
 
 /*
- * @brief
+ * @brief 	Gets a pointer to the Rx buffer. Used for C API compatibility.
+ * 			Pass this to a function expecting uint32_t pointer
  *
- * @param
- * @retval
+ * @param	None
+ * @retval	the Rx buffer pointer
  *
  */
 template <class T, size_t size> T* dsp_double_buffer<T, size>::getRxBuf()
@@ -121,10 +212,11 @@ template <class T, size_t size> T* dsp_double_buffer<T, size>::getRxBuf()
 }
 
 /*
- * @brief
+ * @brief 	Gets a pointer to the Tx buffer. Used for C API compatibility.
+ * 			Pass this to a function expecting uint32_t pointer
  *
- * @param
- * @retval
+ * @param	None
+ * @retval	the Tx buffer pointer
  *
  */
 template <class T, size_t size> T* dsp_double_buffer<T, size>::getTxBuf()

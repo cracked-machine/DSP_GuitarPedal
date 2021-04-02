@@ -1,0 +1,48 @@
+/*
+ *  	sine_lookup_table.hpp
+ *
+ *  	Created on: Apr 2, 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+#ifndef SINE_LOOKUP_TABLE_HPP_
+#define SINE_LOOKUP_TABLE_HPP_
+
+#include <array>
+
+std::array<int, 64> sine_lut {
+
+	0x000080,0x00008c,0x00000098,0x0000a5,0x0000b0,0x0000bc,0x0000c6,0x0000d0,
+	0x0000da,0x0000e2,0x0000ea,0x0000f0,0x0000f5,0x0000fa,0x0000fd,0x0000fe,
+	0x0000ff,0x0000fe,0x0000fd,0x0000fa,0x0000f5,0x0000f0,0x0000ea,0x0000e2,
+	0x0000da,0x0000d0,0x0000c6,0x0000bc,0x0000b0,0x0000a5,0x000098,0x00008c,
+	0x000080,0x000073,0x000067,0x00005a,0x00004f,0x000043,0x000039,0x00002f,
+	0x000025,0x00001d,0x000015,0x0000f,0x0000a,0x00005,0x00002,0x00001,
+	0x00000,0x00001,0x00002,0x00005,0x0000a,0x0000f,0x000015,0x00001d,
+	0x000025,0x00002f,0x000039,0x000043,0x00004f,0x00005a,0x000067,0x000073
+};
+
+
+
+#endif /* SINE_LOOKUP_TABLE_HPP_ */

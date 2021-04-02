@@ -32,6 +32,10 @@
 #include "dsp_buffer.hpp"
 
 
+
+
+
+
 TEST_GROUP(DspBufferGroup)
 {
    void setup()
@@ -44,38 +48,77 @@ TEST_GROUP(DspBufferGroup)
 	  // Uninit stuff
    }
 };
-TEST(DspBufferGroup, DspBuffer_set24BitSample_PositionZero)  // pass
+
+// Tx Buffer Tests
+TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionZero)  // pass
 {
-	const size_t size = 10;
+	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
-	uint32_t left_sample = 0;
-	uint32_t right_sample = 0;
-	CHECK_FALSE(buf.set24BitSample(&left_sample, &right_sample, 0));
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_FALSE(buf.setTx24BitSample(&left_sample, &right_sample, 0, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_set24BitSample_PositionHalfSize)  // pass
+TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionHalfSize)  // pass
 {
-	const size_t size = 10;
+	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
-	uint32_t left_sample = 0;
-	uint32_t right_sample = 0;
-	CHECK_FALSE(buf.set24BitSample(&left_sample, &right_sample, size / 2));
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_FALSE(buf.setTx24BitSample(&left_sample, &right_sample, size / 2, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_set24BitSample_PositionAtSize)  // fail
+TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionAtSize)  // fail
 {
-	const size_t size = 10;
+	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
-	uint32_t left_sample = 0;
-	uint32_t right_sample = 0;
-	CHECK_TRUE(buf.set24BitSample(&left_sample, &right_sample, size));
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_TRUE(buf.setTx24BitSample(&left_sample, &right_sample, size, DBUF_ALLIGN_8B_R));
 }
 
-TEST(DspBufferGroup, DspBuffer_set24BitSample_PositionOverSize)  // fail
+TEST(DspBufferGroup, DspBuffer_setTx24BitSample_PositionOverSize)  // fail
 {
-	const size_t size = 10;
+	const size_t size = 8;
 	dsp_double_buffer<uint16_t, size> buf;
-	uint32_t left_sample = 0;
-	uint32_t right_sample = 0;
-	CHECK_TRUE(buf.set24BitSample(&left_sample, &right_sample, size+1));
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_TRUE(buf.setTx24BitSample(&left_sample, &right_sample, size+1, DBUF_ALLIGN_8B_R));
+}
+
+// Rx Buffer Tests
+TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionZero)  // pass
+{
+	const size_t size = 8;
+	dsp_double_buffer<uint16_t, size> buf;
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_FALSE(buf.setRx24BitSample(&left_sample, &right_sample, 0, DBUF_ALLIGN_8B_R));
+}
+
+TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionHalfSize)  // pass
+{
+	const size_t size = 8;
+	dsp_double_buffer<uint16_t, size> buf;
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_FALSE(buf.setRx24BitSample(&left_sample, &right_sample, size / 2, DBUF_ALLIGN_8B_R));
+}
+
+TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionAtSize)  // fail
+{
+	const size_t size = 8;
+	dsp_double_buffer<uint16_t, size> buf;
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_TRUE(buf.setRx24BitSample(&left_sample, &right_sample, size, DBUF_ALLIGN_8B_R));
+}
+
+TEST(DspBufferGroup, DspBuffer_setRx24BitSample_PositionOverSize)  // fail
+{
+	const size_t size = 8;
+	dsp_double_buffer<uint16_t, size> buf;
+	int left_sample = 0;
+	int right_sample = 0;
+	CHECK_TRUE(buf.setRx24BitSample(&left_sample, &right_sample, size+1, DBUF_ALLIGN_8B_R));
 }

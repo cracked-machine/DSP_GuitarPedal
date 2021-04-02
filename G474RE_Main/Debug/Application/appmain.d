@@ -1,6 +1,6 @@
 Application/appmain.o: ../Application/appmain.cpp \
  /home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests/cpputests_main.hpp \
- ../Application/appmain.hpp \
+ ../Application/appmain.hpp ../Application/sine_lookup_table.hpp \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h \
  ../Core/Inc/stm32g4xx_hal_conf.h \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h \
@@ -35,11 +35,13 @@ Application/appmain.o: ../Application/appmain.cpp \
  ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h \
  ../Core/Inc/tim.h ../Core/Inc/main.h ../Core/Inc/dac.h \
  ../Core/Inc/gpio.h ../Application/dsp_buffer.hpp \
- ../Application/sine_lookup_table.hpp
+ /home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests/cpputests_dsp_buffer.hpp
 
 /home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests/cpputests_main.hpp:
 
 ../Application/appmain.hpp:
+
+../Application/sine_lookup_table.hpp:
 
 ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:
 
@@ -115,4 +117,4 @@ Application/appmain.o: ../Application/appmain.cpp \
 
 ../Application/dsp_buffer.hpp:
 
-../Application/sine_lookup_table.hpp:
+/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests/cpputests_dsp_buffer.hpp:

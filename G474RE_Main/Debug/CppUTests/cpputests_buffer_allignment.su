@@ -1,0 +1,59 @@
+gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+cpputests_buffer_allignment.cpp:61:9:virtual void TEST_GROUP_CppUTestGroupBUfferAllignmentGroup::setup()	16	static
+cpputests_buffer_allignment.cpp:66:9:virtual void TEST_GROUP_CppUTestGroupBUfferAllignmentGroup::teardown()	16	static
+cpputests_buffer_allignment.cpp:59:1:TEST_GROUP_CppUTestGroupBUfferAllignmentGroup::TEST_GROUP_CppUTestGroupBUfferAllignmentGroup()	16	static
+cpputests_buffer_allignment.cpp:59:1:TEST_GROUP_CppUTestGroupBUfferAllignmentGroup::~TEST_GROUP_CppUTestGroupBUfferAllignmentGroup()	16	static
+cpputests_buffer_allignment.cpp:59:1:virtual TEST_GROUP_CppUTestGroupBUfferAllignmentGroup::~TEST_GROUP_CppUTestGroupBUfferAllignmentGroup()	16	static
+cpputests_buffer_allignment.cpp:72:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test::TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test()	16	static
+cpputests_buffer_allignment.cpp:72:1:virtual Utest* TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell::createTest()	24	static
+cpputests_buffer_allignment.cpp:72:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell::TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell()	16	static
+array:175:7:constexpr std::array<_Tp, _Nm>::size_type std::array<_Tp, _Nm>::size() const [with _Tp = int; unsigned int _Nm = 64]	16	static
+cpputests_buffer_allignment.cpp:72:1:virtual void TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test::testBody()	104	static
+cpputests_buffer_allignment.cpp:118:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test::TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test()	16	static
+cpputests_buffer_allignment.cpp:118:1:virtual Utest* TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell::createTest()	24	static
+cpputests_buffer_allignment.cpp:118:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell::TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell()	16	static
+cpputests_buffer_allignment.cpp:118:1:virtual void TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test::testBody()	104	static
+cpputests_buffer_allignment.cpp:164:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test::TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test()	16	static
+cpputests_buffer_allignment.cpp:164:1:virtual Utest* TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell::createTest()	24	static
+cpputests_buffer_allignment.cpp:164:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell::TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell()	16	static
+cpputests_buffer_allignment.cpp:164:1:virtual void TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test::testBody()	104	static
+cpputests_buffer_allignment.cpp:210:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test::TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test()	16	static
+cpputests_buffer_allignment.cpp:210:1:virtual Utest* TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell::createTest()	24	static
+cpputests_buffer_allignment.cpp:210:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell::TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell()	16	static
+cpputests_buffer_allignment.cpp:210:1:virtual void TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test::testBody()	104	static
+dsp_buffer.hpp:50:11:dsp_double_buffer<T, size>::dsp_double_buffer() [with T = short unsigned int; unsigned int size = 8]	24	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = int; unsigned int _Nm = 64]	16	static
+dsp_buffer.hpp:181:9:uint8_t dsp_double_buffer<T, size>::setRx24BitSample(int*, int*, size_t, DBAllignTypedef) [with T = short unsigned int; unsigned int size = 8]	32	static
+dsp_buffer.hpp:86:9:uint8_t dsp_double_buffer<T, size>::getRx24BitSample(int*, int*, size_t, DBAllignTypedef) [with T = short unsigned int; unsigned int size = 8]	32	static
+dsp_buffer.hpp:118:9:uint8_t dsp_double_buffer<T, size>::setTx24BitSample(int*, int*, size_t, DBAllignTypedef) [with T = short unsigned int; unsigned int size = 8]	32	static
+dsp_buffer.hpp:151:9:uint8_t dsp_double_buffer<T, size>::getTx24BitSample(int*, int*, size_t, DBAllignTypedef) [with T = short unsigned int; unsigned int size = 8]	32	static
+array:175:7:constexpr std::array<_Tp, _Nm>::size_type std::array<_Tp, _Nm>::size() const [with _Tp = short unsigned int; unsigned int _Nm = 8]	16	static
+array:116:7:void std::array<_Tp, _Nm>::fill(const value_type&) [with _Tp = short unsigned int; unsigned int _Nm = 8]	24	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = int; unsigned int _Nm = 64]	16	static
+array:185:7:std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](std::array<_Tp, _Nm>::size_type) [with _Tp = short unsigned int; unsigned int _Nm = 8]	16	static
+array:126:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::begin() [with _Tp = short unsigned int; unsigned int _Nm = 8]	16	static
+stl_algobase.h:784:5:_OI std::fill_n(_OI, _Size, const _Tp&) [with _OI = short unsigned int*; _Size = unsigned int; _Tp = short unsigned int]	24	static
+array:55:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = short unsigned int; unsigned int _Nm = 8]	16	static
+array:234:7:std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::data() [with _Tp = short unsigned int; unsigned int _Nm = 8]	16	static
+stl_algobase.h:277:5:_Iterator std::__niter_base(_Iterator) [with _Iterator = short unsigned int*]	16	static
+stl_algobase.h:749:5:typename __gnu_cxx::__enable_if<std::__is_scalar<_Tp>::__value, _OutputIterator>::__type std::__fill_n_a(_OutputIterator, _Size, const _Tp&) [with _OutputIterator = short unsigned int*; _Size = unsigned int; _Tp = short unsigned int]	32	static
+array:59:7:static constexpr _Tp* std::__array_traits<_Tp, _Nm>::_S_ptr(const _Tp (&)[_Nm]) [with _Tp = short unsigned int; unsigned int _Nm = 8]	16	static
+cpputests_buffer_allignment.cpp:210:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell()	16	static
+cpputests_buffer_allignment.cpp:210:1:virtual TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_TestShell()	16	static
+cpputests_buffer_allignment.cpp:210:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test()	16	static
+cpputests_buffer_allignment.cpp:210:1:virtual TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign24BitLeft_Test()	16	static
+cpputests_buffer_allignment.cpp:164:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell()	16	static
+cpputests_buffer_allignment.cpp:164:1:virtual TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_TestShell()	16	static
+cpputests_buffer_allignment.cpp:164:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test()	16	static
+cpputests_buffer_allignment.cpp:164:1:virtual TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign24BitLeft_Test()	16	static
+cpputests_buffer_allignment.cpp:118:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell()	16	static
+cpputests_buffer_allignment.cpp:118:1:virtual TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_TestShell()	16	static
+cpputests_buffer_allignment.cpp:118:1:TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test()	16	static
+cpputests_buffer_allignment.cpp:118:1:virtual TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test::~TEST_BUfferAllignmentGroup_DspBufferTx_Allign8BitRight_Test()	16	static
+cpputests_buffer_allignment.cpp:72:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell()	16	static
+cpputests_buffer_allignment.cpp:72:1:virtual TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_TestShell()	16	static
+cpputests_buffer_allignment.cpp:72:1:TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test()	16	static
+cpputests_buffer_allignment.cpp:72:1:virtual TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test::~TEST_BUfferAllignmentGroup_DspBufferRx_Allign8BitRight_Test()	16	static
+cpputests_buffer_allignment.cpp:254:1:void __static_initialization_and_destruction_0(int, int)	24	static
+cpputests_buffer_allignment.cpp:254:1:cpp)	8	static
+cpputests_buffer_allignment.cpp:254:1:cpp)	8	static

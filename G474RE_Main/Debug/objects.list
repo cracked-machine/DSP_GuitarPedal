@@ -10,6 +10,7 @@
 "Core/Src/system_stm32g4xx.o"
 "Core/Src/tim.o"
 "Core/Startup/startup_stm32g474retx.o"
+"CppUTests/cpputests_buffer_allignment.o"
 "CppUTests/cpputests_dsp_buffer.o"
 "CppUTests/cpputests_main.o"
 "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o"
