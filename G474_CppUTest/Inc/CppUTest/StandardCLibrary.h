@@ -78,7 +78,7 @@ typedef __SIZE_TYPE__ size_t;
 typedef long unsigned int size_t;
 #endif
 
-#define NULL (0)
+//#define NULL (0)
 extern void*	malloc(size_t);
 extern void     free(void *);
 

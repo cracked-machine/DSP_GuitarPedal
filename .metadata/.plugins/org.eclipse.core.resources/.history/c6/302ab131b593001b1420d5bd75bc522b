@@ -1,0 +1,26 @@
+/*
+ * test_src.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+#include <run_cpp_utests.hpp>
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	void run_cpputests()
+	{
+		const char * av_override[] = { };
+		CommandLineTestRunner::RunAllTests(0, av_override);
+	}
+
+
+
+#ifdef __cplusplus
+	}
+#endif
+

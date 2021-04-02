@@ -1,0 +1,54 @@
+/*
+ * dsp_buffer.hpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+#ifndef DSP_BUFFER_HPP_
+#define DSP_BUFFER_HPP_
+
+
+template <class T>
+class dsp_double_buffer
+{
+
+public:
+	explicit dsp_double_buffer(size_t size) :
+		rxBuf_( std::unique_ptr<T[]>(new T[size]) ),
+		txBuf_( std::unique_ptr<T[]>(new T[size]) )
+	{
+
+		for (size_t i = 0; i < size; ++i) {
+			rxBuf_[i] = 0;
+			txBuf_[i] = 0;
+		}
+
+	}
+
+	T getRxBuf();
+	T getTxBuf();
+
+
+private:
+
+	std::unique_ptr<T[]> rxBuf_;
+	std::unique_ptr<T[]> txBuf_;
+
+
+
+};
+
+template <class T> T dsp_double_buffer<T>::getRxBuf()
+{
+	return rxBuf_.get();
+
+}
+
+template <class T> T dsp_double_buffer<T>::getTxBuf()
+{
+	return txBuf_.get();
+}
+
+
+#endif /* DSP_BUFFER_HPP_ */

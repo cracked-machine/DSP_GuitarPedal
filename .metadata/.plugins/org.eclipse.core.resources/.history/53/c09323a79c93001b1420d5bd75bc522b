@@ -1,0 +1,44 @@
+/*
+ * appmain.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+// header
+#include "appmain.hpp"
+
+// c++ std lib
+#include <iostream>
+#include <memory>
+
+// CppUTest for project
+#include "test_src.hpp"
+
+#include "dsp_buffer.hpp"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	dsp_double_buffer<uint16_t> my_buf(10);
+
+	void appmain()
+	{
+		uint16_t *tmpRx = &my_buf.getRxBuf();
+		uint16_t *tmpTx = my_buf.getTxBuf();
+
+		run_cpputests();
+
+		while(1)
+		{
+			std::cout << "AppMain" << std::endl;
+		}
+
+	}
+
+#ifdef __cplusplus
+	}
+#endif
+

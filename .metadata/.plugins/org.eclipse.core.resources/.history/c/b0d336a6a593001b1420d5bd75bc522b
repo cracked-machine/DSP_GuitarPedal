@@ -1,0 +1,53 @@
+/*
+ * appmain.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+// header
+#include "appmain.hpp"
+
+// c++ std lib
+#include <iostream>
+#include <memory>
+
+// CppUTest for project
+#include "test_src.hpp"
+
+#include "dsp_buffer.hpp"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+	size_t size = 10;
+	dsp_double_buffer<uint16_t, 10> my_buf();
+
+	void appmain()
+	{
+
+
+
+
+/*
+		buf = std::unique_ptr<int[]>(new int[size]);
+		//std::unique_ptr<int[]> buf(new int[size]);
+		for (size_t i = 0; i < size; ++i) {
+			buf[i] = (i == 0) ? 1 : i * buf[i-1];
+		}
+		int *bufarray = buf.get();
+*/
+		run_cpputests();
+
+		while(1)
+		{
+			std::cout << "AppMain" << std::endl;
+		}
+
+	}
+
+#ifdef __cplusplus
+	}
+#endif
+

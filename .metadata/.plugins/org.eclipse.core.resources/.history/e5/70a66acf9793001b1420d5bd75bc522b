@@ -1,0 +1,43 @@
+/*
+ * appmain.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+
+#include "appmain.hpp"
+
+#include <iostream>
+#include <memory>
+#include "test_src.hpp"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	std::unique_ptr<int[]> buf;
+
+	void appmain()
+	{
+		size_t size = 10;
+		buf = std::unique_ptr<int[]>(new int[size]);
+		for (int i = 0; i < size; ++i) {
+			buf[i] = (i == 0) ? 1 : i * buf[i-1];
+		}
+		int *bufarray = buf.get();
+
+		run_cpputests();
+
+		while(1)
+		{
+			std::cout << "AppMain" << std::endl;
+		}
+
+	}
+
+#ifdef __cplusplus
+	}
+#endif
+
