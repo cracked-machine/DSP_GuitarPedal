@@ -1,0 +1,24 @@
+/*
+ * cpp_link.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+#include "cpp_link.hpp"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	void appmain()
+	{
+
+
+	}
+
+#ifdef __cplusplus
+	}
+#endif
+

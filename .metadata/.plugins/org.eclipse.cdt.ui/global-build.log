@@ -1,0 +1,115 @@
+10:20:57 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../CppUTests/test_src.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DCPPUTEST_STD_C_LIB_DISABLED -DCPPUTEST_STD_CPP_LIB_DISABLED -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CppUTests/test_src.d" -MT"CppUTests/test_src.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CppUTests/test_src.o"
+../CppUTests/test_src.cpp:17:36: error: expected constructor, destructor, or type conversion before '(' token
+  CommandLineTestRunner::RunAllTests(0, av_override);
+                                    ^
+make: *** [CppUTests/subdir.mk:18: CppUTests/test_src.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:21:59 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../CppUTests/test_src.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DCPPUTEST_STD_C_LIB_DISABLED -DCPPUTEST_STD_CPP_LIB_DISABLED -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CppUTests/test_src.d" -MT"CppUTests/test_src.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CppUTests/test_src.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 196772	    972	  10056	 207800	  32bb8	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:22:01 **** Incremental Build of configuration Debug for project G474_CppUTest ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:22:01 **** Incremental Build of configuration Debug for project G474_RTT ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:22:37 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../CppUTests/test_src.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DCPPUTEST_STD_C_LIB_DISABLED -DCPPUTEST_STD_CPP_LIB_DISABLED -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CppUTests/test_src.d" -MT"CppUTests/test_src.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CppUTests/test_src.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 204172	    988	  10184	 215344	  34930	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:22:40 **** Incremental Build of configuration Debug for project G474_CppUTest ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:22:40 **** Incremental Build of configuration Debug for project G474_RTT ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:23:20 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DCPPUTEST_STD_C_LIB_DISABLED -DCPPUTEST_STD_CPP_LIB_DISABLED -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+In file included from /home/chris/DSP_GuitarPedal/G474_CppUTest/Inc/CppUTest/CppUTestConfig.h:95:0,
+                 from /home/chris/DSP_GuitarPedal/G474_CppUTest/Inc/CppUTest/TestHarness.h:31,
+                 from /home/chris/DSP_GuitarPedal/G474_CppUTest/Inc/CppUTest/CommandLineTestRunner.h:31,
+                 from /home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests/test_src.hpp:11,
+                 from ../Application/appmain.cpp:12:
+/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc/CppUTest/StandardCLibrary.h:81:0: warning: "NULL" redefined
+ #define NULL (0)
+ 
+In file included from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/wctype.h:8:0,
+                 from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/c++/7.3.1/cwctype:50,
+                 from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/c++/7.3.1/bits/locale_facets.h:39,
+                 from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/c++/7.3.1/bits/basic_ios.h:37,
+                 from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/c++/7.3.1/ios:44,
+                 from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/c++/7.3.1/ostream:38,
+                 from /opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/arm-none-eabi/include/c++/7.3.1/iostream:39,
+                 from ../Application/appmain.cpp:11:
+/opt/st/stm32cubeide_1.5.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.linux64_1.5.0.202011040924/tools/lib/gcc/arm-none-eabi/7.3.1/include/stddef.h:403:0: note: this is the location of the previous definition
+ #define NULL __null
+ 
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 229084	   1012	  10528	 240624	  3abf0	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:23:23 **** Incremental Build of configuration Debug for project G474_CppUTest ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:23:23 **** Incremental Build of configuration Debug for project G474_RTT ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:23:46 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 229084	   1012	  10528	 240624	  3abf0	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+10:25:29 **** Clean-only build of configuration Debug for project G474RE_Main ****
+make -j4 clean 
+rm -rf *
+ 
+10:25:30 **** Clean-only build of configuration Debug for project G474_CppUTest ****
+make -j4 clean 
+rm -rf *
+ 
+10:25:30 **** Clean-only build of configuration Debug for project G474_RTT ****
+make -j4 clean 
+rm -rf *
+ 

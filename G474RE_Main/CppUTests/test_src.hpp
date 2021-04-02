@@ -1,0 +1,28 @@
+/*
+ * test_src.hpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+#ifndef TEST_SRC_HPP_
+#define TEST_SRC_HPP_
+
+#include "CppUTest/CommandLineTestRunner.h"
+#include "CppUTest/TestHarness.h"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	void run_cpputests();
+
+#ifdef __cplusplus
+	}
+#endif
+
+
+
+
+#endif /* TEST_SRC_HPP_ */

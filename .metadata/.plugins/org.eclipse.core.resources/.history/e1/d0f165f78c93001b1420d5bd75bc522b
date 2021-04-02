@@ -1,0 +1,24 @@
+/*
+ * appmain.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+#include "appmain.hpp"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	void appmain()
+	{
+
+
+	}
+
+#ifdef __cplusplus
+	}
+#endif
+

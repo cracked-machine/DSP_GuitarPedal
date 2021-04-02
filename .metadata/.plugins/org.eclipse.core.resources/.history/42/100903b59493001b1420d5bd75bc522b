@@ -1,0 +1,22 @@
+/*
+ * test_src.cpp
+ *
+ *  Created on: Apr 2, 2021
+ *      Author: chris
+ */
+
+#include "test_src.hpp"
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+
+	const char * av_override[] = { }; // local variable in main()
+	CommandLineTestRunner::RunAllTests(0, av_override); // call after peripheral
+
+#ifdef __cplusplus
+	}
+#endif
+
