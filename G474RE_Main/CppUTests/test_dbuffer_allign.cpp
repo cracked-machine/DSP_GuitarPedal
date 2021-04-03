@@ -31,7 +31,7 @@
 #include "CppUTest/TestHarness.h"
 
 //#include "sine_lookup_table.hpp"
-std::array<int, 64> test_sine_lut {
+std::array<uint32_t, 64> test_sine_lut {
 
 	0x80,0x8c,0x98,0xa5,0xb0,0xbc,0xc6,0xd0,
 	0xda,0xe2,0xea,0xf0,0xf5,0xfa,0xfd,0xfe,
@@ -43,7 +43,7 @@ std::array<int, 64> test_sine_lut {
 	0x25,0x2f,0x39,0x43,0x4f,0x5a,0x67,0x73
 };
 
-std::array<int, 64> test_sine_lut_24b_left {
+std::array<uint32_t, 64> test_sine_lut_24b_left {
 
 	0x80<<4,0x8c<<4,0x98<<4,0xa5<<4,0xb0<<4,0xbc<<4,0xc6<<4,0xd0<<4,
 	0xda<<4,0xe2<<4,0xea<<4,0xf0<<4,0xf5<<4,0xfa<<4,0xfd<<4,0xfe<<4,
@@ -88,8 +88,8 @@ TEST(DbufferAllignGroup, DbufferRx_Allign8BitRight_Frame0)
 
 	while(test_count < (test_sine_lut.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
@@ -139,8 +139,8 @@ TEST(DbufferAllignGroup, DbufferTx_Allign8BitRight_Frame0)
 
 	while(test_count < (test_sine_lut.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
@@ -187,8 +187,8 @@ TEST(DbufferAllignGroup, DbufferRx_Allign24BitLeft_Frame0)
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
@@ -237,8 +237,8 @@ TEST(DbufferAllignGroup, DbufferTx_Allign24BitLeft_Frame0)
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
@@ -289,8 +289,8 @@ TEST(DbufferAllignGroup, DbufferRx_Allign8BitRight_Frame1)
 
 	while(test_count < (test_sine_lut.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
@@ -342,8 +342,8 @@ TEST(DbufferAllignGroup, DbufferTx_Allign8BitRight_Frame1)
 
 	while(test_count < (test_sine_lut.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
@@ -393,8 +393,8 @@ TEST(DbufferAllignGroup, DbufferRx_Allign24BitLeft_Frame1)
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
@@ -445,8 +445,8 @@ TEST(DbufferAllignGroup, DbufferTx_Allign24BitLeft_Frame1)
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
 	{
-		int left_sample = 0;
-		int right_sample = 0;
+		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );

@@ -31,7 +31,7 @@
 
 #include <array>
 
-std::array<int, 64> sine_lut {
+std::array<uint32_t, 64> sine_lut {
 
 	0x80,0x8c,0x98,0xa5,0xb0,0xbc,0xc6,0xd0,
 	0xda,0xe2,0xea,0xf0,0xf5,0xfa,0xfd,0xfe,
@@ -43,7 +43,7 @@ std::array<int, 64> sine_lut {
 	0x25,0x2f,0x39,0x43,0x4f,0x5a,0x67,0x73
 };
 
-
+/*
 uint32_t sine_data_table_1300[120] = {
 	3400, 3445, 3489, 3534, 3578, 3622, 3665, 3708, 3749, 3790,
 	3830, 3868, 3905, 3941, 3975, 4008, 4039, 4068, 4095, 4121,
@@ -59,7 +59,7 @@ uint32_t sine_data_table_1300[120] = {
 	2970, 3009, 3050, 3091, 3134, 3177, 3221, 3265, 3310, 3354
 };
 
-
+*/
 
 
 #endif /* SINE_LOOKUP_TABLE_HPP_ */

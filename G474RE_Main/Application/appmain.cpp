@@ -71,7 +71,7 @@ size_t sine_lut_index = 0;
 	uint16_t *tmpRx = dbuf.getRxBuf();
 	uint32_t *dbufRxDataWord = dbuf.getRxBuf32_left_chan();
 
-	uint32_t tmp = sine_data_table_1300[0];
+	//uint32_t tmp = sine_data_table_1300[0];
 
 	void init_test_manual_dac_updates();
 	void init_test_dma_dac_updates();
@@ -112,7 +112,7 @@ size_t sine_lut_index = 0;
 
 
 		//uint32_t n = 100;
-		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbufRxDataWord, 1, DAC_ALIGN_12B_R);
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf.getTxBuf32_left_chan(), 1, DAC_ALIGN_12B_R);
 	}
 
 	void test_dma_dac_updates()
@@ -122,10 +122,15 @@ size_t sine_lut_index = 0;
 		//std::cout << tmpRx[0] << " " << tmpRx[1] << "(" << (tmpRx[0] | tmpRx[1]) << ")" << std::endl;
 		//std::cout << dbufRxDataWord << std::endl;
 
+		//dbufRxDataWord = &sine_lut[sine_lut_index];
+
+
+		//dbuf.swap_active_frame();
+
 		// send data into Rx buffer frame #0
-		dbuf.writeRxFrame( 	&sine_lut[sine_lut_index],
-								&sine_lut[sine_lut_index],
-								DBufAllign::eight_bit_r);
+		dbuf.writeTxFrame( 	&sine_lut[sine_lut_index],
+							&sine_lut[sine_lut_index],
+							DBufAllign::eight_bit_r);
 
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 
@@ -150,19 +155,19 @@ size_t sine_lut_index = 0;
 		sine_lut_index = count & ( sine_lut.size() - 1 );
 
 		// send data into Rx buffer frame #0
-		dbuf.writeRxFrame( 	&sine_lut[sine_lut_index],
-								&sine_lut[sine_lut_index],
-								DBufAllign::eight_bit_r);
+		dbuf.writeTxFrame( 	&sine_lut[sine_lut_index],
+							&sine_lut[sine_lut_index],
+							DBufAllign::eight_bit_r);
 
-/*
+
 		// retrieve data from dsp Rx buffer frame #0
-		dbuf.readRxFrame( 	&left_sample,
-								&right_sample,
-								DBufAllign::eight_bit_r);
+		dbuf.readTxFrame( 	&left_sample,
+							&right_sample,
+							DBufAllign::eight_bit_r);
 
-*/
+
 		// or get data from the global rx buffer pointer created at startup
-		left_sample = (int) (( tmpRx[0] << int(DBufAllign::eight_bit_r) ) | tmpRx[1]);
+		//left_sample = (int) (( tmpRx[0] << int(DBufAllign::eight_bit_r) ) | tmpRx[1]);
 
 		HAL_DAC_SetValue(	&hdac1,
 							DAC_CHANNEL_1,

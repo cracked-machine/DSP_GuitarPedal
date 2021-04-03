@@ -51,7 +51,7 @@ TEST(DbufferGetWordPtrGroup, DbufferRxGetWordPtrLeftChan)
 
 	uint32_t *dbufRxDataWord = test_dbuf.getRxBuf32_left_chan();
 
-	int test_item = 125;
+	uint32_t test_item = 125;
 
 	// send data into Rx buffer frame #0
 	test_dbuf.writeRxFrame( 	&test_item,
@@ -69,7 +69,7 @@ TEST(DbufferGetWordPtrGroup, DbufferRxGetWordPtrRightChan)
 
 	uint32_t *dbufRxDataWord = test_dbuf.getRxBuf32_right_chan();
 
-	int test_item = 125;
+	uint32_t test_item = 125;
 
 	// send data into Rx buffer frame #0
 	test_dbuf.writeRxFrame( 	&test_item,
@@ -87,7 +87,7 @@ TEST(DbufferGetWordPtrGroup, DbufferTxGetWordPtrLeftChan)
 
 	uint32_t *dbufRxDataWord = test_dbuf.getTxBuf32_left_chan();
 
-	int test_item = 125;
+	uint32_t test_item = 125;
 
 	// send data into Rx buffer frame #0
 	test_dbuf.writeRxFrame( 	&test_item,
@@ -105,7 +105,7 @@ TEST(DbufferGetWordPtrGroup, DbufferTxGetWordPtrRightChan)
 
 	uint32_t *dbufRxDataWord = test_dbuf.getTxBuf32_right_chan();
 
-	int test_item = 125;
+	uint32_t test_item = 125;
 
 	// send data into Rx buffer frame #0
 	test_dbuf.writeRxFrame( 	&test_item,
