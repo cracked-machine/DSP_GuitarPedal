@@ -43,6 +43,12 @@ typedef enum
 } DBAllignTypedef;
 
 
+enum class DBufFrame : uint8_t
+{
+	frame0 = 0,
+	frame1 = 1
+};
+
 template <class T, size_t size>
 class double_buffer
 {
@@ -64,12 +70,48 @@ public:
 	uint8_t readTxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
 	uint8_t writeTxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
 
+	DBufFrame swap_current_buf_frame();
+	DBufFrame get_current_buf_frame();
+
 private:
+
+	DBufFrame _frame = DBufFrame::frame0;
 
 	std::array<T, size> _rxBuf;
 	std::array<T, size> _txBuf;
 
 };
+
+/*
+ * @brief swap the current buffer frame
+ *
+ * @param	None
+ *
+ * @retval	1 current frame is 1
+ * 			0 current frame is 0
+ *
+ */
+template <class T, size_t size>
+DBufFrame double_buffer<T, size>::swap_current_buf_frame()
+{
+	DBufFrame res;
+	switch(_frame)
+	{
+		case DBufFrame::frame0	:
+
+			_frame = DBufFrame::frame1;
+			res = get_current_buf_frame();
+			break;
+
+		case DBufFrame::frame1	:
+
+			_frame = DBufFrame::frame0;
+			res = get_current_buf_frame();
+			break;
+	}
+
+	return res;
+}
 
 /*
  * @brief Pull data from the specified Rx buffer
@@ -226,4 +268,11 @@ template <class T, size_t size> T* double_buffer<T, size>::getTxBuf()
 	return _txBuf.data();	// return c array from std::array
 }
 
+
+template <class T, size_t size> DBufFrame double_buffer<T, size>::get_current_buf_frame()
+{
+	return _frame;
+}
+
 #endif /* DSP_BUFFER_HPP_ */
+

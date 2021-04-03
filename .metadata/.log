@@ -8693,3 +8693,18 @@ java.lang.Exception: File: /home/chris/DSP_GuitarPedal/G474RE_Main/Debug/G474RE_
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 09:56:08.508
 !MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 10:45:12.584
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 10:45:58.856
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 10:46:43.938
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 10:48:47.519
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 10:58:23.338
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1

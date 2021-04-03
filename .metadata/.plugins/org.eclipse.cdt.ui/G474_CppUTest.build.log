@@ -1,7 +1,7 @@
-09:56:57 **** Clean-only build of configuration Debug for project G474_CppUTest ****
+10:59:07 **** Clean-only build of configuration Debug for project G474_CppUTest ****
 make -j4 clean 
 rm -rf *
  
 
-09:56:57 Build Finished. 0 errors, 0 warnings. (took 282ms)
+10:59:07 Build Finished. 0 errors, 0 warnings. (took 288ms)
 
