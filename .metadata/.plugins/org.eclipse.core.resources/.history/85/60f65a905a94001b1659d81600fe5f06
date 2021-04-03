@@ -43,6 +43,7 @@ typedef enum
 } DBAllignTypedef;
 
 
+
 template <class T, size_t size>
 class double_buffer
 {

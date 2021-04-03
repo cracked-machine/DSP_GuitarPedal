@@ -43,12 +43,13 @@ typedef enum
 } DBAllignTypedef;
 
 
+
 template <class T, size_t size>
-class double_buffer
+class dsp_double_buffer
 {
 
 public:
-	explicit double_buffer()
+	explicit dsp_double_buffer()
 	{
 		//assert(!size % 4);
 		_rxBuf.fill(0);
@@ -84,7 +85,7 @@ private:
  *
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
+uint8_t dsp_double_buffer<T, size>::readRxSample(	int *left_sample,
 														int *right_sample,
 														size_t pos,
 														DBAllignTypedef allignment)
@@ -95,7 +96,6 @@ uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 	}
 	else
 	{
-
 		*left_sample = (int) (( _rxBuf[pos + 0] << allignment ) | _rxBuf[pos + 1]);
 		*right_sample = (int) (( _rxBuf[pos + 2] << allignment ) | _rxBuf[pos + 3]);
 		return 0;
@@ -117,7 +117,7 @@ uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
+uint8_t dsp_double_buffer<T, size>::writeTxSample(int *left_sample,
 												int *right_sample,
 												size_t pos,
 												DBAllignTypedef allignment)
@@ -150,7 +150,7 @@ uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
  *
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
+uint8_t dsp_double_buffer<T, size>::readTxSample(	int *left_sample,
 														int *right_sample,
 														size_t pos,
 														DBAllignTypedef allignment)
@@ -180,7 +180,7 @@ uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
+uint8_t dsp_double_buffer<T, size>::writeRxSample(int *left_sample,
 												int *right_sample,
 												size_t pos,
 												DBAllignTypedef allignment)
@@ -208,7 +208,7 @@ uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
  * @retval	the Rx buffer pointer
  *
  */
-template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
+template <class T, size_t size> T* dsp_double_buffer<T, size>::getRxBuf()
 {
 	return _rxBuf.data();	// return c array from std::array
 }
@@ -221,7 +221,7 @@ template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
  * @retval	the Tx buffer pointer
  *
  */
-template <class T, size_t size> T* double_buffer<T, size>::getTxBuf()
+template <class T, size_t size> T* dsp_double_buffer<T, size>::getTxBuf()
 {
 	return _txBuf.data();	// return c array from std::array
 }

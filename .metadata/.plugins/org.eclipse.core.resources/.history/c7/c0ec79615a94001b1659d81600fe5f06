@@ -65,7 +65,7 @@ size_t sine_lut_index = 0;
 	{
 #endif
 	const size_t dsp_buf_size = 8;
-	double_buffer<uint16_t, dsp_buf_size> dspbuf;
+	dsp_double_buffer<uint16_t, dsp_buf_size> dspbuf;
 
 	void appmain()
 	{

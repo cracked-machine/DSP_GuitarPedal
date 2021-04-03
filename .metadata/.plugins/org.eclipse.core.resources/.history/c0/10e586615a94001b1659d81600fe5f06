@@ -81,7 +81,7 @@ TEST(BUfferAllignmentGroup, DspBufferRx_Allign8BitRight)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 8;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	dsp_double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
 
 	while(test_count < (test_sine_lut.size()) )
@@ -127,7 +127,7 @@ TEST(BUfferAllignmentGroup, DspBufferTx_Allign8BitRight)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 8;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	dsp_double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
 
 	while(test_count < (test_sine_lut.size()) )
@@ -173,7 +173,7 @@ TEST(BUfferAllignmentGroup, DspBufferRx_Allign24BitLeft)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 8;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	dsp_double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
@@ -219,7 +219,7 @@ TEST(BUfferAllignmentGroup, DspBufferTx_Allign24BitLeft)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 8;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	dsp_double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
