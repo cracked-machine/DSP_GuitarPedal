@@ -53,7 +53,7 @@
 
 // Application sources
 #include "dsp_buffer.hpp"
-#include "cpputests_dsp_buffer.hpp"
+#include "cpputests_main.hpp"
 
 size_t count = 0;
 size_t sine_lut_index = 0;

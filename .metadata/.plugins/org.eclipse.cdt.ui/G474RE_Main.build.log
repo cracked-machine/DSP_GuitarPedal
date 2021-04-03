@@ -1,7 +1,7 @@
-10:59:07 **** Clean-only build of configuration Debug for project G474RE_Main ****
+11:08:21 **** Clean-only build of configuration Debug for project G474RE_Main ****
 make -j4 clean 
 rm -rf *
  
 
-10:59:07 Build Finished. 0 errors, 0 warnings. (took 247ms)
+11:08:21 Build Finished. 0 errors, 0 warnings. (took 290ms)
 

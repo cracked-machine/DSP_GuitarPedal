@@ -15,5 +15,5 @@ OBJS += \
 
 # Each subdirectory must supply rules for building sources it contributes
 Core/Startup/startup_stm32g474retx.o: ../Core/Startup/startup_stm32g474retx.s
-	arm-none-eabi-gcc -mcpu=cortex-m4 -c -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32g474retx.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m4 -c -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32g474retx.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@" "$<"
 
