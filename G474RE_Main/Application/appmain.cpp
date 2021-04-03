@@ -107,30 +107,50 @@ size_t sine_lut_index = 0;
 	void init_test_dma_dac_updates()
 	{
 		HAL_TIM_Base_Start_IT(&htim6);
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)sine_data_table_1300, 120, DAC_ALIGN_12B_R);
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)sine_lut.data(), 64, DAC_ALIGN_8B_R);
-
-
-		//uint32_t n = 100;
 		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf.getTxBuf32_left_chan(), 1, DAC_ALIGN_12B_R);
 	}
 
 	void test_dma_dac_updates()
 	{
 
+		// increment the LUT position (circular)
 		sine_lut_index = count & ( sine_lut.size() - 1 );
+
+
 		//std::cout << tmpRx[0] << " " << tmpRx[1] << "(" << (tmpRx[0] | tmpRx[1]) << ")" << std::endl;
 		//std::cout << dbufRxDataWord << std::endl;
 
-		//dbufRxDataWord = &sine_lut[sine_lut_index];
+		std::cout << sine_lut[sine_lut_index] << std::endl;
+		std::cout << *dbuf.getRxBuf32_left_chan() << std::endl;
+
+		// direct copy data into auxiliary RxBuf32 pointer
+		*dbufRxDataWord = sine_lut[sine_lut_index];
+
+		std::cout << *dbuf.getRxBuf32_left_chan() << std::endl;
+
+		// update the central Rxbuffer from auxiliary RxBuf32 pointer
+		dbuf.updateRxFrame( DBufAllign::eight_bit_r );
+
+
+		// now read the central Rxbuffer values back
+		uint32_t ltest = 0;
+		uint32_t rtest = 0;
+		dbuf.readRxFrame(	&ltest,
+							&rtest,
+							DBufAllign::eight_bit_r
+							);
+
+		std::cout << ltest << std::endl;
+
 
 
 		//dbuf.swap_active_frame();
 
 		// send data into Rx buffer frame #0
-		dbuf.writeTxFrame( 	&sine_lut[sine_lut_index],
-							&sine_lut[sine_lut_index],
-							DBufAllign::eight_bit_r);
+		dbuf.writeTxFrame( 	&ltest,
+							&rtest,
+							DBufAllign::eight_bit_r
+							);
 
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 
@@ -148,8 +168,8 @@ size_t sine_lut_index = 0;
 
 	void test_manual_dac_updates()
 	{
- 		int left_sample = 0;
-		int right_sample = 0;
+ 		uint32_t left_sample = 0;
+		uint32_t right_sample = 0;
 
 		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
 		sine_lut_index = count & ( sine_lut.size() - 1 );

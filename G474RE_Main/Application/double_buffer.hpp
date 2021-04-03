@@ -70,17 +70,13 @@ public:
 	uint32_t* getTxBuf32_left_chan();
 	uint32_t* getTxBuf32_right_chan();
 
-
-	uint8_t readRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
 	uint8_t readRxFrame(uint32_t *left_sample, uint32_t *right_sample, DBufAllign allignment);
+	uint8_t updateRxFrame(DBufAllign allignment);
 
-	uint8_t writeRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
 	uint8_t writeRxFrame(uint32_t *left_sample, uint32_t *right_sample, DBufAllign allignment);
 
-	uint8_t readTxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
 	uint8_t readTxFrame(uint32_t *left_sample, uint32_t *right_sample, DBufAllign allignment);
 
-	uint8_t writeTxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
 	uint8_t writeTxFrame(uint32_t *left_sample, uint32_t *right_sample, DBufAllign allignment);
 
 	DBufFrame swap_active_frame();
@@ -173,6 +169,33 @@ DBufFrame double_buffer<T, size>::swap_active_frame()
  */
 
 template <class T, size_t size>
+uint8_t double_buffer<T, size>::updateRxFrame(	DBufAllign allignment)
+{
+
+	switch(_active_frame)
+	{
+		case DBufFrame::frame0	:
+				_rxBuf[0] = (_rxBuf32_left_chan >> int(allignment) ) & 0xFFFF;
+				_rxBuf[1] = _rxBuf32_left_chan & 0xFFFF;
+				_rxBuf[2] = (_rxBuf32_right_chan >> int(allignment) ) & 0xFFFF;
+				_rxBuf[3] = _rxBuf32_right_chan & 0xFFFF;
+			break;
+
+		case DBufFrame::frame1	:
+				_rxBuf[4] = (_rxBuf32_left_chan >> int(allignment) ) & 0xFFFF;
+				_rxBuf[5] = _rxBuf32_left_chan & 0xFFFF;
+				_rxBuf[6] = (_rxBuf32_right_chan >> int(allignment) ) & 0xFFFF;
+				_rxBuf[7] = _rxBuf32_right_chan & 0xFFFF;
+			break;
+	}
+
+	return 0;
+
+
+}
+
+
+template <class T, size_t size>
 uint8_t double_buffer<T, size>::readRxFrame(	uint32_t *left_sample,
 												uint32_t *right_sample,
 												DBufAllign allignment)
@@ -182,15 +205,18 @@ uint8_t double_buffer<T, size>::readRxFrame(	uint32_t *left_sample,
 	{
 		case DBufFrame::frame0	:
 
-			*left_sample = (int) (( _rxBuf[0] << int(allignment) ) | _rxBuf[1]);
-			*right_sample = (int) (( _rxBuf[2] << int(allignment) ) | _rxBuf[3]);
+
+				*left_sample = (int) (( _rxBuf[0] << int(allignment) ) | _rxBuf[1]);
+				*right_sample = (int) (( _rxBuf[2] << int(allignment) ) | _rxBuf[3]);
 
 			break;
 
 		case DBufFrame::frame1	:
 
-			*left_sample = (int) (( _rxBuf[4] << int(allignment) ) | _rxBuf[5]);
-			*right_sample = (int) (( _rxBuf[6] << int(allignment) ) | _rxBuf[7]);
+
+				*left_sample = (int) (( _rxBuf[4] << int(allignment) ) | _rxBuf[5]);
+				*right_sample = (int) (( _rxBuf[6] << int(allignment) ) | _rxBuf[7]);
+
 
 			break;
 	}
