@@ -57,10 +57,10 @@ public:
 	explicit double_buffer()
 	{
 		//assert(!size % 4);
-		_rxBuf_frame0.fill(0);
-		_txBuf_frame0.fill(0);
-		_rxBuf_frame1.fill(0);
-		_txBuf_frame1.fill(0);
+//		_rxBuf_frame0.fill(0);
+//		_txBuf_frame0.fill(0);
+		_rxBuf.fill(0);
+		_txBuf.fill(0);
 	}
 
 	T* getRxBuf();
@@ -79,16 +79,13 @@ private:
 
 	DBufFrame _active_frame = DBufFrame::frame0;
 
-	std::array<T, size*2> _rxBuf_bothFrames;
-	std::array<T, size*2> _txBuf_bothFrames;
+	std::array<T, size*2> _rxBuf;
+	std::array<T, size*2> _txBuf;
 
-	std::array<T, size> _rxBuf_frame0;
-	std::array<T, size> _txBuf_frame0;
-
-	std::array<T, size> _rxBuf_frame1;
-	std::array<T, size> _txBuf_frame1;
 
 };
+
+
 
 /*
  * @brief swap the current buffer frame
@@ -115,20 +112,6 @@ DBufFrame double_buffer<T, size>::swap_active_frame()
 
 			_active_frame = DBufFrame::frame0;
 			res = get_active_frame();
-			break;
-	}
-
-
-	switch(_active_frame)
-	{
-		case DBufFrame::frame0	:
-
-
-			break;
-
-		case DBufFrame::frame1	:
-
-
 			break;
 	}
 
@@ -160,14 +143,14 @@ uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
 	{
 		case DBufFrame::frame0	:
 
-			*left_sample = (int) (( _rxBuf_frame0[0] << int(allignment) ) | _rxBuf_frame0[1]);
-			*right_sample = (int) (( _rxBuf_frame0[2] << int(allignment) ) | _rxBuf_frame0[3]);
+			*left_sample = (int) (( _rxBuf[0] << int(allignment) ) | _rxBuf[1]);
+			*right_sample = (int) (( _rxBuf[2] << int(allignment) ) | _rxBuf[3]);
 			break;
 
 		case DBufFrame::frame1	:
 
-			*left_sample = (int) (( _rxBuf_frame1[0] << int(allignment) ) | _rxBuf_frame1[1]);
-			*right_sample = (int) (( _rxBuf_frame1[2] << int(allignment) ) | _rxBuf_frame1[3]);
+			*left_sample = (int) (( _rxBuf[4] << int(allignment) ) | _rxBuf[5]);
+			*right_sample = (int) (( _rxBuf[6] << int(allignment) ) | _rxBuf[7]);
 			break;
 	}
 
@@ -200,14 +183,14 @@ uint8_t double_buffer<T, size>::readTxFrame(	int *left_sample,
 	{
 		case DBufFrame::frame0	:
 
-			*left_sample = (int) (( _txBuf_frame0[0] << int(allignment) ) | _txBuf_frame0[1]);
-			*right_sample = (int) (( _txBuf_frame0[2] << int(allignment) ) | _txBuf_frame0[3]);
+			*left_sample = (int) (( _txBuf[0] << int(allignment) ) | _txBuf[1]);
+			*right_sample = (int) (( _txBuf[2] << int(allignment) ) | _txBuf[3]);
 			break;
 
 		case DBufFrame::frame1	:
 
-			*left_sample = (int) (( _txBuf_frame1[0] << int(allignment) ) | _txBuf_frame1[1]);
-			*right_sample = (int) (( _txBuf_frame1[2] << int(allignment) ) | _txBuf_frame1[3]);
+			*left_sample = (int) (( _txBuf[4] << int(allignment) ) | _txBuf[5]);
+			*right_sample = (int) (( _txBuf[6] << int(allignment) ) | _txBuf[7]);
 			break;
 	}
 
@@ -239,23 +222,20 @@ uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
 	{
 		case DBufFrame::frame0	:
 
-			_txBuf_frame0[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame0[1] = (*left_sample) & 0xFFFF;
-			_txBuf_frame0[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame0[3] = (*right_sample) & 0xFFFF;
+			_txBuf[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf[1] = (*left_sample) & 0xFFFF;
+			_txBuf[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf[3] = (*right_sample) & 0xFFFF;
 			break;
 
 		case DBufFrame::frame1	:
 
-			_txBuf_frame1[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame1[1] = (*left_sample) & 0xFFFF;
-			_txBuf_frame1[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame1[3] = (*right_sample) & 0xFFFF;
+			_txBuf[4] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf[5] = (*left_sample) & 0xFFFF;
+			_txBuf[6] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf[7] = (*right_sample) & 0xFFFF;
 			break;
 	}
-
-	// update the conjoined buffer
-	getTxBuf();
 
 	return 0;
 }
@@ -285,23 +265,20 @@ uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
 	{
 		case DBufFrame::frame0	:
 
-			_rxBuf_frame0[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
-			_rxBuf_frame0[1] = (*left_sample) & 0xFFFF;
-			_rxBuf_frame0[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
-			_rxBuf_frame0[3] = (*right_sample) & 0xFFFF;
+			_rxBuf[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
+			_rxBuf[1] = (*left_sample) & 0xFFFF;
+			_rxBuf[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
+			_rxBuf[3] = (*right_sample) & 0xFFFF;
 			break;
 
 		case DBufFrame::frame1	:
 
-			_rxBuf_frame1[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
-			_rxBuf_frame1[1] = (*left_sample) & 0xFFFF;
-			_rxBuf_frame1[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
-			_rxBuf_frame1[3] = (*right_sample) & 0xFFFF;
+			_rxBuf[4] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
+			_rxBuf[5] = (*left_sample) & 0xFFFF;
+			_rxBuf[6] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
+			_rxBuf[7] = (*right_sample) & 0xFFFF;
 			break;
 	}
-
-	// update the conjoined buffer
-	getRxBuf();
 
 	return 0;
 
@@ -319,9 +296,7 @@ template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
 {
 	//return _rxBuf_frame0.data();	// return c array from std::array
 	// return both rx frames conjoined into a c-style array
-	std::copy(_rxBuf_frame0.data(), _rxBuf_frame0.data() + size,_rxBuf_bothFrames.data());
-	std::copy(_rxBuf_frame1.data(), _rxBuf_frame1.data() + size,_rxBuf_bothFrames.data() + size);
-	return _rxBuf_bothFrames.data();
+	return _rxBuf.data();
 }
 
 /*
@@ -335,9 +310,7 @@ template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
 template <class T, size_t size> T* double_buffer<T, size>::getTxBuf()
 {
 	// return both tx frames conjoined into a c-style array
-	std::copy(_txBuf_frame0.data(), _txBuf_frame0.data() + size,_txBuf_bothFrames.data());
-	std::copy(_txBuf_frame1.data(), _txBuf_frame1.data() + size,_txBuf_bothFrames.data() + size);
-	return _txBuf_bothFrames.data();
+	return _txBuf.data();
 }
 
 
