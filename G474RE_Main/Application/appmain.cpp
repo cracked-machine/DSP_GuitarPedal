@@ -64,7 +64,8 @@ size_t sine_lut_index = 0;
 	extern "C"
 	{
 #endif
-	const size_t dsp_buf_size = 8;
+	// create double buffer of frame size = 4 * uint16_t
+	const size_t dsp_buf_size = 4;
 	double_buffer<uint16_t, dsp_buf_size> dspbuf;
 
 	void appmain()
@@ -99,13 +100,11 @@ size_t sine_lut_index = 0;
 		// send data into Rx buffer #1
 		dspbuf.writeRxSample( 	&sine_lut[sine_lut_index],
 									&sine_lut[sine_lut_index],
-									3 ,
 									DBUF_ALLIGN_8B_R);
 
 		// retrieve data from dsp Rx buffer #1
 		dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
-									3,
 									DBUF_ALLIGN_8B_R);
 
 

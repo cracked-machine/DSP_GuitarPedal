@@ -933,7 +933,7 @@ uint32_t HAL_SAI_GetError(SAI_HandleTypeDef *hsai);
 
 #define IS_SAI_BLOCK_FRAME_LENGTH(LENGTH) ((8U <= (LENGTH)) && ((LENGTH) <= 256U))
 
-#define IS_SAI_BLOCK_ACTIVE_FRAME(LENGTH) ((1U <= (LENGTH)) && ((LENGTH) <= 128U))
+#define IS_SAI_BLOCK_ACTIVE_active_frame(LENGTH) ((1U <= (LENGTH)) && ((LENGTH) <= 128U))
 
 /**
   * @}

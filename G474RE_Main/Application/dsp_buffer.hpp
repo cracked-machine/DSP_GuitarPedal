@@ -57,28 +57,33 @@ public:
 	explicit double_buffer()
 	{
 		//assert(!size % 4);
-		_rxBuf.fill(0);
-		_txBuf.fill(0);
+		_rxBuf_frame0.fill(0);
+		_txBuf_frame0.fill(0);
+		_rxBuf_frame1.fill(0);
+		_txBuf_frame1.fill(0);
 	}
 
 	T* getRxBuf();
 	T* getTxBuf();
 
-	uint8_t readRxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
-	uint8_t writeRxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t readRxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
+	uint8_t writeRxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
 
-	uint8_t readTxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
-	uint8_t writeTxSample(int *left_sample, int *right_sample, size_t pos, DBAllignTypedef allignment);
+	uint8_t readTxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
+	uint8_t writeTxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
 
-	DBufFrame swap_current_buf_frame();
-	DBufFrame get_current_buf_frame();
+	DBufFrame swap_active_frame();
+	DBufFrame get_active_frame();
 
 private:
 
-	DBufFrame _frame = DBufFrame::frame0;
+	DBufFrame _active_frame = DBufFrame::frame0;
 
-	std::array<T, size> _rxBuf;
-	std::array<T, size> _txBuf;
+	std::array<T, size> _rxBuf_frame0;
+	std::array<T, size> _txBuf_frame0;
+
+	std::array<T, size> _rxBuf_frame1;
+	std::array<T, size> _txBuf_frame1;
 
 };
 
@@ -92,21 +97,35 @@ private:
  *
  */
 template <class T, size_t size>
-DBufFrame double_buffer<T, size>::swap_current_buf_frame()
+DBufFrame double_buffer<T, size>::swap_active_frame()
 {
 	DBufFrame res;
-	switch(_frame)
+	switch(_active_frame)
 	{
 		case DBufFrame::frame0	:
 
-			_frame = DBufFrame::frame1;
-			res = get_current_buf_frame();
+			_active_frame = DBufFrame::frame1;
+			res = get_active_frame();
 			break;
 
 		case DBufFrame::frame1	:
 
-			_frame = DBufFrame::frame0;
-			res = get_current_buf_frame();
+			_active_frame = DBufFrame::frame0;
+			res = get_active_frame();
+			break;
+	}
+
+
+	switch(_active_frame)
+	{
+		case DBufFrame::frame0	:
+
+
+			break;
+
+		case DBufFrame::frame1	:
+
+
 			break;
 	}
 
@@ -128,20 +147,26 @@ DBufFrame double_buffer<T, size>::swap_current_buf_frame()
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 														int *right_sample,
-														size_t pos,
 														DBAllignTypedef allignment)
 {
-	if(pos + 3 > _rxBuf.size())
-	{
-		return 1;
-	}
-	else
-	{
 
-		*left_sample = (int) (( _rxBuf[pos + 0] << allignment ) | _rxBuf[pos + 1]);
-		*right_sample = (int) (( _rxBuf[pos + 2] << allignment ) | _rxBuf[pos + 3]);
-		return 0;
+	switch(_active_frame)
+	{
+		case DBufFrame::frame0	:
+
+			*left_sample = (int) (( _rxBuf_frame0[0] << allignment ) | _rxBuf_frame0[1]);
+			*right_sample = (int) (( _rxBuf_frame0[2] << allignment ) | _rxBuf_frame0[3]);
+			break;
+
+		case DBufFrame::frame1	:
+
+			*left_sample = (int) (( _rxBuf_frame1[0] << allignment ) | _rxBuf_frame1[1]);
+			*right_sample = (int) (( _rxBuf_frame1[2] << allignment ) | _rxBuf_frame1[3]);
+			break;
 	}
+
+	return 0;
+
 
 }
 
@@ -161,22 +186,29 @@ uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
 												int *right_sample,
-												size_t pos,
 												DBAllignTypedef allignment)
 {
-	if(pos + 3 > _txBuf.size())
+	//restore to buffer
+	switch(_active_frame)
 	{
-		return 1;
+		case DBufFrame::frame0	:
+
+			_txBuf_frame0[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame0[1] = (*left_sample) & 0xFFFF;
+			_txBuf_frame0[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame0[3] = (*right_sample) & 0xFFFF;
+			break;
+
+		case DBufFrame::frame1	:
+
+			_txBuf_frame1[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame1[1] = (*left_sample) & 0xFFFF;
+			_txBuf_frame1[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame1[3] = (*right_sample) & 0xFFFF;
+			break;
 	}
-	else
-	{
-		//restore to buffer
-		_txBuf[pos + 0] = ( (*left_sample) >> allignment ) & 0xFFFF;
-		_txBuf[pos + 1] = (*left_sample) & 0xFFFF;
-		_txBuf[pos + 2] = ( (*right_sample) >> allignment ) & 0xFFFF;
-		_txBuf[pos + 3] = (*right_sample) & 0xFFFF;
-		return 0;
-	}
+
+	return 0;
 }
 
 /*
@@ -194,19 +226,26 @@ uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
 														int *right_sample,
-														size_t pos,
 														DBAllignTypedef allignment)
 {
-	if(pos + 3 > _txBuf.size())
+
+	switch(_active_frame)
 	{
-		return 1;
+		case DBufFrame::frame0	:
+
+			*left_sample = (int) (( _txBuf_frame0[0] << allignment ) | _txBuf_frame0[1]);
+			*right_sample = (int) (( _txBuf_frame0[2] << allignment ) | _txBuf_frame0[3]);
+			break;
+
+		case DBufFrame::frame1	:
+
+			*left_sample = (int) (( _txBuf_frame1[0] << allignment ) | _txBuf_frame1[1]);
+			*right_sample = (int) (( _txBuf_frame1[2] << allignment ) | _txBuf_frame1[3]);
+			break;
 	}
-	else
-	{
-		*left_sample = (int) (( _txBuf[pos + 0] << allignment ) | _txBuf[pos + 1]);
-		*right_sample = (int) (( _txBuf[pos + 2] << allignment ) | _txBuf[pos + 3]);
-		return 0;
-	}
+
+	return 0;
+
 
 }
 
@@ -224,22 +263,31 @@ uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
 												int *right_sample,
-												size_t pos,
 												DBAllignTypedef allignment)
 {
-	if(pos + 3 > _rxBuf.size())
+
+	//restore to buffer
+	switch(_active_frame)
 	{
-		return 1;
+		case DBufFrame::frame0	:
+
+			_rxBuf_frame0[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame0[1] = (*left_sample) & 0xFFFF;
+			_rxBuf_frame0[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame0[3] = (*right_sample) & 0xFFFF;
+			break;
+
+		case DBufFrame::frame1	:
+
+			_rxBuf_frame1[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame1[1] = (*left_sample) & 0xFFFF;
+			_rxBuf_frame1[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame1[3] = (*right_sample) & 0xFFFF;
+			break;
 	}
-	else
-	{
-		//restore to buffer
-		_rxBuf[pos + 0] = ( (*left_sample) >> allignment ) & 0xFFFF;
-		_rxBuf[pos + 1] = (*left_sample) & 0xFFFF;
-		_rxBuf[pos + 2] = ( (*right_sample) >> allignment ) & 0xFFFF;
-		_rxBuf[pos + 3] = (*right_sample) & 0xFFFF;
-		return 0;
-	}
+
+	return 0;
+
 }
 
 /*
@@ -252,7 +300,7 @@ uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
  */
 template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
 {
-	return _rxBuf.data();	// return c array from std::array
+	return _rxBuf_frame0.data();	// return c array from std::array
 }
 
 /*
@@ -265,13 +313,13 @@ template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
  */
 template <class T, size_t size> T* double_buffer<T, size>::getTxBuf()
 {
-	return _txBuf.data();	// return c array from std::array
+	return _txBuf_frame0.data();	// return c array from std::array
 }
 
 
-template <class T, size_t size> DBufFrame double_buffer<T, size>::get_current_buf_frame()
+template <class T, size_t size> DBufFrame double_buffer<T, size>::get_active_frame()
 {
-	return _frame;
+	return _active_frame;
 }
 
 #endif /* DSP_BUFFER_HPP_ */

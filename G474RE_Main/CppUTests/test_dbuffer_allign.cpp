@@ -79,7 +79,7 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign8BitRight)
 
 	size_t test_count = 0;
 	size_t test_sine_lut_index = 0;
-	const size_t dsp_buf_size = 8;
+	const size_t dsp_buf_size = 4;
 
 	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
@@ -95,13 +95,11 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign8BitRight)
 		// send data into Rx buffer #1
 		test_dspbuf.writeRxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
-									3 ,
 									DBUF_ALLIGN_8B_R);
 
 		// retrieve data from dsp Rx buffer #1
 		test_dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
-									3,
 									DBUF_ALLIGN_8B_R);
 
 
@@ -125,7 +123,7 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign8BitRight)
 
 	size_t test_count = 0;
 	size_t test_sine_lut_index = 0;
-	const size_t dsp_buf_size = 8;
+	const size_t dsp_buf_size = 4;
 
 	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
@@ -141,13 +139,11 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign8BitRight)
 		// send data into Rx buffer #1
 		test_dspbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
-									3 ,
 									DBUF_ALLIGN_8B_R);
 
 		// retrieve data from dsp Rx buffer #1
 		test_dspbuf.readTxSample( 	&left_sample,
 									&right_sample,
-									3,
 									DBUF_ALLIGN_8B_R);
 
 
@@ -171,7 +167,7 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign24BitLeft)
 
 	size_t test_count = 0;
 	size_t test_sine_lut_index = 0;
-	const size_t dsp_buf_size = 8;
+	const size_t dsp_buf_size = 4;
 
 	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
@@ -187,13 +183,11 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign24BitLeft)
 		// send data into Rx buffer #1
 		test_dspbuf.writeRxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
-									3 ,
 									DBUF_ALLIGN_24B_L);
 
 		// retrieve data from dsp Rx buffer #1
 		test_dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
-									3,
 									DBUF_ALLIGN_24B_L);
 
 
@@ -217,7 +211,7 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign24BitLeft)
 
 	size_t test_count = 0;
 	size_t test_sine_lut_index = 0;
-	const size_t dsp_buf_size = 8;
+	const size_t dsp_buf_size = 4;
 
 	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
 
@@ -233,13 +227,11 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign24BitLeft)
 		// send data into Rx buffer #1
 		test_dspbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
-									3 ,
 									DBUF_ALLIGN_24B_L);
 
 		// retrieve data from dsp Rx buffer #1
 		test_dspbuf.readTxSample( 	&left_sample,
 									&right_sample,
-									3,
 									DBUF_ALLIGN_24B_L);
 
 

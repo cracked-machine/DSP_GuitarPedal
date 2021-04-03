@@ -1,5 +1,5 @@
 /*
- *  	test_dbuffer_frame.cpp
+ *  	test_dbuffer_active_frame.cpp
  *
  *  	Created on: Apr 3, 2021
  *		
@@ -48,15 +48,15 @@ TEST(DbufferFrameGroup, DbufferFrameSwapPass)
 
 	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
 
-	DBufFrame current_frame = test_dbuf.get_current_buf_frame();
+	DBufFrame current_active_frame = test_dbuf.get_active_frame();
 
-	DBufFrame swapped_frame = test_dbuf.swap_current_buf_frame();
+	DBufFrame swapped_active_frame = test_dbuf.swap_active_frame();
 
-	CHECK_FALSE(current_frame == swapped_frame);	// pass
+	CHECK_FALSE(current_active_frame == swapped_active_frame);			// pass
 
-	swapped_frame = test_dbuf.swap_current_buf_frame();
+	swapped_active_frame = test_dbuf.swap_active_frame();
 
-	CHECK(current_frame == swapped_frame);			// pass
+	CHECK(current_active_frame == swapped_active_frame);				// pass
 }
 
 
