@@ -26,8 +26,8 @@
  * 		SOFTWARE.
  */
 
+#include <double_buffer.hpp>
 #include "CppUTest/TestHarness.h"
-#include "dsp_buffer.hpp"
 
 TEST_GROUP(DbufferFrameGroup)
 {

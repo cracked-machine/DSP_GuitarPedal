@@ -28,6 +28,7 @@
  */
 
 // header
+#include <double_buffer.hpp>
 #include <tests_main.hpp>
 #include <tests_main.hpp>
 #include "appmain.hpp"
@@ -53,7 +54,6 @@
 #include "gpio.h"
 
 // Application sources
-#include "dsp_buffer.hpp"
 
 size_t count = 0;
 size_t sine_lut_index = 0;
@@ -114,6 +114,8 @@ size_t sine_lut_index = 0;
 							left_sample);
 
 		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+
+
 		//HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_lut[sine_lut_index]);
 
 		//increment the counter

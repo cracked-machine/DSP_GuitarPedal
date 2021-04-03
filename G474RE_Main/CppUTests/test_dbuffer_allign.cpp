@@ -27,8 +27,8 @@
  */
 
 
+#include <double_buffer.hpp>
 #include "CppUTest/TestHarness.h"
-#include "dsp_buffer.hpp"
 
 //#include "sine_lookup_table.hpp"
 std::array<int, 64> test_sine_lut {
