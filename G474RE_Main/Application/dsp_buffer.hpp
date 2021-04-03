@@ -33,14 +33,12 @@
 #include <assert.h>
 
 
-
-typedef enum
+enum class DBufAllign : uint8_t
 {
-	DBUF_ALLIGN_8B_R	= 4,		// 16-bit data right packed in 32-bit frame xxxxAABB
-	DBUF_ALLIGN_16B_L	= 16,		// 16-bit data left packed in 32-bit frame AABBxxxx
-	DBUF_ALLIGN_24B_L	= 16		// 24-bit data left packed in 32-bit frame AABBCCxx
-
-} DBAllignTypedef;
+	eight_bit_r 		= 4,		// 16-bit data right packed in 32-bit frame xxxxAABB
+	sixteen_bit_l 		= 16,		// 16-bit data left packed in 32-bit frame AABBxxxx
+	twentyfour_bit_l	= 16		// 24-bit data left packed in 32-bit frame AABBCCxx
+};
 
 
 enum class DBufFrame : uint8_t
@@ -66,11 +64,11 @@ public:
 	T* getRxBuf();
 	T* getTxBuf();
 
-	uint8_t readRxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
-	uint8_t writeRxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
+	uint8_t readRxSample(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t writeRxSample(int *left_sample, int *right_sample, DBufAllign allignment);
 
-	uint8_t readTxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
-	uint8_t writeTxSample(int *left_sample, int *right_sample, DBAllignTypedef allignment);
+	uint8_t readTxSample(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t writeTxSample(int *left_sample, int *right_sample, DBufAllign allignment);
 
 	DBufFrame swap_active_frame();
 	DBufFrame get_active_frame();
@@ -137,8 +135,11 @@ DBufFrame double_buffer<T, size>::swap_active_frame()
  *
  * @param	left_sample 	- the output left channel sample
  * 			right_smaple 	- the output right channel sample
- * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
- * 			//TODO use enums to represent two halves of ping pong buffer instead
+ * 			allignment		- packet bit allignment
+ * 							eight_bit_r 		= 4,	// 16-bit data right packed in 32-bit frame xxxxAABB
+ * 							sixteen_bit_l 		= 16,	// 16-bit data left packed in 32-bit frame AABBxxxx
+ * 							twentyfour_bit_l	= 16	// 24-bit data left packed in 32-bit frame AABBCCxx
+
  *
  * @retval	1 if pos param is pos+ 3 larger than buffer size
  * 			0 if pos param valid
@@ -147,21 +148,21 @@ DBufFrame double_buffer<T, size>::swap_active_frame()
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 														int *right_sample,
-														DBAllignTypedef allignment)
+														DBufAllign allignment)
 {
 
 	switch(_active_frame)
 	{
 		case DBufFrame::frame0	:
 
-			*left_sample = (int) (( _rxBuf_frame0[0] << allignment ) | _rxBuf_frame0[1]);
-			*right_sample = (int) (( _rxBuf_frame0[2] << allignment ) | _rxBuf_frame0[3]);
+			*left_sample = (int) (( _rxBuf_frame0[0] << int(allignment) ) | _rxBuf_frame0[1]);
+			*right_sample = (int) (( _rxBuf_frame0[2] << int(allignment) ) | _rxBuf_frame0[3]);
 			break;
 
 		case DBufFrame::frame1	:
 
-			*left_sample = (int) (( _rxBuf_frame1[0] << allignment ) | _rxBuf_frame1[1]);
-			*right_sample = (int) (( _rxBuf_frame1[2] << allignment ) | _rxBuf_frame1[3]);
+			*left_sample = (int) (( _rxBuf_frame1[0] << int(allignment) ) | _rxBuf_frame1[1]);
+			*right_sample = (int) (( _rxBuf_frame1[2] << int(allignment) ) | _rxBuf_frame1[3]);
 			break;
 	}
 
@@ -177,8 +178,10 @@ uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
  *
  * @param	left_sample 	- the input left channel sample
  * 			right_smaple 	- the input right channel sample
- * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
- * 			//TODO use enums to represent two halves of ping pong buffer instead
+ * 			allignment		- packet bit allignment
+ * 							eight_bit_r 		= 4,	// 16-bit data right packed in 32-bit frame xxxxAABB
+ * 							sixteen_bit_l 		= 16,	// 16-bit data left packed in 32-bit frame AABBxxxx
+ * 							twentyfour_bit_l	= 16	// 24-bit data left packed in 32-bit frame AABBCCxx
  *
  * @retval	1 if pos param is pos+ 3 larger than buffer size
  * 			0 if pos param valid
@@ -186,24 +189,24 @@ uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
 												int *right_sample,
-												DBAllignTypedef allignment)
+												DBufAllign allignment)
 {
 	//restore to buffer
 	switch(_active_frame)
 	{
 		case DBufFrame::frame0	:
 
-			_txBuf_frame0[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame0[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
 			_txBuf_frame0[1] = (*left_sample) & 0xFFFF;
-			_txBuf_frame0[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame0[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_txBuf_frame0[3] = (*right_sample) & 0xFFFF;
 			break;
 
 		case DBufFrame::frame1	:
 
-			_txBuf_frame1[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame1[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
 			_txBuf_frame1[1] = (*left_sample) & 0xFFFF;
-			_txBuf_frame1[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_txBuf_frame1[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_txBuf_frame1[3] = (*right_sample) & 0xFFFF;
 			break;
 	}
@@ -216,8 +219,10 @@ uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
  *
  * @param	left_sample 	- the output left channel sample
  * 			right_smaple 	- the output right channel sample
- * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
- * 			//TODO use enums to represent two halves of ping pong buffer instead
+ * 			allignment		- packet bit allignment
+ * 							eight_bit_r 		= 4,	// 16-bit data right packed in 32-bit frame xxxxAABB
+ * 							sixteen_bit_l 		= 16,	// 16-bit data left packed in 32-bit frame AABBxxxx
+ * 							twentyfour_bit_l	= 16	// 24-bit data left packed in 32-bit frame AABBCCxx
  *
  * @retval	1 if pos param is pos+ 3 larger than buffer size
  * 			0 if pos param valid
@@ -226,21 +231,21 @@ uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
 														int *right_sample,
-														DBAllignTypedef allignment)
+														DBufAllign allignment)
 {
 
 	switch(_active_frame)
 	{
 		case DBufFrame::frame0	:
 
-			*left_sample = (int) (( _txBuf_frame0[0] << allignment ) | _txBuf_frame0[1]);
-			*right_sample = (int) (( _txBuf_frame0[2] << allignment ) | _txBuf_frame0[3]);
+			*left_sample = (int) (( _txBuf_frame0[0] << int(allignment) ) | _txBuf_frame0[1]);
+			*right_sample = (int) (( _txBuf_frame0[2] << int(allignment) ) | _txBuf_frame0[3]);
 			break;
 
 		case DBufFrame::frame1	:
 
-			*left_sample = (int) (( _txBuf_frame1[0] << allignment ) | _txBuf_frame1[1]);
-			*right_sample = (int) (( _txBuf_frame1[2] << allignment ) | _txBuf_frame1[3]);
+			*left_sample = (int) (( _txBuf_frame1[0] << int(allignment) ) | _txBuf_frame1[1]);
+			*right_sample = (int) (( _txBuf_frame1[2] << int(allignment) ) | _txBuf_frame1[3]);
 			break;
 	}
 
@@ -254,8 +259,10 @@ uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
  *
  * @param	left_sample 	- the input left channel sample
  * 			right_smaple 	- the input right channel sample
- * 			pos				- the buffer offset. Should be zero or (size/2 - 1)
- * 			//TODO use enums to represent two halves of ping pong buffer instead
+ * 			allignment		- packet bit allignment
+ * 							eight_bit_r 		= 4,	// 16-bit data right packed in 32-bit frame xxxxAABB
+ * 							sixteen_bit_l 		= 16,	// 16-bit data left packed in 32-bit frame AABBxxxx
+ * 							twentyfour_bit_l	= 16	// 24-bit data left packed in 32-bit frame AABBCCxx
  *
  * @retval	1 if pos param is pos+ 3 larger than buffer size
  * 			0 if pos param valid
@@ -263,7 +270,7 @@ uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
 template <class T, size_t size>
 uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
 												int *right_sample,
-												DBAllignTypedef allignment)
+												DBufAllign allignment)
 {
 
 	//restore to buffer
@@ -271,17 +278,17 @@ uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
 	{
 		case DBufFrame::frame0	:
 
-			_rxBuf_frame0[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame0[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
 			_rxBuf_frame0[1] = (*left_sample) & 0xFFFF;
-			_rxBuf_frame0[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame0[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_rxBuf_frame0[3] = (*right_sample) & 0xFFFF;
 			break;
 
 		case DBufFrame::frame1	:
 
-			_rxBuf_frame1[0] = ( (*left_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame1[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
 			_rxBuf_frame1[1] = (*left_sample) & 0xFFFF;
-			_rxBuf_frame1[2] = ( (*right_sample) >> allignment ) & 0xFFFF;
+			_rxBuf_frame1[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_rxBuf_frame1[3] = (*right_sample) & 0xFFFF;
 			break;
 	}

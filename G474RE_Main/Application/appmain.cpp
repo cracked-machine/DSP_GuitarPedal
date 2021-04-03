@@ -28,7 +28,8 @@
  */
 
 // header
-#include <cpputests_main.hpp>
+#include <tests_main.hpp>
+#include <tests_main.hpp>
 #include "appmain.hpp"
 #include "sine_lookup_table.hpp"
 
@@ -53,7 +54,6 @@
 
 // Application sources
 #include "dsp_buffer.hpp"
-#include "cpputests_main.hpp"
 
 size_t count = 0;
 size_t sine_lut_index = 0;
@@ -100,12 +100,12 @@ size_t sine_lut_index = 0;
 		// send data into Rx buffer #1
 		dspbuf.writeRxSample( 	&sine_lut[sine_lut_index],
 									&sine_lut[sine_lut_index],
-									DBUF_ALLIGN_8B_R);
+									DBufAllign::eight_bit_r);
 
 		// retrieve data from dsp Rx buffer #1
 		dspbuf.readRxSample( 	&left_sample,
 									&right_sample,
-									DBUF_ALLIGN_8B_R);
+									DBufAllign::eight_bit_r);
 
 
 		HAL_DAC_SetValue(	&hdac1,

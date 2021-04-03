@@ -69,11 +69,13 @@ TEST_GROUP(DbufferAllignGroup)
    }
 };
 
-TEST(DbufferAllignGroup, DspBufferRx_Allign8BitRight)
+TEST(DbufferAllignGroup, DbufferRx_Allign8BitRight_Frame0)
 {
 	// Test:
 	// Pass right-alligned 8-bit data manually thru the rx buffer
 	// in DBUF_ALLIGN_8B_R mode and compare input vs. output.
+
+	// Use default buffer frame0
 
 	bool result = true;
 
@@ -81,7 +83,7 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign8BitRight)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 4;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
 
 
 	while(test_count < (test_sine_lut.size()) )
@@ -93,18 +95,23 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign8BitRight)
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.writeRxSample( 	&test_sine_lut[test_sine_lut_index],
+		test_dbuf.writeRxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
-									DBUF_ALLIGN_8B_R);
+									DBufAllign::eight_bit_r);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.readRxSample( 	&left_sample,
+		test_dbuf.readRxSample( 	&left_sample,
 									&right_sample,
-									DBUF_ALLIGN_8B_R);
+									DBufAllign::eight_bit_r);
 
 
 		if( test_sine_lut[test_sine_lut_index] != left_sample)
 			result = false;
+
+		if( test_sine_lut[test_sine_lut_index] != right_sample)
+			result = false;
+
+
 
 		//increment the counter
 		test_count++;
@@ -113,11 +120,13 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign8BitRight)
 	CHECK(result);
 }
 
-TEST(DbufferAllignGroup, DspBufferTx_Allign8BitRight)
+TEST(DbufferAllignGroup, DbufferTx_Allign8BitRight_Frame0)
 {
 	// Test:
 	// Pass right-alligned 8-bit data manually thru the rx buffer
 	// in DBUF_ALLIGN_8B_R mode and compare input vs. output.
+
+	// Use default buffer frame0
 
 	bool result = true;
 
@@ -125,7 +134,7 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign8BitRight)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 4;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
 
 
 	while(test_count < (test_sine_lut.size()) )
@@ -137,17 +146,20 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign8BitRight)
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
+		test_dbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
-									DBUF_ALLIGN_8B_R);
+									DBufAllign::eight_bit_r);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.readTxSample( 	&left_sample,
+		test_dbuf.readTxSample( 	&left_sample,
 									&right_sample,
-									DBUF_ALLIGN_8B_R);
+									DBufAllign::eight_bit_r);
 
 
 		if( test_sine_lut[test_sine_lut_index] != left_sample)
+			result = false;
+
+		if( test_sine_lut[test_sine_lut_index] != right_sample)
 			result = false;
 
 		//increment the counter
@@ -157,20 +169,21 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign8BitRight)
 	CHECK(result);
 }
 
-TEST(DbufferAllignGroup, DspBufferRx_Allign24BitLeft)
+TEST(DbufferAllignGroup, DbufferRx_Allign24BitLeft_Frame0)
 {
 	// Test:
 	// Pass left-alligned 24-bit data manually thru the rx buffer
 	// in DBUF_ALLIGN_24B_L mode and compare input vs. output.
 
+	// Use default buffer frame0
+
 	bool result = true;
 
 	size_t test_count = 0;
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 4;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
-
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
 	{
@@ -181,17 +194,21 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign24BitLeft)
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.writeRxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
+		test_dbuf.writeRxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
-									DBUF_ALLIGN_24B_L);
+									DBufAllign::twentyfour_bit_l);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.readRxSample( 	&left_sample,
+		test_dbuf.readRxSample( 	&left_sample,
 									&right_sample,
-									DBUF_ALLIGN_24B_L);
+									DBufAllign::twentyfour_bit_l);
 
 
 		if( test_sine_lut_24b_left[test_sine_lut_index] != left_sample)
+			result = false;
+
+
+		if( test_sine_lut_24b_left[test_sine_lut_index] != right_sample)
 			result = false;
 
 		//increment the counter
@@ -201,11 +218,13 @@ TEST(DbufferAllignGroup, DspBufferRx_Allign24BitLeft)
 	CHECK(result);
 }
 
-TEST(DbufferAllignGroup, DspBufferTx_Allign24BitLeft)
+TEST(DbufferAllignGroup, DbufferTx_Allign24BitLeft_Frame0)
 {
 	// Test:
 	// Pass left-alligned 24-bit data manually thru the TX buffer
 	// in DBUF_ALLIGN_24B_L mode and compare input vs. output.
+
+	// Use default buffer frame0
 
 	bool result = true;
 
@@ -213,7 +232,7 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign24BitLeft)
 	size_t test_sine_lut_index = 0;
 	const size_t dsp_buf_size = 4;
 
-	double_buffer<uint16_t, dsp_buf_size> test_dspbuf;
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
 
 
 	while(test_count < (test_sine_lut_24b_left.size()) )
@@ -225,17 +244,228 @@ TEST(DbufferAllignGroup, DspBufferTx_Allign24BitLeft)
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dspbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
+		test_dbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
-									DBUF_ALLIGN_24B_L);
+									DBufAllign::twentyfour_bit_l);
 
 		// retrieve data from dsp Rx buffer #1
-		test_dspbuf.readTxSample( 	&left_sample,
+		test_dbuf.readTxSample( 	&left_sample,
 									&right_sample,
-									DBUF_ALLIGN_24B_L);
+									DBufAllign::twentyfour_bit_l);
 
 
 		if( test_sine_lut_24b_left[test_sine_lut_index] != left_sample)
+			result = false;
+
+		if( test_sine_lut_24b_left[test_sine_lut_index] != right_sample)
+			result = false;
+
+		//increment the counter
+		test_count++;
+	}
+
+	CHECK(result);
+}
+
+
+TEST(DbufferAllignGroup, DbufferRx_Allign8BitRight_Frame1)
+{
+	// Test:
+	// Pass right-alligned 8-bit data manually thru the rx buffer
+	// in DBUF_ALLIGN_8B_R mode and compare input vs. output.
+
+	// Use non-default buffer frame1
+
+	bool result = true;
+
+	size_t test_count = 0;
+	size_t test_sine_lut_index = 0;
+	const size_t dsp_buf_size = 4;
+
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
+
+	// swap to non-default buffer frame1
+	test_dbuf.swap_active_frame();
+
+	while(test_count < (test_sine_lut.size()) )
+	{
+		int left_sample = 0;
+		int right_sample = 0;
+
+		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
+		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
+
+		// send data into Rx buffer #1
+		test_dbuf.writeRxSample( 	&test_sine_lut[test_sine_lut_index],
+									&test_sine_lut[test_sine_lut_index],
+									DBufAllign::eight_bit_r);
+
+		// retrieve data from dsp Rx buffer #1
+		test_dbuf.readRxSample( 	&left_sample,
+									&right_sample,
+									DBufAllign::eight_bit_r);
+
+
+		if( test_sine_lut[test_sine_lut_index] != left_sample)
+			result = false;
+
+		if( test_sine_lut[test_sine_lut_index] != right_sample)
+			result = false;
+
+
+
+		//increment the counter
+		test_count++;
+	}
+
+	CHECK(result);
+}
+
+TEST(DbufferAllignGroup, DbufferTx_Allign8BitRight_Frame1)
+{
+	// Test:
+	// Pass right-alligned 8-bit data manually thru the rx buffer
+	// in DBUF_ALLIGN_8B_R mode and compare input vs. output.
+
+	// Use non-default buffer frame1
+
+	bool result = true;
+
+	size_t test_count = 0;
+	size_t test_sine_lut_index = 0;
+	const size_t dsp_buf_size = 4;
+
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
+
+	// swap to non-default buffer frame1
+	test_dbuf.swap_active_frame();
+
+	while(test_count < (test_sine_lut.size()) )
+	{
+		int left_sample = 0;
+		int right_sample = 0;
+
+		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
+		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
+
+		// send data into Rx buffer #1
+		test_dbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
+									&test_sine_lut[test_sine_lut_index],
+									DBufAllign::eight_bit_r);
+
+		// retrieve data from dsp Rx buffer #1
+		test_dbuf.readTxSample( 	&left_sample,
+									&right_sample,
+									DBufAllign::eight_bit_r);
+
+
+		if( test_sine_lut[test_sine_lut_index] != left_sample)
+			result = false;
+
+		if( test_sine_lut[test_sine_lut_index] != right_sample)
+			result = false;
+
+		//increment the counter
+		test_count++;
+	}
+
+	CHECK(result);
+}
+
+TEST(DbufferAllignGroup, DbufferRx_Allign24BitLeft_Frame1)
+{
+	// Test:
+	// Pass left-alligned 24-bit data manually thru the rx buffer
+	// in DBUF_ALLIGN_24B_L mode and compare input vs. output.
+
+	// Use non-default buffer frame1
+
+	bool result = true;
+
+	size_t test_count = 0;
+	size_t test_sine_lut_index = 0;
+	const size_t dsp_buf_size = 4;
+
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
+
+	// swap to non-default buffer frame1
+	test_dbuf.swap_active_frame();
+
+	while(test_count < (test_sine_lut_24b_left.size()) )
+	{
+		int left_sample = 0;
+		int right_sample = 0;
+
+		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
+		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
+
+		// send data into Rx buffer #1
+		test_dbuf.writeRxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
+									&test_sine_lut_24b_left[test_sine_lut_index],
+									DBufAllign::twentyfour_bit_l);
+
+		// retrieve data from dsp Rx buffer #1
+		test_dbuf.readRxSample( 	&left_sample,
+									&right_sample,
+									DBufAllign::twentyfour_bit_l);
+
+
+		if( test_sine_lut_24b_left[test_sine_lut_index] != left_sample)
+			result = false;
+
+
+		if( test_sine_lut_24b_left[test_sine_lut_index] != right_sample)
+			result = false;
+
+		//increment the counter
+		test_count++;
+	}
+
+	CHECK(result);
+}
+
+TEST(DbufferAllignGroup, DbufferTx_Allign24BitLeft_Frame1)
+{
+	// Test:
+	// Pass left-alligned 24-bit data manually thru the TX buffer
+	// in DBUF_ALLIGN_24B_L mode and compare input vs. output.
+
+	// Use non-default buffer frame1
+
+	bool result = true;
+
+	size_t test_count = 0;
+	size_t test_sine_lut_index = 0;
+	const size_t dsp_buf_size = 4;
+
+	double_buffer<uint16_t, dsp_buf_size> test_dbuf;
+
+	// swap to non-default buffer frame1
+	test_dbuf.swap_active_frame();
+
+	while(test_count < (test_sine_lut_24b_left.size()) )
+	{
+		int left_sample = 0;
+		int right_sample = 0;
+
+		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
+		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
+
+		// send data into Rx buffer #1
+		test_dbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
+									&test_sine_lut_24b_left[test_sine_lut_index],
+									DBufAllign::twentyfour_bit_l);
+
+		// retrieve data from dsp Rx buffer #1
+		test_dbuf.readTxSample( 	&left_sample,
+									&right_sample,
+									DBufAllign::twentyfour_bit_l);
+
+
+		if( test_sine_lut_24b_left[test_sine_lut_index] != left_sample)
+			result = false;
+
+		if( test_sine_lut_24b_left[test_sine_lut_index] != right_sample)
 			result = false;
 
 		//increment the counter
