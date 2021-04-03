@@ -146,7 +146,7 @@ TEST(DbufferAllignGroup, DbufferTx_Allign8BitRight_Frame0)
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dbuf.writeTxFrame( 	&test_sine_lut[test_sine_lut_index],
+		test_dbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
 									DBufAllign::eight_bit_r);
 
@@ -244,7 +244,7 @@ TEST(DbufferAllignGroup, DbufferTx_Allign24BitLeft_Frame0)
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dbuf.writeTxFrame( 	&test_sine_lut_24b_left[test_sine_lut_index],
+		test_dbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
 									DBufAllign::twentyfour_bit_l);
 
@@ -349,7 +349,7 @@ TEST(DbufferAllignGroup, DbufferTx_Allign8BitRight_Frame1)
 		test_sine_lut_index = test_count & ( test_sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dbuf.writeTxFrame( 	&test_sine_lut[test_sine_lut_index],
+		test_dbuf.writeTxSample( 	&test_sine_lut[test_sine_lut_index],
 									&test_sine_lut[test_sine_lut_index],
 									DBufAllign::eight_bit_r);
 
@@ -452,7 +452,7 @@ TEST(DbufferAllignGroup, DbufferTx_Allign24BitLeft_Frame1)
 		test_sine_lut_index = test_count & ( test_sine_lut_24b_left.size() - 1 );
 
 		// send data into Rx buffer #1
-		test_dbuf.writeTxFrame( 	&test_sine_lut_24b_left[test_sine_lut_index],
+		test_dbuf.writeTxSample( 	&test_sine_lut_24b_left[test_sine_lut_index],
 									&test_sine_lut_24b_left[test_sine_lut_index],
 									DBufAllign::twentyfour_bit_l);
 

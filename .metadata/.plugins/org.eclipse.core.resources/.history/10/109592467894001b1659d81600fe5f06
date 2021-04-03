@@ -66,11 +66,11 @@ public:
 	T* getRxBuf();
 	T* getTxBuf();
 
-	uint8_t readRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
-	uint8_t writeRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t readRxSample(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t writeRxSample(int *left_sample, int *right_sample, DBufAllign allignment);
 
-	uint8_t readTxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
-	uint8_t writeTxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t readTxSample(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t writeTxSample(int *left_sample, int *right_sample, DBufAllign allignment);
 
 	DBufFrame swap_active_frame();
 	DBufFrame get_active_frame();
@@ -151,7 +151,7 @@ DBufFrame double_buffer<T, size>::swap_active_frame()
  *
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
+uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 														int *right_sample,
 														DBufAllign allignment)
 {
@@ -191,7 +191,7 @@ uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
  *
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::readTxFrame(	int *left_sample,
+uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
 														int *right_sample,
 														DBufAllign allignment)
 {
@@ -230,7 +230,7 @@ uint8_t double_buffer<T, size>::readTxFrame(	int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
+uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
 												int *right_sample,
 												DBufAllign allignment)
 {
@@ -275,7 +275,7 @@ uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
+uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
 												int *right_sample,
 												DBufAllign allignment)
 {

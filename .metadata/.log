@@ -11082,3 +11082,12 @@ java.lang.NumberFormatException: For input string: ""
 	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:872)
 	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$14(StackAnalyzerView.java:1185)
 	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 13:17:38.285
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 13:21:05.894
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 13:25:00.996
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1

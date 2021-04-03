@@ -102,7 +102,7 @@ size_t sine_lut_index = 0;
 		sine_lut_index = count & ( sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		dbuf.writeRxFrame( 	&sine_lut[sine_lut_index],
+		dbuf.writeRxSample( 	&sine_lut[sine_lut_index],
 								&sine_lut[sine_lut_index],
 								DBufAllign::eight_bit_r);
 

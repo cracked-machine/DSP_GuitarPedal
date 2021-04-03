@@ -67,15 +67,15 @@ size_t sine_lut_index = 0;
 #endif
 	// create double buffer of frame size = 4 * uint16_t
 	const size_t dbuf_size = 4;
-	double_buffer<uint16_t, dbuf_size> dbuf;
+	double_buffer<uint16_t, dbuf_size> dspbuf;
 
-	uint16_t *fullRxBuff = dbuf.getRxBuf();
+	uint16_t fullRxBuff[dbuf_size];
 
 
 	void appmain()
 	{
 
-		uint16_t *tmpRx = dbuf.getRxBuf();
+		uint16_t *tmpRx = dspbuf.getRxBuf();
 		std::cout << tmpRx[0] << std::endl;
 
 		run_all_tests();
@@ -102,12 +102,12 @@ size_t sine_lut_index = 0;
 		sine_lut_index = count & ( sine_lut.size() - 1 );
 
 		// send data into Rx buffer #1
-		dbuf.writeRxFrame( 	&sine_lut[sine_lut_index],
+		dspbuf.writeRxSample( 	&sine_lut[sine_lut_index],
 								&sine_lut[sine_lut_index],
 								DBufAllign::eight_bit_r);
 
 		// retrieve data from dsp Rx buffer #1
-		dbuf.readRxFrame( 	&left_sample,
+		dspbuf.readRxSample( 	&left_sample,
 								&right_sample,
 								DBufAllign::eight_bit_r);
 

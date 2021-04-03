@@ -66,11 +66,11 @@ public:
 	T* getRxBuf();
 	T* getTxBuf();
 
-	uint8_t readRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
-	uint8_t writeRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t readRxSample(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t writeRxSample(int *left_sample, int *right_sample, DBufAllign allignment);
 
-	uint8_t readTxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
-	uint8_t writeTxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t readTxSample(int *left_sample, int *right_sample, DBufAllign allignment);
+	uint8_t writeTxSample(int *left_sample, int *right_sample, DBufAllign allignment);
 
 	DBufFrame swap_active_frame();
 	DBufFrame get_active_frame();
@@ -151,7 +151,7 @@ DBufFrame double_buffer<T, size>::swap_active_frame()
  *
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
+uint8_t double_buffer<T, size>::readRxSample(	int *left_sample,
 														int *right_sample,
 														DBufAllign allignment)
 {
@@ -176,6 +176,49 @@ uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
 
 }
 
+
+
+/*
+ * @brief 	Push data to the specified Tx buffer
+ *
+ * @param	left_sample 	- the input left channel sample
+ * 			right_smaple 	- the input right channel sample
+ * 			allignment		- packet bit allignment
+ * 							eight_bit_r 		= 4,	// 16-bit data right packed in 32-bit frame xxxxAABB
+ * 							sixteen_bit_l 		= 16,	// 16-bit data left packed in 32-bit frame AABBxxxx
+ * 							twentyfour_bit_l	= 16	// 24-bit data left packed in 32-bit frame AABBCCxx
+ *
+ * @retval	1 if pos param is pos+ 3 larger than buffer size
+ * 			0 if pos param valid
+ */
+template <class T, size_t size>
+uint8_t double_buffer<T, size>::writeTxSample(int *left_sample,
+												int *right_sample,
+												DBufAllign allignment)
+{
+	//restore to buffer
+	switch(_active_frame)
+	{
+		case DBufFrame::frame0	:
+
+			_txBuf_frame0[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf_frame0[1] = (*left_sample) & 0xFFFF;
+			_txBuf_frame0[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf_frame0[3] = (*right_sample) & 0xFFFF;
+			break;
+
+		case DBufFrame::frame1	:
+
+			_txBuf_frame1[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf_frame1[1] = (*left_sample) & 0xFFFF;
+			_txBuf_frame1[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
+			_txBuf_frame1[3] = (*right_sample) & 0xFFFF;
+			break;
+	}
+
+	return 0;
+}
+
 /*
  * @brief Pull data from the specified Tx buffer
  *
@@ -191,7 +234,7 @@ uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
  *
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::readTxFrame(	int *left_sample,
+uint8_t double_buffer<T, size>::readTxSample(	int *left_sample,
 														int *right_sample,
 														DBufAllign allignment)
 {
@@ -217,51 +260,6 @@ uint8_t double_buffer<T, size>::readTxFrame(	int *left_sample,
 }
 
 /*
- * @brief 	Push data to the specified Tx buffer
- *
- * @param	left_sample 	- the input left channel sample
- * 			right_smaple 	- the input right channel sample
- * 			allignment		- packet bit allignment
- * 							eight_bit_r 		= 4,	// 16-bit data right packed in 32-bit frame xxxxAABB
- * 							sixteen_bit_l 		= 16,	// 16-bit data left packed in 32-bit frame AABBxxxx
- * 							twentyfour_bit_l	= 16	// 24-bit data left packed in 32-bit frame AABBCCxx
- *
- * @retval	1 if pos param is pos+ 3 larger than buffer size
- * 			0 if pos param valid
- */
-template <class T, size_t size>
-uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
-												int *right_sample,
-												DBufAllign allignment)
-{
-	//restore to buffer
-	switch(_active_frame)
-	{
-		case DBufFrame::frame0	:
-
-			_txBuf_frame0[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame0[1] = (*left_sample) & 0xFFFF;
-			_txBuf_frame0[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame0[3] = (*right_sample) & 0xFFFF;
-			break;
-
-		case DBufFrame::frame1	:
-
-			_txBuf_frame1[0] = ( (*left_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame1[1] = (*left_sample) & 0xFFFF;
-			_txBuf_frame1[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
-			_txBuf_frame1[3] = (*right_sample) & 0xFFFF;
-			break;
-	}
-
-	// update the conjoined buffer
-	getTxBuf();
-
-	return 0;
-}
-
-
-/*
  * @brief 	Push data to the specified Rx buffer
  *
  * @param	left_sample 	- the input left channel sample
@@ -275,7 +273,7 @@ uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
  * 			0 if pos param valid
  */
 template <class T, size_t size>
-uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
+uint8_t double_buffer<T, size>::writeRxSample(int *left_sample,
 												int *right_sample,
 												DBufAllign allignment)
 {
@@ -300,9 +298,6 @@ uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
 			break;
 	}
 
-	// update the conjoined buffer
-	getRxBuf();
-
 	return 0;
 
 }
@@ -317,11 +312,7 @@ uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
  */
 template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
 {
-	//return _rxBuf_frame0.data();	// return c array from std::array
-	// return both rx frames conjoined into a c-style array
-	std::copy(_rxBuf_frame0.data(), _rxBuf_frame0.data() + size,_rxBuf_bothFrames.data());
-	std::copy(_rxBuf_frame1.data(), _rxBuf_frame1.data() + size,_rxBuf_bothFrames.data() + size);
-	return _rxBuf_bothFrames.data();
+	return _rxBuf_frame0.data();	// return c array from std::array
 }
 
 /*
@@ -334,10 +325,9 @@ template <class T, size_t size> T* double_buffer<T, size>::getRxBuf()
  */
 template <class T, size_t size> T* double_buffer<T, size>::getTxBuf()
 {
-	// return both tx frames conjoined into a c-style array
-	std::copy(_txBuf_frame0.data(), _txBuf_frame0.data() + size,_txBuf_bothFrames.data());
-	std::copy(_txBuf_frame1.data(), _txBuf_frame1.data() + size,_txBuf_bothFrames.data() + size);
-	return _txBuf_bothFrames.data();
+	std::copy(_txBuf_frame0, _txBuf_frame0 + size,_txBuf_bothFrames);
+	std::copy(_txBuf_frame1, _txBuf_frame1 + size,_txBuf_bothFrames + size);
+	return _txBuf_frame0.data();	// return c array from std::array
 }
 
 
