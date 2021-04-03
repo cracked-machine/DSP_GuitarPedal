@@ -11134,3 +11134,234 @@ java.lang.Exception: File: /home/chris/DSP_GuitarPedal/G474RE_Main/Debug/G474RE_
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 14:17:13.419
 !MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 14:49:48.299
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 14:51:54.558
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 14:55:38.414
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:00:57.328
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:02:27.363
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:04:08.302
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:05:02.804
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:20:19.579
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:21:48.226
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:23:40.487
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:30:04.875
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:31:08.439
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:32:02.768
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:33:24.566
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:35:21.212
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:36:20.702
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:37:01.703
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:37:37.830
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:38:35.546
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:39:23.572
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:40:10.490
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:41:51.765
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:42:44.726
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:43:42.959
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:44:08.358
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:45:17.036
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:46:25.308
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 15:50:28.397
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:21:31.255
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:22:09.857
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:25:07.448
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:28:18.440
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:31:57.482
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:33:58.965
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:37:59.292
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:39:00.994
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:40:33.027
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:41:45.622
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:43:16.624
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+!SESSION 2021-04-03 16:45:32.910 -----------------------------------------------
+eclipse.buildId=Version 1.5.1
+java.version=1.8.0_272
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-04-03 16:45:42.293
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-04-03 16:45:47.638
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-04-03 16:45:47.735
+!MESSAGE Log4j initialized with config file /home/chris/DSP_GuitarPedal/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-04-03 16:45:54.634
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-04-03 16:45:54.947
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:46:16.660
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY org.eclipse.core.jobs 2 2 2021-04-03 16:46:57.800
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.core.DebugPlugin$EventDispatchJob
+!SESSION 2021-04-03 16:48:10.162 -----------------------------------------------
+eclipse.buildId=Version 1.5.1
+java.version=1.8.0_272
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-04-03 16:48:19.727
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-04-03 16:48:19.807
+!MESSAGE Log4j initialized with config file /home/chris/DSP_GuitarPedal/.metadata/.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-04-03 16:48:24.955
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-04-03 16:48:25.196
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 16:48:36.349
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:04:54.529
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:07:59.722
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:11:24.057
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:21:38.869
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:25:56.901
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:26:08.490
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:27:33.004
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:27:43.335
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:35:56.639
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:39:27.180
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:40:11.397
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:40:42.411
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:40:54.143
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:42:47.379
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:46:40.245
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:46:50.142
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:48:00.313
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 17:52:08.327
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 18:04:11.495
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 18:04:56.146
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 18:05:15.038
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-03 18:06:48.594
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1

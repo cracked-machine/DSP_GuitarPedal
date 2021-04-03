@@ -65,6 +65,11 @@ public:
 
 	T* getRxBuf();
 	T* getTxBuf();
+	uint32_t* getRxBuf32_left_chan();
+	uint32_t* getRxBuf32_right_chan();
+	uint32_t* getTxBuf32_left_chan();
+	uint32_t* getTxBuf32_right_chan();
+
 
 	uint8_t readRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
 	uint8_t writeRxFrame(int *left_sample, int *right_sample, DBufAllign allignment);
@@ -82,9 +87,37 @@ private:
 	std::array<T, size*2> _rxBuf;
 	std::array<T, size*2> _txBuf;
 
+	uint32_t _rxBuf32_left_chan;
+	uint32_t _rxBuf32_right_chan;
+
+	uint32_t _txBuf32_left_chan;
+	uint32_t _txBuf32_right_chan;
 
 };
 
+template <class T, size_t size>
+uint32_t* double_buffer<T, size>::getRxBuf32_left_chan()
+{
+	return &_rxBuf32_left_chan;
+}
+
+template <class T, size_t size>
+uint32_t* double_buffer<T, size>::getRxBuf32_right_chan()
+{
+	return &_rxBuf32_right_chan;
+}
+
+template <class T, size_t size>
+uint32_t* double_buffer<T, size>::getTxBuf32_left_chan()
+{
+	return &_txBuf32_left_chan;
+}
+
+template <class T, size_t size>
+uint32_t* double_buffer<T, size>::getTxBuf32_right_chan()
+{
+	return &_txBuf32_right_chan;
+}
 
 
 /*
@@ -145,12 +178,14 @@ uint8_t double_buffer<T, size>::readRxFrame(	int *left_sample,
 
 			*left_sample = (int) (( _rxBuf[0] << int(allignment) ) | _rxBuf[1]);
 			*right_sample = (int) (( _rxBuf[2] << int(allignment) ) | _rxBuf[3]);
+
 			break;
 
 		case DBufFrame::frame1	:
 
 			*left_sample = (int) (( _rxBuf[4] << int(allignment) ) | _rxBuf[5]);
 			*right_sample = (int) (( _rxBuf[6] << int(allignment) ) | _rxBuf[7]);
+
 			break;
 	}
 
@@ -226,6 +261,11 @@ uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
 			_txBuf[1] = (*left_sample) & 0xFFFF;
 			_txBuf[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_txBuf[3] = (*right_sample) & 0xFFFF;
+
+			// pack half words into pointer for DMA with C API
+			_txBuf32_left_chan = (uint32_t)( _txBuf[0] | _txBuf[1] );
+			_txBuf32_right_chan = (uint32_t)( _txBuf[2] | _txBuf[3] );
+
 			break;
 
 		case DBufFrame::frame1	:
@@ -234,6 +274,11 @@ uint8_t double_buffer<T, size>::writeTxFrame(int *left_sample,
 			_txBuf[5] = (*left_sample) & 0xFFFF;
 			_txBuf[6] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_txBuf[7] = (*right_sample) & 0xFFFF;
+
+			// pack half words into pointer for DMA with C API
+			_txBuf32_left_chan = (uint32_t)( _txBuf[4] | _txBuf[5] );
+			_txBuf32_right_chan = (uint32_t)( _txBuf[6] | _txBuf[7] );
+
 			break;
 	}
 
@@ -269,6 +314,11 @@ uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
 			_rxBuf[1] = (*left_sample) & 0xFFFF;
 			_rxBuf[2] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_rxBuf[3] = (*right_sample) & 0xFFFF;
+
+			// pack half words into pointer for DMA with C API
+			_rxBuf32_left_chan = (uint32_t)( _rxBuf[0] | _rxBuf[1] );
+			_rxBuf32_right_chan = (uint32_t)( _rxBuf[2] | _rxBuf[3] );
+
 			break;
 
 		case DBufFrame::frame1	:
@@ -277,6 +327,11 @@ uint8_t double_buffer<T, size>::writeRxFrame(int *left_sample,
 			_rxBuf[5] = (*left_sample) & 0xFFFF;
 			_rxBuf[6] = ( (*right_sample) >> int(allignment) ) & 0xFFFF;
 			_rxBuf[7] = (*right_sample) & 0xFFFF;
+
+			// pack half words into pointer for DMA with C API
+			_rxBuf32_left_chan = (uint32_t)( _rxBuf[4] | _rxBuf[5] );
+			_rxBuf32_left_chan = (uint32_t)( _rxBuf[6] | _rxBuf[7] );
+
 			break;
 	}
 

@@ -1,0 +1,188 @@
+/*
+ * 		appmain.cpp
+ *
+ *  	Created on: Apr 2, 2021
+ *      Author: Chris Sutton
+ *
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+// header
+#include <double_buffer.hpp>
+#include <tests_main.hpp>
+
+#include "appmain.hpp"
+#include "sine_lookup_table.hpp"
+
+// c++ std lib
+#include <iostream>
+#include <memory>
+#include <algorithm>
+
+// STM HAL Framework
+#include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal_tim.h"
+#include "stm32g4xx_hal_tim_ex.h"
+#include "stm32g4xx_hal_dac.h"
+#include "stm32g4xx_hal_dac_ex.h"
+#include "stm32g4xx_hal_gpio.h"
+#include "stm32g4xx_hal_gpio_ex.h"
+
+// STM32Cube generated HAL init code
+#include "tim.h"
+#include "dac.h"
+#include "gpio.h"
+
+// Application sources
+
+size_t count = 0;
+size_t sine_lut_index = 0;
+
+
+
+
+
+
+#ifdef __cplusplus
+	extern "C"
+	{
+#endif
+
+	// create double buffer of frame size = 4 * uint16_t
+	const size_t frame_size = 4;
+	double_buffer<uint16_t, frame_size> dbuf;
+
+	uint16_t *tmpRx = dbuf.getRxBuf();
+	uint32_t test_data = dbuf.getRxBuf32();
+
+
+	void init_test_manual_dac_updates();
+	void init_test_dma_dac_updates();
+	void test_manual_dac_updates();
+	void test_dma_dac_updates();
+
+
+	void appmain()
+	{
+
+
+		std::cout << tmpRx[0] << std::endl;
+
+		run_all_tests();
+		std::cout << "Running Loop" << std::endl;
+
+		//init_test_manual_dac_updates();
+		init_test_dma_dac_updates();
+
+		while(1)
+		{
+
+		}
+
+	}
+
+	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+	{
+		//test_manual_dac_updates();
+		test_dma_dac_updates();
+	}
+
+	void init_test_dma_dac_updates()
+	{
+		HAL_TIM_Base_Start_IT(&htim6);
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)sine_data_table_1300, 120, DAC_ALIGN_12B_R);
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)sine_lut.data(), 64, DAC_ALIGN_8B_R);
+
+
+
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, dbuf.getRxBuf32(), 1, DAC_ALIGN_8B_R);
+	}
+
+	void test_dma_dac_updates()
+	{
+
+		sine_lut_index = count & ( sine_lut.size() - 1 );
+		std::cout << tmpRx[0] << " " << tmpRx[1] << "(" << (tmpRx[0] | tmpRx[1]) << ")" << std::endl;
+
+		// send data into Rx buffer frame #0
+		dbuf.writeRxFrame( 	&sine_lut[sine_lut_index],
+								&sine_lut[sine_lut_index],
+								DBufAllign::eight_bit_r);
+
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+
+		//increment the counter
+		count++;
+
+	}
+
+	void init_test_manual_dac_updates()
+	{
+		HAL_TIM_Base_Start_IT(&htim6);
+		HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+
+	}
+
+	void test_manual_dac_updates()
+	{
+ 		int left_sample = 0;
+		int right_sample = 0;
+
+		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
+		sine_lut_index = count & ( sine_lut.size() - 1 );
+
+		// send data into Rx buffer frame #0
+		dbuf.writeRxFrame( 	&sine_lut[sine_lut_index],
+								&sine_lut[sine_lut_index],
+								DBufAllign::eight_bit_r);
+
+/*
+		// retrieve data from dsp Rx buffer frame #0
+		dbuf.readRxFrame( 	&left_sample,
+								&right_sample,
+								DBufAllign::eight_bit_r);
+
+*/
+		// or get data from the global rx buffer pointer created at startup
+		left_sample = (int) (( tmpRx[0] << int(DBufAllign::eight_bit_r) ) | tmpRx[1]);
+
+		HAL_DAC_SetValue(	&hdac1,
+							DAC_CHANNEL_1,
+							DAC_ALIGN_8B_R,
+							left_sample);
+
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+
+
+		//HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_lut[sine_lut_index]);
+
+		//increment the counter
+		count++;
+
+	}
+
+
+#ifdef __cplusplus
+	}
+#endif
+
