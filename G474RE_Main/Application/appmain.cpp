@@ -30,7 +30,11 @@
 // header
 #include <double_buffer.hpp>
 #include <double_buffer16.hpp>
+
 #include <double_buffer32.hpp>
+#include <double_bufferf32.hpp>
+
+#include "iir_filter_32u.hpp"
 
 #include <tests_main.hpp>
 
@@ -72,11 +76,24 @@ size_t lut_index = 0;
 
 	double_buffer16 *dbuf16 = new double_buffer16();
 
-
+	// uint32_t single-item Double Buffer
+	//
 	double_buffer32 *dbuf32 = new double_buffer32();
 	uint32_t *dbuf32Rx = dbuf32->get_rxBuf();
 
-	arm_fir_instance_f32 S;
+	// float single-item double buffer
+	double_bufferf32 *dbuf_float = new double_bufferf32();
+	float *dbufRx_float32 = dbuf_float->get_rxBuf();
+
+	uint32_t base_period = 1024;
+	float octave_pitch_down = 1;
+	float offset = 0.0f;
+	float amplitude = 1.0f;
+
+
+	iir_filter_32u *iir1 = new iir_filter_32u();
+	uint32_t *iir_output;
+	//arm_fir_instance_f32 S;
 
 
 	const size_t frame_size = 4;
@@ -91,9 +108,12 @@ size_t lut_index = 0;
 	void test_manual_dac_updates();
 	void test_dma_dac_updates();
 
-	void init_dbuf32();
-	void loop_dbuf32_clock_out_dac();
-	void loop_dbuf32_clock_in_buff();
+	void init_dbuf_uint32();
+	void loop_dbuf_uint32_clock_out_dac();
+	void loop_dbuf_uint32_clock_in_buff();
+
+	void init_dbuf_float();
+	void loop_dbuf_float_clock_in_buff();
 
 
 	void appmain()
@@ -106,7 +126,8 @@ size_t lut_index = 0;
 
 		//init_test_manual_dac_updates();
 		//init_test_dma_dac_updates();
-		init_dbuf32();
+		init_dbuf_uint32();
+		//init_dbuf_float();
 
 		while(1)
 		{
@@ -121,36 +142,82 @@ size_t lut_index = 0;
 		{
 			//test_manual_dac_updates();
 			//test_dma_dac_updates();
-			loop_dbuf32_clock_in_buff();
+			loop_dbuf_uint32_clock_in_buff();
+
+			//loop_dbuf_float_clock_in_buff();
 		}
 		if(htim->Instance == TIM7)
 		{
-			loop_dbuf32_clock_out_dac();
+			//loop_dbuf_uint32_clock_out_dac();
+
 		}
 
 	}
 
 
-
-	void init_dbuf32()
+	void init_dbuf_float()
 	{
-		uint32_t base_period = 1024;
-		float speed_coefficient = 2;
 		// clock the data into the double_buffer32 using TIM7
 		TIM7->ARR = base_period;
 		HAL_TIM_Base_Start_IT(&htim7);
 
 		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
-		TIM6->ARR = base_period * speed_coefficient;
+		TIM6->ARR = base_period * octave_pitch_down;
+		HAL_TIM_Base_Start_IT(&htim6);
+
+		// set the txBuff pointer as DMA destination
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf_float->get_txBuf(), 1, DAC_ALIGN_12B_R);
+
+
+	}
+
+	void loop_dbuf_float_clock_in_buff()
+	{
+		// increment the LUT position (circular)
+		lut_index = count & ( TEST_LUT.size() - 1 );
+
+		// assign new data to the rx buffer
+		*dbufRx_float32 = TEST_LUT[lut_index];
+
+		// process the rx buffer data here
+		*dbufRx_float32 = *dbufRx_float32 * amplitude;
+		*dbufRx_float32 = *dbufRx_float32 + offset;
+
+
+		// iir filter - TODO stop using this uint32_t->float->uint32_t insanity!
+/*		float output = 0;
+		iir1->process(dbufRx_float32, &output);
+		*dbufRx_float32 = output;
+*/
+		//uint32_t *tmp = (uint32_t*)dbuf_float->get_rxBuf();
+
+		//swap the rx buffer data out to the tx buffer pointer
+		dbuf_float->swap();
+
+		//increment the counter
+		count++;
+
+	}
+
+	void init_dbuf_uint32()
+	{
+
+		// clock the data into the double_buffer32 using TIM7
+		TIM7->ARR = base_period;
+		HAL_TIM_Base_Start_IT(&htim7);
+
+		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
+		TIM6->ARR = base_period * octave_pitch_down;
 		HAL_TIM_Base_Start_IT(&htim6);
 
 		// set the txBuff pointer as DMA destination
 		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf32->get_txBuf(), 1, DAC_ALIGN_12B_R);
 
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)iir_output, 1, DAC_ALIGN_12B_R);
 		// test the DAC by sending the whole LUT at once
 		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)tri_lut.data(), 64, DAC_ALIGN_12B_R);
 	}
-	void loop_dbuf32_clock_in_buff()
+	void loop_dbuf_uint32_clock_in_buff()
 	{
 		// increment the LUT position (circular)
 		lut_index = count & ( TEST_LUT.size() - 1 );
@@ -159,8 +226,19 @@ size_t lut_index = 0;
 		*dbuf32Rx = TEST_LUT[lut_index];
 
 		// process the rx buffer data here
-		*dbuf32Rx = *dbuf32Rx * 0.5;
-		*dbuf32Rx = *dbuf32Rx + 2048;
+		*dbuf32Rx = *dbuf32Rx * amplitude;
+		*dbuf32Rx = *dbuf32Rx + offset;
+
+
+		// iir filter - TODO stop using this uint32_t->float->uint32_t insanity!
+		float input = (float)*dbuf32Rx;
+		float output = 0;
+		iir1->process(&input, &output);
+		uint32_t tmp = (uint32_t)output;
+		*dbuf32Rx = tmp;
+
+
+		std::cout << *iir_output << std::endl;
 
 		//swap the rx buffer data out to the tx buffer pointer
 		dbuf32->swap();
@@ -170,7 +248,7 @@ size_t lut_index = 0;
 
 	}
 
-	void loop_dbuf32_clock_out_dac()
+	void loop_dbuf_uint32_clock_out_dac()
 	{
 
 	}

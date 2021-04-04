@@ -30,8 +30,9 @@
 #define SINE_LOOKUP_TABLE_HPP_
 
 #include <array>
+#include <arm_math.h>
 
-// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
+// https://www.daycounter.com/Calculators/Sine-Generator-Calculator.phtml
 // NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
 std::array<uint32_t, 64> sine_lut {
 
@@ -45,7 +46,7 @@ std::array<uint32_t, 64> sine_lut {
 	600,749,910,1082,1264,1453,1648,1847
 };
 
-// https://www.daycounter.com/Calculators/Sine-Generator-Calculator.phtml
+// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
 // NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
 std::array<uint32_t, 64> tri_lut {
 
@@ -59,6 +60,22 @@ std::array<uint32_t, 64> tri_lut {
 	896,768,640,512,384,256,128,0
 
 };
+
+// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
+// NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
+std::array<float, 64> tri_lut_f32 {
+
+	128.0,  256.0,  384.0,  512.0,  640.0,  768.0,  896.0,  1024.0,
+	1152.0, 1280.0, 1408.0, 1536.0, 1664.0, 1792.0, 1920.0, 2048.0,
+	2175.0, 2303.0, 2431.0, 2559.0, 2687.0, 2815.0, 2943.0, 3071.0,
+	3199.0, 3327.0, 3455.0, 3583.0, 3711.0, 3839.0, 3967.0, 4095.0,
+	3967.0, 3839.0, 3711.0, 3583.0, 3455.0, 3327.0, 3199.0, 3071.0,
+	2943.0, 2815.0, 2687.0, 2559.0, 2431.0, 2303.0, 2175.0, 2048.0,
+	1920.0, 1792.0, 1664.0, 1536.0, 1408.0, 1280.0, 1152.0, 1024.0,
+	896.0,  768.0,  640.0,  512.0,  384.0,  256.0,  128.0,  0.0
+
+};
+
 
 // https://www.daycounter.com/Calculators/Decaying-Wave-Generator-Calculator.phtml
 // NumPoints=64, MaxAmpl=4095,TmConst=4 NumPerRow=8, Dec, Invert
