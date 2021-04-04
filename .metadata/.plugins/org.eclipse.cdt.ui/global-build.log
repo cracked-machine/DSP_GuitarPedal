@@ -1,41 +1,656 @@
-22:12:59 **** Incremental Build of configuration Debug for project G474RE_Main ****
+10:27:11 **** Incremental Build of configuration Debug for project G474RE_Main ****
 make -j4 all 
-arm-none-eabi-g++ "../CppUTests/test_dbuffer_dma_thruput.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CppUTests/test_dbuffer_dma_thruput.d" -MT"CppUTests/test_dbuffer_dma_thruput.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CppUTests/test_dbuffer_dma_thruput.o"
-arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: G474RE_Main.elf
  
 arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
 arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
 arm-none-eabi-size   G474RE_Main.elf 
    text	   data	    bss	    dec	    hex	filename
- 276540	   2080	  11208	 289828	  46c24	G474RE_Main.elf
+ 276924	   1832	  11328	 290084	  46d24	G474RE_Main.elf
 Finished building: default.size.stdout
  
 Finished building: G474RE_Main.bin
  
 Finished building: G474RE_Main.list
  
-22:13:05 **** Incremental Build of configuration Debug for project G474RE_Main ****
+10:27:17 **** Incremental Build of configuration Debug for project G474RE_Main ****
 make -j4 all 
 arm-none-eabi-size   G474RE_Main.elf 
    text	   data	    bss	    dec	    hex	filename
- 276540	   2080	  11208	 289828	  46c24	G474RE_Main.elf
+ 276924	   1832	  11328	 290084	  46d24	G474RE_Main.elf
 Finished building: default.size.stdout
  
-22:14:43 **** Incremental Build of configuration Debug for project G474RE_Main ****
+10:28:08 **** Incremental Build of configuration Debug for project G474RE_Main ****
 make -j4 all 
-arm-none-eabi-g++ "../CppUTests/test_dbuffer_dma_thruput.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CppUTests/test_dbuffer_dma_thruput.d" -MT"CppUTests/test_dbuffer_dma_thruput.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CppUTests/test_dbuffer_dma_thruput.o"
-arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: G474RE_Main.elf
  
 arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
 arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
 arm-none-eabi-size   G474RE_Main.elf 
    text	   data	    bss	    dec	    hex	filename
- 275044	   1824	  11176	 288044	  4652c	G474RE_Main.elf
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
 Finished building: default.size.stdout
  
 Finished building: G474RE_Main.bin
  
 Finished building: G474RE_Main.list
+ 
+10:28:36 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:29:04 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+Finished building: G474RE_Main.bin
+ 
+ 
+Finished building: G474RE_Main.list
+ 
+10:29:21 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+10:30:00 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:30:28 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+Finished building: G474RE_Main.bin
+ 
+ 
+Finished building: G474RE_Main.list
+ 
+10:31:09 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:31:36 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:32:02 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:32:26 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+Finished building: G474RE_Main.bin
+ 
+ 
+Finished building: G474RE_Main.list
+ 
+10:32:55 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:33:44 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:34:15 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:34:38 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:35:06 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:35:34 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:35:53 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+10:36:17 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:36:38 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276932	   1832	  11328	 290092	  46d2c	G474RE_Main.elf
+Finished building: G474RE_Main.bin
+Finished building: default.size.stdout
+ 
+ 
+Finished building: G474RE_Main.list
+ 
+10:37:00 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:38:06 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276956	   1832	  11328	 290116	  46d44	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:38:33 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276956	   1832	  11328	 290116	  46d44	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:38:54 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:39:12 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+10:39:33 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276948	   1832	  11328	 290108	  46d3c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:40:03 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276956	   1832	  11328	 290116	  46d44	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:40:34 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276956	   1832	  11328	 290116	  46d44	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:41:28 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276956	   1832	  11328	 290116	  46d44	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:42:32 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276956	   1832	  11328	 290116	  46d44	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:43:56 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+In file included from ../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h:118:0,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h:30,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h:29,
+                 from ../Core/Inc/stm32g4xx_hal_conf.h:211,
+                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:30,
+                 from ../Application/appmain.cpp:46:
+../Application/appmain.cpp: In function 'void init_dbuf32()':
+../Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h:1342:55: error: expression cannot be used as a function
+ #define TIM7                ((TIM_TypeDef *) TIM7_BASE)
+                                                       ^
+../Application/appmain.cpp:140:3: note: in expansion of macro 'TIM7'
+   TIM7->ARR = base_period;
+   ^~~~
+make: *** [Application/subdir.mk:31: Application/appmain.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:44:02 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276964	   1832	  11328	 290124	  46d4c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:44:27 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276964	   1832	  11328	 290124	  46d4c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:44:52 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276964	   1832	  11328	 290124	  46d4c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:45:16 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276964	   1832	  11328	 290124	  46d4c	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:45:45 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:46:13 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:46:31 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+10:46:41 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:47:10 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: G474RE_Main.elf
+ 
+arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
+arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
+Finished building: default.size.stdout
+ 
+Finished building: G474RE_Main.bin
+ 
+Finished building: G474RE_Main.list
+ 
+10:47:29 **** Incremental Build of configuration Debug for project G474RE_Main ****
+make -j4 all 
+arm-none-eabi-size   G474RE_Main.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
+Finished building: default.size.stdout
  

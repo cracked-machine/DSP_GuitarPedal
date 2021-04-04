@@ -1,20 +1,10 @@
-22:14:43 **** Incremental Build of configuration Debug for project G474RE_Main ****
+10:47:29 **** Incremental Build of configuration Debug for project G474RE_Main ****
 make -j4 all 
-arm-none-eabi-g++ "../CppUTests/test_dbuffer_dma_thruput.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I"/home/chris/DSP_GuitarPedal/G474_CppUTest/Inc" -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/CppUTests" -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"CppUTests/test_dbuffer_dma_thruput.d" -MT"CppUTests/test_dbuffer_dma_thruput.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "CppUTests/test_dbuffer_dma_thruput.o"
-arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -lG474_CppUTest -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L"/home/chris/DSP_GuitarPedal/G474_CppUTest/Debug" -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: G474RE_Main.elf
- 
-arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
-arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
 arm-none-eabi-size   G474RE_Main.elf 
    text	   data	    bss	    dec	    hex	filename
- 275044	   1824	  11176	 288044	  4652c	G474RE_Main.elf
+ 276988	   1832	  11328	 290148	  46d64	G474RE_Main.elf
 Finished building: default.size.stdout
  
-Finished building: G474RE_Main.bin
- 
-Finished building: G474RE_Main.list
- 
 
-22:14:47 Build Finished. 0 errors, 0 warnings. (took 3s.817ms)
+10:47:29 Build Finished. 0 errors, 0 warnings. (took 288ms)
 

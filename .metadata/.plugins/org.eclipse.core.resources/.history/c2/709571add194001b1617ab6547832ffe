@@ -1,0 +1,103 @@
+/*
+ *  	double_buffer16.hpp
+ *
+ *  	Created on: Apr 3, 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+#ifndef DOUBLE_BUFFER16_HPP_
+#define DOUBLE_BUFFER16_HPP_
+
+#include <assert.h>
+#include <stdint.h>
+#include <array>
+
+
+enum class DBuf16Allign : uint8_t
+{
+	eight_bit_r 		= 4,		// 16-bit data right packed in 32-bit frame xxxxAABB
+	sixteen_bit_l 		= 16,		// 16-bit data left packed in 32-bit frame AABBxxxx
+	twentyfour_bit_l	= 16		// 24-bit data left packed in 32-bit frame AABBCCxx
+};
+
+
+enum class DBuf16Frame : uint8_t
+{
+	frame0 = 0,
+	frame1 = 1
+};
+
+
+class double_buffer16
+{
+
+public:
+	explicit double_buffer16()
+	{
+		//assert(!size % 4);
+//		_rxBuf_frame0.fill(0);
+//		_txBuf_frame0.fill(0);
+		_rxBuf.fill(0);
+		_txBuf.fill(0);
+	}
+
+	uint16_t* getRxBuf();
+	uint16_t* getTxBuf();
+	uint32_t* getRxBuf32_left_chan();
+	uint32_t* getRxBuf32_right_chan();
+	uint32_t* getTxBuf32_left_chan();
+	uint32_t* getTxBuf32_right_chan();
+
+	uint8_t readRxFrame(uint32_t *left_sample, uint32_t *right_sample, DBuf16Allign allignment);
+	uint8_t updateRxFrame(DBuf16Allign allignment);
+
+	uint8_t writeRxFrame(uint32_t *left_sample, uint32_t *right_sample, DBuf16Allign allignment);
+
+	uint8_t readTxFrame(uint32_t *left_sample, uint32_t *right_sample, DBuf16Allign allignment);
+
+	uint8_t writeTxFrame(uint32_t *left_sample, uint32_t *right_sample, DBuf16Allign allignment);
+
+	DBuf16Frame swap_active_frame();
+	DBuf16Frame get_active_frame();
+
+private:
+
+	DBuf16Frame _active_frame = DBuf16Frame::frame0;
+
+	std::array<uint16_t, 8> _rxBuf;
+	std::array<uint16_t, 8> _txBuf;
+
+	uint32_t _rxBuf32_left_chan;
+	uint32_t _rxBuf32_right_chan;
+
+	uint32_t _txBuf32_left_chan;
+	uint32_t _txBuf32_right_chan;
+
+};
+
+
+
+
+
+#endif /* DOUBLE_BUFFER16_HPP_ */

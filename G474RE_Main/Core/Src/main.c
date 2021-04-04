@@ -91,6 +91,7 @@ int main(void)
   MX_DMA_Init();
   MX_TIM6_Init();
   MX_DAC1_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
 
   appmain();

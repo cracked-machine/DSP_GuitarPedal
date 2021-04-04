@@ -29,6 +29,9 @@
 
 // header
 #include <double_buffer.hpp>
+#include <double_buffer16.hpp>
+#include <double_buffer32.hpp>
+
 #include <tests_main.hpp>
 
 #include "appmain.hpp"
@@ -53,21 +56,31 @@
 #include "dac.h"
 #include "gpio.h"
 
-// Application sources
+// CMSIS DSP
+#include <arm_math.h>
 
 size_t count = 0;
 size_t sine_lut_index = 0;
+size_t lut_index = 0;
 
+#define TEST_LUT tri_lut
 
 #ifdef __cplusplus
 	extern "C"
 	{
 #endif
 
-	// create double buffer of frame size = 4 * uint16_t
+	double_buffer16 *dbuf16 = new double_buffer16();
+
+
+	double_buffer32 *dbuf32 = new double_buffer32();
+	uint32_t *dbuf32Rx = dbuf32->get_rxBuf();
+
+	arm_fir_instance_f32 S;
+
+
 	const size_t frame_size = 4;
 	double_buffer<uint16_t, frame_size> dbuf;
-
 	uint16_t *tmpRx = dbuf.getRxBuf();
 	uint32_t *dbufRxDataWord = dbuf.getRxBuf32_left_chan();
 
@@ -78,10 +91,13 @@ size_t sine_lut_index = 0;
 	void test_manual_dac_updates();
 	void test_dma_dac_updates();
 
+	void init_dbuf32();
+	void loop_dbuf32_clock_out_dac();
+	void loop_dbuf32_clock_in_buff();
+
 
 	void appmain()
 	{
-
 
 		std::cout << tmpRx[0] << std::endl;
 
@@ -89,7 +105,8 @@ size_t sine_lut_index = 0;
 		std::cout << "Running Loop" << std::endl;
 
 		//init_test_manual_dac_updates();
-		init_test_dma_dac_updates();
+		//init_test_dma_dac_updates();
+		init_dbuf32();
 
 		while(1)
 		{
@@ -100,8 +117,62 @@ size_t sine_lut_index = 0;
 
 	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
-		//test_manual_dac_updates();
-		test_dma_dac_updates();
+		if(htim->Instance == TIM6)
+		{
+			//test_manual_dac_updates();
+			//test_dma_dac_updates();
+			loop_dbuf32_clock_in_buff();
+		}
+		if(htim->Instance == TIM7)
+		{
+			loop_dbuf32_clock_out_dac();
+		}
+
+	}
+
+
+
+	void init_dbuf32()
+	{
+		uint32_t base_period = 1024;
+		float speed_coefficient = 2;
+		// clock the data into the double_buffer32 using TIM7
+		TIM7->ARR = base_period;
+		HAL_TIM_Base_Start_IT(&htim7);
+
+		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
+		TIM6->ARR = base_period * speed_coefficient;
+		HAL_TIM_Base_Start_IT(&htim6);
+
+		// set the txBuff pointer as DMA destination
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf32->get_txBuf(), 1, DAC_ALIGN_12B_R);
+
+		// test the DAC by sending the whole LUT at once
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)tri_lut.data(), 64, DAC_ALIGN_12B_R);
+	}
+	void loop_dbuf32_clock_in_buff()
+	{
+		// increment the LUT position (circular)
+		lut_index = count & ( TEST_LUT.size() - 1 );
+
+		// assign new data to the rx buffer
+		*dbuf32Rx = TEST_LUT[lut_index];
+
+		// process the rx buffer data here
+		*dbuf32Rx = *dbuf32Rx * 0.5;
+		*dbuf32Rx = *dbuf32Rx + 2048;
+
+		//swap the rx buffer data out to the tx buffer pointer
+		dbuf32->swap();
+
+		//increment the counter
+		count++;
+
+	}
+
+	void loop_dbuf32_clock_out_dac()
+	{
+
 	}
 
 	void init_test_dma_dac_updates()
