@@ -31,8 +31,8 @@
 #define APPMAIN_HPP_
 
 
-
 #ifdef __cplusplus
+
 
 	extern "C"
 	{

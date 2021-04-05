@@ -1,10 +1,10 @@
-12:57:00 **** Incremental Build of configuration Debug for project G474RE_Main ****
+13:00:58 **** Incremental Build of configuration Debug for project G474RE_Main ****
 make -j4 all 
 arm-none-eabi-size   G474RE_Main.elf 
    text	   data	    bss	    dec	    hex	filename
- 277500	   1840	  11344	 290684	  46f7c	G474RE_Main.elf
+ 276268	   1840	  11288	 289396	  46a74	G474RE_Main.elf
 Finished building: default.size.stdout
  
 
-12:57:00 Build Finished. 0 errors, 0 warnings. (took 285ms)
+13:00:58 Build Finished. 0 errors, 0 warnings. (took 363ms)
 

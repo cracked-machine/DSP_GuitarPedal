@@ -34,6 +34,8 @@
 #include <double_buffer32.hpp>
 #include <double_bufferf32.hpp>
 
+#include <audio_buffer.hpp>
+
 #include "iir_filter_32u.hpp"
 
 #include <tests_main.hpp>
@@ -67,24 +69,18 @@ size_t count = 0;
 size_t sine_lut_index = 0;
 size_t lut_index = 0;
 
-#define TEST_LUT tri_lut
+#define TEST_LUT tri_lut_f32
 
 #ifdef __cplusplus
 	extern "C"
 	{
 #endif
 
-	double_buffer16 *dbuf16 = new double_buffer16();
+	// create a uint32_t ping pong buffer
+	audiobuffer_u32 t_dbuf;
+	uint32_t* t_dbuf_rxptr = t_dbuf.get_rxBuf();
 
-	// uint32_t single-item Double Buffer
-	//
-	double_buffer32 *dbuf32 = new double_buffer32();
-	uint32_t *dbuf32Rx = dbuf32->get_rxBuf();
-
-	// float single-item double buffer
-	double_bufferf32 *dbuf_float = new double_bufferf32();
-	float *dbufRx_float32 = dbuf_float->get_rxBuf();
-
+	// settings for output DAC timer to control pitch, offset and amplitude
 	uint32_t base_period = 1024;
 	float octave_pitch_down = 1;
 	float offset = 0.0f;
@@ -96,38 +92,25 @@ size_t lut_index = 0;
 	//arm_fir_instance_f32 S;
 
 
-	const size_t frame_size = 4;
-	double_buffer<uint16_t, frame_size> dbuf;
-	uint16_t *tmpRx = dbuf.getRxBuf();
-	uint32_t *dbufRxDataWord = dbuf.getRxBuf32_left_chan();
-
-	//uint32_t tmp = sine_data_table_1300[0];
-
-	void init_test_manual_dac_updates();
-	void init_test_dma_dac_updates();
-	void test_manual_dac_updates();
-	void test_dma_dac_updates();
-
-	void init_dbuf_uint32();
-	void loop_dbuf_uint32_clock_out_dac();
-	void loop_dbuf_uint32_clock_in_buff();
-
-	void init_dbuf_float();
-	void loop_dbuf_float_clock_in_buff();
 
 
 	void appmain()
 	{
 
-		std::cout << tmpRx[0] << std::endl;
-
 		run_all_tests();
-		std::cout << "Running Loop" << std::endl;
 
-		//init_test_manual_dac_updates();
-		//init_test_dma_dac_updates();
-		init_dbuf_uint32();
-		//init_dbuf_float();
+		// clock the data into the double_buffer32 using TIM7
+		TIM7->ARR = base_period;
+		HAL_TIM_Base_Start_IT(&htim7);
+
+		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
+		TIM6->ARR = base_period * octave_pitch_down;
+		HAL_TIM_Base_Start_IT(&htim6);
+
+		// set the txBuff pointer as DMA destination
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf32->get_txBuf(), 1, DAC_ALIGN_12B_R);
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)t_dbuf.get_txBuf(), 1, DAC_ALIGN_12B_R);
+
 
 		while(1)
 		{
@@ -138,221 +121,38 @@ size_t lut_index = 0;
 
 	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
-		if(htim->Instance == TIM6)
-		{
-			//test_manual_dac_updates();
-			//test_dma_dac_updates();
-			loop_dbuf_uint32_clock_in_buff();
-
-			//loop_dbuf_float_clock_in_buff();
-		}
+		// the receive timer
 		if(htim->Instance == TIM7)
 		{
-			//loop_dbuf_uint32_clock_out_dac();
+			//rest the rx ptr to Buffer A and tx ptr to Buffer B
+			t_dbuf.reset();
+
+			// increment the LUT position (circular)
+			lut_index = count & ( TEST_LUT.size() - 1 );
+
+			// assign new data to the rx buffer
+			*t_dbuf_rxptr = TEST_LUT[lut_index];
+
+			// process the rx buffer data here
+			*t_dbuf_rxptr = *t_dbuf_rxptr * amplitude;
+			*t_dbuf_rxptr = *t_dbuf_rxptr + offset;
+
+			//swap the rx ptr to Buffer B and tx ptr to Buffer A
+			t_dbuf.swap();
+
+			//increment the counter
+			count++;
+		}
+
+		// the DAC transmit timer
+		if(htim->Instance == TIM6)
+		{
 
 		}
 
-	}
-
-
-	void init_dbuf_float()
-	{
-		// clock the data into the double_buffer32 using TIM7
-		TIM7->ARR = base_period;
-		HAL_TIM_Base_Start_IT(&htim7);
-
-		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
-		TIM6->ARR = base_period * octave_pitch_down;
-		HAL_TIM_Base_Start_IT(&htim6);
-
-		// set the txBuff pointer as DMA destination
-		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf_float->get_txBuf(), 1, DAC_ALIGN_12B_R);
 
 
 	}
-
-	void loop_dbuf_float_clock_in_buff()
-	{
-		// increment the LUT position (circular)
-		lut_index = count & ( TEST_LUT.size() - 1 );
-
-		// assign new data to the rx buffer
-		*dbufRx_float32 = TEST_LUT[lut_index];
-
-		// process the rx buffer data here
-		*dbufRx_float32 = *dbufRx_float32 * amplitude;
-		*dbufRx_float32 = *dbufRx_float32 + offset;
-
-
-		// iir filter - TODO stop using this uint32_t->float->uint32_t insanity!
-/*		float output = 0;
-		iir1->process(dbufRx_float32, &output);
-		*dbufRx_float32 = output;
-*/
-		//uint32_t *tmp = (uint32_t*)dbuf_float->get_rxBuf();
-
-		//swap the rx buffer data out to the tx buffer pointer
-		dbuf_float->swap();
-
-		//increment the counter
-		count++;
-
-	}
-
-	void init_dbuf_uint32()
-	{
-
-		// clock the data into the double_buffer32 using TIM7
-		TIM7->ARR = base_period;
-		HAL_TIM_Base_Start_IT(&htim7);
-
-		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
-		TIM6->ARR = base_period * octave_pitch_down;
-		HAL_TIM_Base_Start_IT(&htim6);
-
-		// set the txBuff pointer as DMA destination
-		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf32->get_txBuf(), 1, DAC_ALIGN_12B_R);
-
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)iir_output, 1, DAC_ALIGN_12B_R);
-		// test the DAC by sending the whole LUT at once
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)tri_lut.data(), 64, DAC_ALIGN_12B_R);
-	}
-	void loop_dbuf_uint32_clock_in_buff()
-	{
-		// increment the LUT position (circular)
-		lut_index = count & ( TEST_LUT.size() - 1 );
-
-		// assign new data to the rx buffer
-		*dbuf32Rx = TEST_LUT[lut_index];
-
-		// process the rx buffer data here
-		*dbuf32Rx = *dbuf32Rx * amplitude;
-		*dbuf32Rx = *dbuf32Rx + offset;
-
-
-		// iir filter - TODO stop using this uint32_t->float->uint32_t insanity!
-		float input = (float)*dbuf32Rx;
-		float output = 0;
-		iir1->process(&input, &output);
-		uint32_t tmp = (uint32_t)output;
-		*dbuf32Rx = tmp;
-
-
-		std::cout << *iir_output << std::endl;
-
-		//swap the rx buffer data out to the tx buffer pointer
-		dbuf32->swap();
-
-		//increment the counter
-		count++;
-
-	}
-
-	void loop_dbuf_uint32_clock_out_dac()
-	{
-
-	}
-
-	void init_test_dma_dac_updates()
-	{
-		HAL_TIM_Base_Start_IT(&htim6);
-		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf.getTxBuf32_left_chan(), 1, DAC_ALIGN_12B_R);
-	}
-
-	void test_dma_dac_updates()
-	{
-
-		// increment the LUT position (circular)
-		sine_lut_index = count & ( sine_lut.size() - 1 );
-
-
-		//std::cout << tmpRx[0] << " " << tmpRx[1] << "(" << (tmpRx[0] | tmpRx[1]) << ")" << std::endl;
-		//std::cout << dbufRxDataWord << std::endl;
-
-		std::cout << sine_lut[sine_lut_index] << std::endl;
-		std::cout << *dbuf.getRxBuf32_left_chan() << std::endl;
-
-		// direct copy data into auxiliary RxBuf32 pointer
-		*dbufRxDataWord = sine_lut[sine_lut_index];
-
-		std::cout << *dbuf.getRxBuf32_left_chan() << std::endl;
-
-		// update the central Rxbuffer from auxiliary RxBuf32 pointer
-		dbuf.updateRxFrame( DBufAllign::eight_bit_r );
-
-
-		// now read the central Rxbuffer values back
-		uint32_t ltest = 0;
-		uint32_t rtest = 0;
-		dbuf.readRxFrame(	&ltest,
-							&rtest,
-							DBufAllign::eight_bit_r
-							);
-
-		std::cout << ltest << std::endl;
-
-
-
-		//dbuf.swap_active_frame();
-
-		// send data into Rx buffer frame #0
-		dbuf.writeTxFrame( 	&ltest,
-							&rtest,
-							DBufAllign::eight_bit_r
-							);
-
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-
-		//increment the counter
-		count++;
-
-	}
-
-	void init_test_manual_dac_updates()
-	{
-		HAL_TIM_Base_Start_IT(&htim6);
-		HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
-
-	}
-
-	void test_manual_dac_updates()
-	{
- 		uint32_t left_sample = 0;
-		uint32_t right_sample = 0;
-
-		// increment the lut array every N-1 ( or sine_lut.size() - 1 )
-		sine_lut_index = count & ( sine_lut.size() - 1 );
-
-		// send data into Rx buffer frame #0
-		dbuf.writeTxFrame( 	&sine_lut[sine_lut_index],
-							&sine_lut[sine_lut_index],
-							DBufAllign::eight_bit_r);
-
-
-		// retrieve data from dsp Rx buffer frame #0
-		dbuf.readTxFrame( 	&left_sample,
-							&right_sample,
-							DBufAllign::eight_bit_r);
-
-
-		// or get data from the global rx buffer pointer created at startup
-		//left_sample = (int) (( tmpRx[0] << int(DBufAllign::eight_bit_r) ) | tmpRx[1]);
-
-		HAL_DAC_SetValue(	&hdac1,
-							DAC_CHANNEL_1,
-							DAC_ALIGN_8B_R,
-							left_sample);
-
-		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-
-
-		//HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_8B_R, sine_lut[sine_lut_index]);
-
-		//increment the counter
-		count++;
-
-	}
-
 
 #ifdef __cplusplus
 	}

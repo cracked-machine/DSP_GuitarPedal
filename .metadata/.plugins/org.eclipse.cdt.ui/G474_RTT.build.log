@@ -1,6 +1,6 @@
-12:55:28 **** Incremental Build of configuration Debug for project G474_RTT ****
+12:47:56 **** Incremental Build of configuration Debug for project G474_RTT ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-12:55:28 Build Finished. 0 errors, 0 warnings. (took 266ms)
+12:47:56 Build Finished. 0 errors, 0 warnings. (took 271ms)
 

@@ -1,0 +1,59 @@
+/*
+ *  	test_audio_buffer.cpp
+ *
+ *  	Created on: 5 Apr 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+#include "CppUTest/TestHarness.h"
+#include <audio_buffer.hpp>
+
+// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
+// NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
+std::array<uint32_t, 64> tri_lut {
+
+	128,256,384,512,640,768,896,1024,
+	1152,1280,1408,1536,1664,1792,1920,2048,
+	2175,2303,2431,2559,2687,2815,2943,3071,
+	3199,3327,3455,3583,3711,3839,3967,4095,
+	3967,3839,3711,3583,3455,3327,3199,3071,
+	2943,2815,2687,2559,2431,2303,2175,2048,
+	1920,1792,1664,1536,1408,1280,1152,1024,
+	896,768,640,512,384,256,128,0
+
+};
+
+TEST_GROUP(FirstTestGroup)
+{
+};
+TEST(FirstTestGroup, FirstTest) // failure
+{
+	audiobuffer_u32 test;
+    FAIL("Embedded Area");
+}
+
+TEST(FirstTestGroup, SecondTest) // successful
+{
+    CHECK_EQUAL_ZERO(0);
+}

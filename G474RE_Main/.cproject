@@ -35,6 +35,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474_RTT/RTT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/CppUTests}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/buffers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/filters}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/lut}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.365863778" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -56,6 +59,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474_RTT/RTT}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/buffers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/filters}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/lut}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.410072798" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -78,6 +84,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474_RTT/RTT}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/buffers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/filters}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/lut}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.790699043" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -153,6 +162,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474_RTT/RTT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/CppUTests}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/buffers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/filters}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/lut}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.121843256" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -173,6 +185,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474_RTT/RTT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/CppUTests}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/buffers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/filters}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/lut}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1922360345" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -193,6 +208,9 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474_RTT/RTT}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/CppUTests}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/buffers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/filters}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/G474RE_Main/Application/lut}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1544221137" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
