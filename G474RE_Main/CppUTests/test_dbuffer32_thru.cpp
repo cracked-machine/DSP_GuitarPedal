@@ -25,7 +25,7 @@
  * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * 		SOFTWARE.
  */
-
+/*
 #include <double_buffer32.hpp>
 #include "CppUTest/TestHarness.h"
 
@@ -41,14 +41,14 @@ TEST_GROUP(Dbuffer32ThruGroup)
 	  // Uninit stuff
    }
 };
-
+*/
 /*
  * 		Dbuffer32Thru
  *
  * 		@Brief		check output == input, after buffer swap.
  * 					Expected result: pass
  */
-
+/*
 TEST(Dbuffer32ThruGroup, Dbuffer32ThruSwap)
 {
 	uint32_t input = 2048;
@@ -69,13 +69,14 @@ TEST(Dbuffer32ThruGroup, Dbuffer32ThruSwap)
 	CHECK(input == *output);
 	delete dbuf32;
 }
-
+*/
 /*
  * 		Dbuffer32ThruAboveUpperThreshold
  *
  * 		@Brief		check upper limit threshold.
  * 					Expected result: pass
  */
+/*
 TEST(Dbuffer32ThruGroup, Dbuffer32ThruAboveUpperThreshold)
 {
 	uint32_t input = 4096;
@@ -98,3 +99,4 @@ TEST(Dbuffer32ThruGroup, Dbuffer32ThruAboveUpperThreshold)
 	delete dbuf32;
 }
 
+*/

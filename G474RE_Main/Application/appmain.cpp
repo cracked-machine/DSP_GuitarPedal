@@ -27,16 +27,10 @@
  * 		SOFTWARE.
  */
 
-// header
-#include <double_buffer.hpp>
-#include <double_buffer16.hpp>
-
-#include <double_buffer32.hpp>
-#include <double_bufferf32.hpp>
 
 #include <audio_buffer.hpp>
 
-#include "iir_filter_32u.hpp"
+//#include <iir_biquad.hpp>
 
 #include <tests_main.hpp>
 
@@ -69,47 +63,89 @@ size_t count = 0;
 size_t sine_lut_index = 0;
 size_t lut_index = 0;
 
-#define TEST_LUT tri_lut_f32
+#define TEST_LUT tri_lut
 
 #ifdef __cplusplus
 	extern "C"
 	{
 #endif
 
+
+
 	// create a uint32_t ping pong buffer
 	audiobuffer_u32 t_dbuf;
 	uint32_t* t_dbuf_rxptr = t_dbuf.get_rxBuf();
 
 	// settings for output DAC timer to control pitch, offset and amplitude
-	uint32_t base_period = 1024;
+	uint32_t timer_arr = 1024;
 	float octave_pitch_down = 1;
 	float offset = 0.0f;
 	float amplitude = 1.0f;
 
 
-	iir_filter_32u *iir1 = new iir_filter_32u();
-	uint32_t *iir_output;
-	//arm_fir_instance_f32 S;
+	//iir_filter_32u *iir1 = new iir_filter_32u();
+	//uint32_t *iir_output;
 
+	// enable/disable IIR BIQUAD filter here
+	//#define ENABLE_IIR_BIQUAD
 
+	#define BLOCK_SIZE            1
+	#define NUM_TAPS              1
+	arm_biquad_casd_df1_inst_f32 S;
+	float32_t iir_output[BLOCK_SIZE] = {0};
+
+	/* 	Fc=10KHz, Q=0.707, G=6db, SR=96KHz
+	 *
+		a0 = 0.07222759259637182
+		a1 = 0.14445518519274364
+		a2 = 0.07222759259637182
+		b1 = -1.1091783806868014
+		b2 = 0.39808875107228864
+*/
+	const float32_t coeffs[] = {	0.07222759259637182,
+									0.14445518519274364,
+									0.07222759259637182,
+									1.1091783806868014,
+									0.39808875107228864 };
+
+	/*	Fc=1KHz, Q=0.707, G=6db, SR=96KHz
+	 *
+	 	a0 = 0.001023210807384899
+		a1 = 0.002046421614769798
+		a2 = 0.001023210807384899
+		b1 = -1.9074888914066748
+		b2 = 0.9115817346362142
+
+	const float32_t coeffs[] = {	0.001023210807384899,
+									0.002046421614769798,
+									0.001023210807384899,
+									1.9074888914066748,
+									0.9115817346362142  };
+*/
+	static float32_t iirState[BLOCK_SIZE + (NUM_TAPS - 1)];
+
+	//biquad_f32 my_biquad_f32;
+	//biquad_u32 my_biquad_u32;
 
 
 	void appmain()
 	{
 
-		run_all_tests();
+		arm_biquad_cascade_df1_init_f32(&S, NUM_TAPS, coeffs, iirState);
+		//run_all_tests();
 
 		// clock the data into the double_buffer32 using TIM7
-		TIM7->ARR = base_period;
+		TIM7->ARR = timer_arr;
 		HAL_TIM_Base_Start_IT(&htim7);
 
 		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
-		TIM6->ARR = base_period * octave_pitch_down;
+		TIM6->ARR = timer_arr * octave_pitch_down;
 		HAL_TIM_Base_Start_IT(&htim6);
 
 		// set the txBuff pointer as DMA destination
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)dbuf32->get_txBuf(), 1, DAC_ALIGN_12B_R);
 		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)t_dbuf.get_txBuf(), 1, DAC_ALIGN_12B_R);
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)TEST_LUT.data(), TEST_LUT.size(), DAC_ALIGN_12B_R);
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)iir_output, BLOCK_SIZE, DAC_ALIGN_12B_R);
 
 
 		while(1)
@@ -119,6 +155,9 @@ size_t lut_index = 0;
 
 	}
 
+
+
+
 	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
 		// the receive timer
@@ -127,17 +166,35 @@ size_t lut_index = 0;
 			//rest the rx ptr to Buffer A and tx ptr to Buffer B
 			t_dbuf.reset();
 
+// BEGIN INCOMING DMA SIMULATION
 			// increment the LUT position (circular)
 			lut_index = count & ( TEST_LUT.size() - 1 );
 
 			// assign new data to the rx buffer
 			*t_dbuf_rxptr = TEST_LUT[lut_index];
+// END INCOMING DMA SIMULATION
 
 			// process the rx buffer data here
-			*t_dbuf_rxptr = *t_dbuf_rxptr * amplitude;
-			*t_dbuf_rxptr = *t_dbuf_rxptr + offset;
+			// *t_dbuf_rxptr = *t_dbuf_rxptr * amplitude;
+			// *t_dbuf_rxptr = *t_dbuf_rxptr + offset;
 
-			//swap the rx ptr to Buffer B and tx ptr to Buffer A
+#ifdef ENABLE_IIR_BIQUAD
+			// IIR Biquad filter
+			float32_t iir_input_f32 = (float32_t) *t_dbuf_rxptr;
+			float32_t iir_output_f32;
+			arm_biquad_cascade_df1_f32( &S, &iir_input_f32, &iir_output_f32, BLOCK_SIZE);
+			*t_dbuf_rxptr = (uint32_t)iir_output_f32;
+#endif
+//			uint32_t out;
+//			my_biquad_u32.process(*t_dbuf_rxptr, &out);
+//			*t_dbuf_rxptr = out;
+
+//			float out = 0;
+//			my_biquad_f32.process((float)*t_dbuf_rxptr, &out);
+//			*t_dbuf_rxptr = (uint32_t)out;
+
+			// swap the rx ptr to Buffer B and tx ptr to Buffer A
+			// before DMA uses the txBuf ptr transfer data to the DAC output register
 			t_dbuf.swap();
 
 			//increment the counter
@@ -147,11 +204,7 @@ size_t lut_index = 0;
 		// the DAC transmit timer
 		if(htim->Instance == TIM6)
 		{
-
 		}
-
-
-
 	}
 
 #ifdef __cplusplus

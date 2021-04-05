@@ -1,0 +1,109 @@
+/*
+ *  	iir_biquad.hpp
+ *
+ *  	Created on: Apr 5, 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+#ifndef FILTERS_IIR_BIQUAD_HPP_
+#define FILTERS_IIR_BIQUAD_HPP_
+
+template<class T>
+class iir_biquad
+{
+
+public:
+
+	iir_biquad() : in_z1(0), in_z2(0), out_z1(0), out_z2(0)
+	{
+
+	}
+	void process(T input, T *output);
+
+
+private:
+	//300Hz high-pass, 96k
+	/*
+	float a0 = 0.9862117951198142f;
+	float a1 = -1.9724235902396283f;
+	float a2 = 0.9862117951198142f;
+	float b1 = -1.972233470205696f;
+	float b2 = 0.9726137102735608f;
+	*/
+
+	// 10KHz low-pass, 96KHz
+	float a0 = 0.07222759259637182;
+	float a1 = 0.14445518519274364;
+	float a2 = 0.07222759259637182;
+	float b1 = 1.1091783806868014;
+	float b2 = 0.39808875107228864;
+
+	// 500Hz low-pass, 96KHz
+/*	float a0 = 0.00025668462720233523;
+	float a1 = 0.0005133692544046705;
+	float a2 = 0.00025668462720233523;
+	float b1 = -1.916632007760119;
+	float b2 = 0.9176587462689284;
+*/
+	// 1000Hz low-pass, 96KHz
+/*	float a0 = 0.07223066687518032;
+	float a1 = 0.14446133375036063;
+	float a2 = 0.07223066687518032;
+	float b1 = -1.10922559150289;
+	float b2 = 0.3981482590036111;
+*/
+	float in_z1;
+	float in_z2;
+	float out_z1;
+	float out_z2;
+
+	T input;
+	T output;
+};
+
+template<class T>
+void iir_biquad<T>::process(T input, T *output)
+{
+
+	//y[n] = b0 * x[n] + b1 * x[n-1] + b2 * x[n-2] + a1 * y[n-1] + a2 * y[n-2]
+	float tmp =	a0 * input
+				+ a1 * in_z1
+				+ a2 * in_z2
+				- b1 * out_z1
+				- b2 * out_z2;
+	if(tmp < 0)
+		tmp = 0;
+	in_z2 = in_z1;
+	in_z1 = input;
+	out_z2 = out_z1;
+	out_z1 = tmp;
+	*output = tmp;
+}
+
+typedef iir_biquad<uint32_t> 	biquad_u32;
+typedef iir_biquad<float>		biquad_f32;
+typedef iir_biquad<q31_t>		biquad_q31_t;
+
+
+#endif /* FILTERS_IIR_BIQUAD_HPP_ */

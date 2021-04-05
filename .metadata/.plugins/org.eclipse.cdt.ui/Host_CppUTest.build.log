@@ -1,6 +1,6 @@
-12:47:57 **** Incremental Build of configuration Debug for project Host_CppUTest ****
+16:15:58 **** Incremental Build of configuration Debug for project Host_CppUTest ****
 make all 
 make: Nothing to be done for 'all'.
 
-12:47:57 Build Finished. 0 errors, 0 warnings. (took 222ms)
+16:15:58 Build Finished. 0 errors, 0 warnings. (took 247ms)
 
