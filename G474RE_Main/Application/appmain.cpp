@@ -59,9 +59,9 @@
 // CMSIS DSP
 #include <arm_math.h>
 
-size_t count = 0;
-size_t sine_lut_index = 0;
-size_t lut_index = 0;
+//size_t count = 0;
+//size_t sine_lut_index = 0;
+//size_t lut_index = 0;
 
 #define TEST_LUT tri_lut
 
@@ -72,9 +72,7 @@ size_t lut_index = 0;
 
 
 
-	// create a uint32_t ping pong buffer
-	audiobuffer_u32 t_dbuf;
-	uint32_t* t_dbuf_rxptr = t_dbuf.get_rxBuf();
+
 
 	// settings for output DAC timer to control pitch, offset and amplitude
 	uint32_t timer_arr = 1024;
@@ -89,10 +87,10 @@ size_t lut_index = 0;
 	// enable/disable IIR BIQUAD filter here
 	//#define ENABLE_IIR_BIQUAD
 
-	#define BLOCK_SIZE            1
-	#define NUM_TAPS              1
-	arm_biquad_casd_df1_inst_f32 S;
-	float32_t iir_output[BLOCK_SIZE] = {0};
+//	#define BLOCK_SIZE            1
+//	#define NUM_TAPS              1
+//	arm_biquad_casd_df1_inst_f32 S;
+//	float32_t iir_output[BLOCK_SIZE] = {0};
 
 	/* 	Fc=10KHz, Q=0.707, G=6db, SR=96KHz
 	 *
@@ -102,12 +100,12 @@ size_t lut_index = 0;
 		b1 = -1.1091783806868014
 		b2 = 0.39808875107228864
 */
-	const float32_t coeffs[] = {	0.07222759259637182,
+/*	const float32_t coeffs[] = {	0.07222759259637182,
 									0.14445518519274364,
 									0.07222759259637182,
 									1.1091783806868014,
 									0.39808875107228864 };
-
+*/
 	/*	Fc=1KHz, Q=0.707, G=6db, SR=96KHz
 	 *
 	 	a0 = 0.001023210807384899
@@ -122,7 +120,7 @@ size_t lut_index = 0;
 									1.9074888914066748,
 									0.9115817346362142  };
 */
-	static float32_t iirState[BLOCK_SIZE + (NUM_TAPS - 1)];
+	//static float32_t iirState[BLOCK_SIZE + (NUM_TAPS - 1)];
 
 	//biquad_f32 my_biquad_f32;
 	//biquad_u32 my_biquad_u32;
@@ -131,7 +129,7 @@ size_t lut_index = 0;
 	void appmain()
 	{
 
-		arm_biquad_cascade_df1_init_f32(&S, NUM_TAPS, coeffs, iirState);
+		//arm_biquad_cascade_df1_init_f32(&S, NUM_TAPS, coeffs, iirState);
 		//run_all_tests();
 
 		// clock the data into the double_buffer32 using TIM7
@@ -143,7 +141,9 @@ size_t lut_index = 0;
 		HAL_TIM_Base_Start_IT(&htim6);
 
 		// set the txBuff pointer as DMA destination
-		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)t_dbuf.get_txBuf(), 1, DAC_ALIGN_12B_R);
+		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)t_dbuf.get_txBuf(), 1, DAC_ALIGN_12B_R);
+
+
 		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)TEST_LUT.data(), TEST_LUT.size(), DAC_ALIGN_12B_R);
 		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)iir_output, BLOCK_SIZE, DAC_ALIGN_12B_R);
 
@@ -157,7 +157,7 @@ size_t lut_index = 0;
 
 
 
-
+/*
 	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	{
 		// the receive timer
@@ -206,7 +206,7 @@ size_t lut_index = 0;
 		{
 		}
 	}
-
+*/
 #ifdef __cplusplus
 	}
 #endif

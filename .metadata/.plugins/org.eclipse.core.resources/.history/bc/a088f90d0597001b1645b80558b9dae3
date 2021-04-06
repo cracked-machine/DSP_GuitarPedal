@@ -1,0 +1,105 @@
+/*
+ *  	testmain.cpp
+ *
+ *  	Created on: Apr 6, 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+
+// STM HAL Framework
+#include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal_tim.h"
+#include "stm32g4xx_hal_tim_ex.h"
+#include "stm32g4xx_hal_dac.h"
+#include "stm32g4xx_hal_dac_ex.h"
+#include "stm32g4xx_hal_gpio.h"
+#include "stm32g4xx_hal_gpio_ex.h"
+
+// STM32Cube generated HAL init code
+#include "tim.h"
+#include "dac.h"
+#include "gpio.h"
+
+#include <array>
+
+#include<audio_buffer.hpp>
+
+size_t lut_count = 0;
+size_t sine_lut_index = 0;
+size_t lut_index = 0;
+
+// create a uint32_t ping pong buffer
+audiobuffer_u32 t_dbuf;
+uint32_t* t_dbuf_rxptr = t_dbuf.get_rxBuf();
+
+std::array<uint32_t,64> test_sine {
+
+	2048,2248,2447,2642,2831,3013,3185,3346,
+	3495,3630,3750,3853,3939,4007,4056,4085,
+	4095,4085,4056,4007,3939,3853,3750,3630,
+	3495,3346,3185,3013,2831,2642,2447,2248,
+	2048,1847,1648,1453,1264,1082,910,749,
+	600,465,345,242,156,88,39,10,
+	0,10,39,88,156,242,345,465,
+	600,749,910,1082,1264,1453,1648,1847
+};
+
+uint32_t data_point[1] = {0};
+
+#ifdef __cplusplus
+
+
+	extern "C"
+	{
+
+#endif
+
+	uint8_t togglebit = 0;
+
+	void testmain()
+	{
+		HAL_TIM_Base_Start_IT(&htim6);
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, data_point, 1, DAC_ALIGN_12B_R);
+		while(1)
+		{
+
+			//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+			//HAL_Delay(1000);
+
+
+		}
+	}
+
+	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+	{
+		//togglebit ^= 1 << 0;
+		lut_index = lut_count++ & ( test_sine.size() - 1 );
+		data_point[0] = test_sine[lut_index];
+	}
+
+#ifdef __cplusplus
+	}
+#endif
+
+

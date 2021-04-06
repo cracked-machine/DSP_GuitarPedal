@@ -3,11 +3,16 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
-		<item key="wholeword" value="false"/>
+		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="MX_DAC1_Init"/>
+		<item key="selection" value="T"/>
 		<list key="findhistory">
+			<item value="T"/>
+			<item value="float"/>
+			<item value="base_period"/>
+			<item value="t_dbuf_u32"/>
+			<item value="audio_buffer"/>
 			<item value="__HAL_RCC_DAC1_CLK_ENABLE() "/>
 			<item value="_HAL_RCC_DAC1_CLK_ENABLE() "/>
 			<item value="_HAL_RCC_DAC_CLK_ENABLE() "/>
@@ -15,6 +20,12 @@
 			<item value="rxBuf"/>
 		</list>
 		<list key="replacehistory">
+			<item value="float"/>
+			<item value="T"/>
+			<item value="timer_arr"/>
+			<item value="t_dbuf"/>
+			<item value="&#x09;&#x09;// reset the buffer pointers back to default buffer allocation&#x0A;&#x09;&#x09;buf.reset();"/>
+			<item value="audio_buffer_block"/>
 			<item value="_rxBuf"/>
 		</list>
 	</section>

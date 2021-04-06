@@ -1,0 +1,207 @@
+/*
+ *  	testmain.cpp
+ *
+ *  	Created on: Apr 6, 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+
+// STM HAL Framework
+#include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal_tim.h"
+#include "stm32g4xx_hal_tim_ex.h"
+#include "stm32g4xx_hal_dac.h"
+#include "stm32g4xx_hal_dac_ex.h"
+#include "stm32g4xx_hal_gpio.h"
+#include "stm32g4xx_hal_gpio_ex.h"
+
+// STM32Cube generated HAL init code
+#include "tim.h"
+#include "dac.h"
+#include "gpio.h"
+
+#include <array>
+
+#include <audio_buffer.hpp>
+
+// CMSIS DSP
+#include <arm_math.h>
+
+
+#define BLOCK_SIZE            1
+
+
+/*
+ * FIR FILTER
+ */
+#define FIR_NUM_TAPS 55
+arm_fir_instance_f32 s_ch1_f32;
+
+// LPF FIR data for fc=0.1(KHz) fs=48 N=55
+float32_t lpf_fir_coeffs_0_1khz_f32[FIR_NUM_TAPS] = {
+	0.002707f, 0.002814f, 0.003132f, 0.003655f, 0.004377f, 0.005290f, 0.006380f, 0.007634f, 0.009035f, 0.010563f, 0.012200f, 0.013922f, 0.015706f, 0.017529f, 0.019365f, 0.021190f, 0.022979f, 0.024707f, 0.026351f, 0.027889f, 0.029300f, 0.030564f, 0.031664f, 0.032585f, 0.033316f, 0.033844f, 0.034164f, 0.034272f, 0.034164f, 0.033844f, 0.033316f, 0.032585f, 0.031664f, 0.030564f, 0.029300f, 0.027889f, 0.026351f, 0.024707f, 0.022979f, 0.021190f, 0.019365f, 0.017529f, 0.015706f, 0.013922f, 0.012200f, 0.010563f, 0.009035f, 0.007634f, 0.006380f, 0.005290f, 0.004377f, 0.003655f, 0.003132f, 0.002814f, 0.002707f
+};
+
+// LPF FIR data for fc=1(KHz) fs=48 N=55
+float32_t lpf_fir_coeffs_1khz_f32[FIR_NUM_TAPS] = {
+	-0.000324f, -0.000208f, -0.000072f, 0.000119f, 0.000403f, 0.000822f, 0.001417f, 0.002225f, 0.003281f, 0.004611f, 0.006232f, 0.008153f, 0.010369f, 0.012863f, 0.015606f, 0.018557f, 0.021663f, 0.024861f, 0.028083f, 0.031251f, 0.034287f, 0.037113f, 0.039654f, 0.041838f, 0.043606f, 0.044906f, 0.045702f, 0.045970f, 0.045702f, 0.044906f, 0.043606f, 0.041838f, 0.039654f, 0.037113f, 0.034287f, 0.031251f, 0.028083f, 0.024861f, 0.021663f, 0.018557f, 0.015606f, 0.012863f, 0.010369f, 0.008153f, 0.006232f, 0.004611f, 0.003281f, 0.002225f, 0.001417f, 0.000822f, 0.000403f, 0.000119f, -0.000072f, -0.000208f, -0.000324f
+};
+
+// LPF FIR data for fc=10(KHz) fs=48 N=55
+float32_t lpf_fir_coeffs_10khz_f32[FIR_NUM_TAPS] = {
+	-0.000608f, 0.000576f, 0.001108f, -0.000105f, -0.001749f, -0.000990f, 0.002133f, 0.002973f, -0.001397f, -0.005467f, -0.001393f, 0.007214f, 0.006573f, -0.006258f, -0.013240f, 0.000605f, 0.018929f, 0.010872f, -0.019771f, -0.027653f, 0.010871f, 0.047315f, 0.014351f, -0.065981f, -0.072247f, 0.079399f, 0.306159f, 0.415563f, 0.306159f, 0.079399f, -0.072247f, -0.065981f, 0.014351f, 0.047315f, 0.010871f, -0.027653f, -0.019771f, 0.010872f, 0.018929f, 0.000605f, -0.013240f, -0.006258f, 0.006573f, 0.007214f, -0.001393f, -0.005467f, -0.001397f, 0.002973f, 0.002133f, -0.000990f, -0.001749f, -0.000105f, 0.001108f, 0.000576f, -0.000608f
+};
+
+static float32_t firState[BLOCK_SIZE + (FIR_NUM_TAPS - 1)];
+
+/*
+ * IIR FILTER
+ */
+#define IIR_NUM_TAPS              1
+arm_biquad_casd_df1_inst_f32 S;
+
+const float32_t coeffs[] = {	0.07222759259637182,
+								0.14445518519274364,
+								0.07222759259637182,
+								1.1091783806868014,
+								0.39808875107228864 };
+
+static float32_t iirState[BLOCK_SIZE + (IIR_NUM_TAPS - 1)];
+
+/*
+ * TEST DATA
+ */
+
+#define LUT_SIZE 64
+
+/*
+uint32_t test_sine[LUT_SIZE] {
+
+	2048,2248,2447,2642,2831,3013,3185,3346,
+	3495,3630,3750,3853,3939,4007,4056,4085,
+	4095,4085,4056,4007,3939,3853,3750,3630,
+	3495,3346,3185,3013,2831,2642,2447,2248,
+	2048,1847,1648,1453,1264,1082,910,749,
+	600,465,345,242,156,88,39,10,
+	0,10,39,88,156,242,345,465,
+	600,749,910,1082,1264,1453,1648,1847
+};
+*/
+// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
+// NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
+uint32_t test_tri[LUT_SIZE] = {
+
+	128,256,384,512,640,768,896,1024,
+	1152,1280,1408,1536,1664,1792,1920,2048,
+	2175,2303,2431,2559,2687,2815,2943,3071,
+	3199,3327,3455,3583,3711,3839,3967,4095,
+	3967,3839,3711,3583,3455,3327,3199,3071,
+	2943,2815,2687,2559,2431,2303,2175,2048,
+	1920,1792,1664,1536,1408,1280,1152,1024,
+	896,768,640,512,384,256,128,0
+
+};
+
+std::array<uint32_t,LUT_SIZE> test_tri_stl {
+
+	128,256,384,512,640,768,896,1024,
+	1152,1280,1408,1536,1664,1792,1920,2048,
+	2175,2303,2431,2559,2687,2815,2943,3071,
+	3199,3327,3455,3583,3711,3839,3967,4095,
+	3967,3839,3711,3583,3455,3327,3199,3071,
+	2943,2815,2687,2559,2431,2303,2175,2048,
+	1920,1792,1664,1536,1408,1280,1152,1024,
+	896,768,640,512,384,256,128,0
+
+};
+
+uint32_t data_point[1] = {0};
+
+size_t lut_count = 0;
+size_t sine_lut_index = 0;
+size_t lut_index = 0;
+
+float32_t output;
+
+#ifdef __cplusplus
+
+
+	extern "C"
+	{
+
+#endif
+
+	uint8_t togglebit = 0;
+
+	void testmain()
+	{
+		arm_biquad_cascade_df1_init_f32(	&S,
+											IIR_NUM_TAPS,
+											coeffs,
+											iirState);
+
+		arm_fir_init_f32(	&s_ch1_f32,
+							FIR_NUM_TAPS,
+							(float32_t *)&lpf_fir_coeffs_10khz_f32,
+							(float32_t *)&firState,
+							BLOCK_SIZE);
+
+		HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, data_point, 1, DAC_ALIGN_12B_R);
+		HAL_TIM_Base_Start_IT(&htim6);
+		//HAL_TIM_Base_Start_IT(&htim7);
+
+
+		while(1)
+		{
+
+			//HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+			//HAL_Delay(1000);
+
+		}
+	}
+
+	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+	{
+		// increments the lookup table index
+		lut_index = lut_count & ( test_tri_stl.size() - 1 );
+
+		data_point[0] = test_tri[lut_index];
+
+
+		//float input = (float32_t)test_tri_stl[lut_index];
+
+		//arm_biquad_cascade_df1_f32( &S, &input, &output, BLOCK_SIZE);
+		//arm_fir_f32(&s_ch1_f32, &input, &output, BLOCK_SIZE);
+
+		//data_point[0] = (uint32_t)output;
+
+		lut_count++;
+	}
+
+
+#ifdef __cplusplus
+	}
+#endif
+
+
