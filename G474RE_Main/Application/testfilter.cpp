@@ -83,12 +83,12 @@ void initFilter()
 {
 	arm_biquad_cascade_df1_init_f32(	&iir_inst_f32,
 										IIR_NUM_TAPS,
-										lpf_iir_coeffs_1khz_f32,
+										lpf_iir_coeffs_500hz_f32,
 										iirState);
 
 	arm_fir_init_f32(	&s_ch1_f32,
 						FIR_NUM_TAPS,
-						(float32_t *)&lpf_iir_coeffs_500hz_f32,
+						(float32_t *)&lpf_fir_coeffs_1khz_f32,
 						(float32_t *)&firState,
 						64);
 

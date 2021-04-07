@@ -1,6 +1,186 @@
-16:19:12 **** Incremental Build of configuration Debug for project Host_CppUTest ****
+19:00:49 **** Build of configuration Debug for project Host_CppUTest ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../CppUTestSrc/CodeMemoryReportFormatter.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/CodeMemoryReportFormatter.d" -MT"CppUTestSrc/CodeMemoryReportFormatter.o" -o "CppUTestSrc/CodeMemoryReportFormatter.o" "../CppUTestSrc/CodeMemoryReportFormatter.cpp"
+Finished building: ../CppUTestSrc/CodeMemoryReportFormatter.cpp
+ 
+Building file: ../CppUTestSrc/CommandLineArguments.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/CommandLineArguments.d" -MT"CppUTestSrc/CommandLineArguments.o" -o "CppUTestSrc/CommandLineArguments.o" "../CppUTestSrc/CommandLineArguments.cpp"
+Finished building: ../CppUTestSrc/CommandLineArguments.cpp
+ 
+Building file: ../CppUTestSrc/CommandLineTestRunner.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/CommandLineTestRunner.d" -MT"CppUTestSrc/CommandLineTestRunner.o" -o "CppUTestSrc/CommandLineTestRunner.o" "../CppUTestSrc/CommandLineTestRunner.cpp"
+Finished building: ../CppUTestSrc/CommandLineTestRunner.cpp
+ 
+Building file: ../CppUTestSrc/GTest.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/GTest.d" -MT"CppUTestSrc/GTest.o" -o "CppUTestSrc/GTest.o" "../CppUTestSrc/GTest.cpp"
+Finished building: ../CppUTestSrc/GTest.cpp
+ 
+Building file: ../CppUTestSrc/IEEE754ExceptionsPlugin.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/IEEE754ExceptionsPlugin.d" -MT"CppUTestSrc/IEEE754ExceptionsPlugin.o" -o "CppUTestSrc/IEEE754ExceptionsPlugin.o" "../CppUTestSrc/IEEE754ExceptionsPlugin.cpp"
+Finished building: ../CppUTestSrc/IEEE754ExceptionsPlugin.cpp
+ 
+Building file: ../CppUTestSrc/JUnitTestOutput.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/JUnitTestOutput.d" -MT"CppUTestSrc/JUnitTestOutput.o" -o "CppUTestSrc/JUnitTestOutput.o" "../CppUTestSrc/JUnitTestOutput.cpp"
+Finished building: ../CppUTestSrc/JUnitTestOutput.cpp
+ 
+Building file: ../CppUTestSrc/MemoryLeakDetector.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MemoryLeakDetector.d" -MT"CppUTestSrc/MemoryLeakDetector.o" -o "CppUTestSrc/MemoryLeakDetector.o" "../CppUTestSrc/MemoryLeakDetector.cpp"
+Finished building: ../CppUTestSrc/MemoryLeakDetector.cpp
+ 
+Building file: ../CppUTestSrc/MemoryLeakWarningPlugin.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MemoryLeakWarningPlugin.d" -MT"CppUTestSrc/MemoryLeakWarningPlugin.o" -o "CppUTestSrc/MemoryLeakWarningPlugin.o" "../CppUTestSrc/MemoryLeakWarningPlugin.cpp"
+Finished building: ../CppUTestSrc/MemoryLeakWarningPlugin.cpp
+ 
+Building file: ../CppUTestSrc/MemoryReportAllocator.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MemoryReportAllocator.d" -MT"CppUTestSrc/MemoryReportAllocator.o" -o "CppUTestSrc/MemoryReportAllocator.o" "../CppUTestSrc/MemoryReportAllocator.cpp"
+Finished building: ../CppUTestSrc/MemoryReportAllocator.cpp
+ 
+Building file: ../CppUTestSrc/MemoryReportFormatter.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MemoryReportFormatter.d" -MT"CppUTestSrc/MemoryReportFormatter.o" -o "CppUTestSrc/MemoryReportFormatter.o" "../CppUTestSrc/MemoryReportFormatter.cpp"
+Finished building: ../CppUTestSrc/MemoryReportFormatter.cpp
+ 
+Building file: ../CppUTestSrc/MemoryReporterPlugin.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MemoryReporterPlugin.d" -MT"CppUTestSrc/MemoryReporterPlugin.o" -o "CppUTestSrc/MemoryReporterPlugin.o" "../CppUTestSrc/MemoryReporterPlugin.cpp"
+Finished building: ../CppUTestSrc/MemoryReporterPlugin.cpp
+ 
+Building file: ../CppUTestSrc/MockActualCall.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockActualCall.d" -MT"CppUTestSrc/MockActualCall.o" -o "CppUTestSrc/MockActualCall.o" "../CppUTestSrc/MockActualCall.cpp"
+Finished building: ../CppUTestSrc/MockActualCall.cpp
+ 
+Building file: ../CppUTestSrc/MockExpectedCall.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockExpectedCall.d" -MT"CppUTestSrc/MockExpectedCall.o" -o "CppUTestSrc/MockExpectedCall.o" "../CppUTestSrc/MockExpectedCall.cpp"
+Finished building: ../CppUTestSrc/MockExpectedCall.cpp
+ 
+Building file: ../CppUTestSrc/MockExpectedCallsList.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockExpectedCallsList.d" -MT"CppUTestSrc/MockExpectedCallsList.o" -o "CppUTestSrc/MockExpectedCallsList.o" "../CppUTestSrc/MockExpectedCallsList.cpp"
+Finished building: ../CppUTestSrc/MockExpectedCallsList.cpp
+ 
+Building file: ../CppUTestSrc/MockFailure.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockFailure.d" -MT"CppUTestSrc/MockFailure.o" -o "CppUTestSrc/MockFailure.o" "../CppUTestSrc/MockFailure.cpp"
+Finished building: ../CppUTestSrc/MockFailure.cpp
+ 
+Building file: ../CppUTestSrc/MockNamedValue.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockNamedValue.d" -MT"CppUTestSrc/MockNamedValue.o" -o "CppUTestSrc/MockNamedValue.o" "../CppUTestSrc/MockNamedValue.cpp"
+Finished building: ../CppUTestSrc/MockNamedValue.cpp
+ 
+Building file: ../CppUTestSrc/MockSupport.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockSupport.d" -MT"CppUTestSrc/MockSupport.o" -o "CppUTestSrc/MockSupport.o" "../CppUTestSrc/MockSupport.cpp"
+Finished building: ../CppUTestSrc/MockSupport.cpp
+ 
+Building file: ../CppUTestSrc/MockSupportPlugin.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockSupportPlugin.d" -MT"CppUTestSrc/MockSupportPlugin.o" -o "CppUTestSrc/MockSupportPlugin.o" "../CppUTestSrc/MockSupportPlugin.cpp"
+Finished building: ../CppUTestSrc/MockSupportPlugin.cpp
+ 
+Building file: ../CppUTestSrc/MockSupport_c.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/MockSupport_c.d" -MT"CppUTestSrc/MockSupport_c.o" -o "CppUTestSrc/MockSupport_c.o" "../CppUTestSrc/MockSupport_c.cpp"
+Finished building: ../CppUTestSrc/MockSupport_c.cpp
+ 
+Building file: ../CppUTestSrc/OrderedTest.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/OrderedTest.d" -MT"CppUTestSrc/OrderedTest.o" -o "CppUTestSrc/OrderedTest.o" "../CppUTestSrc/OrderedTest.cpp"
+Finished building: ../CppUTestSrc/OrderedTest.cpp
+ 
+Building file: ../CppUTestSrc/SimpleMutex.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/SimpleMutex.d" -MT"CppUTestSrc/SimpleMutex.o" -o "CppUTestSrc/SimpleMutex.o" "../CppUTestSrc/SimpleMutex.cpp"
+Finished building: ../CppUTestSrc/SimpleMutex.cpp
+ 
+Building file: ../CppUTestSrc/SimpleString.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/SimpleString.d" -MT"CppUTestSrc/SimpleString.o" -o "CppUTestSrc/SimpleString.o" "../CppUTestSrc/SimpleString.cpp"
+Finished building: ../CppUTestSrc/SimpleString.cpp
+ 
+Building file: ../CppUTestSrc/SimpleStringInternalCache.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/SimpleStringInternalCache.d" -MT"CppUTestSrc/SimpleStringInternalCache.o" -o "CppUTestSrc/SimpleStringInternalCache.o" "../CppUTestSrc/SimpleStringInternalCache.cpp"
+Finished building: ../CppUTestSrc/SimpleStringInternalCache.cpp
+ 
+Building file: ../CppUTestSrc/TeamCityTestOutput.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TeamCityTestOutput.d" -MT"CppUTestSrc/TeamCityTestOutput.o" -o "CppUTestSrc/TeamCityTestOutput.o" "../CppUTestSrc/TeamCityTestOutput.cpp"
+Finished building: ../CppUTestSrc/TeamCityTestOutput.cpp
+ 
+Building file: ../CppUTestSrc/TestFailure.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestFailure.d" -MT"CppUTestSrc/TestFailure.o" -o "CppUTestSrc/TestFailure.o" "../CppUTestSrc/TestFailure.cpp"
+Finished building: ../CppUTestSrc/TestFailure.cpp
+ 
+Building file: ../CppUTestSrc/TestFilter.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestFilter.d" -MT"CppUTestSrc/TestFilter.o" -o "CppUTestSrc/TestFilter.o" "../CppUTestSrc/TestFilter.cpp"
+Finished building: ../CppUTestSrc/TestFilter.cpp
+ 
+Building file: ../CppUTestSrc/TestHarness_c.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestHarness_c.d" -MT"CppUTestSrc/TestHarness_c.o" -o "CppUTestSrc/TestHarness_c.o" "../CppUTestSrc/TestHarness_c.cpp"
+Finished building: ../CppUTestSrc/TestHarness_c.cpp
+ 
+Building file: ../CppUTestSrc/TestMemoryAllocator.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestMemoryAllocator.d" -MT"CppUTestSrc/TestMemoryAllocator.o" -o "CppUTestSrc/TestMemoryAllocator.o" "../CppUTestSrc/TestMemoryAllocator.cpp"
+Finished building: ../CppUTestSrc/TestMemoryAllocator.cpp
+ 
+Building file: ../CppUTestSrc/TestOutput.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestOutput.d" -MT"CppUTestSrc/TestOutput.o" -o "CppUTestSrc/TestOutput.o" "../CppUTestSrc/TestOutput.cpp"
+Finished building: ../CppUTestSrc/TestOutput.cpp
+ 
+Building file: ../CppUTestSrc/TestPlugin.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestPlugin.d" -MT"CppUTestSrc/TestPlugin.o" -o "CppUTestSrc/TestPlugin.o" "../CppUTestSrc/TestPlugin.cpp"
+Finished building: ../CppUTestSrc/TestPlugin.cpp
+ 
+Building file: ../CppUTestSrc/TestRegistry.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestRegistry.d" -MT"CppUTestSrc/TestRegistry.o" -o "CppUTestSrc/TestRegistry.o" "../CppUTestSrc/TestRegistry.cpp"
+Finished building: ../CppUTestSrc/TestRegistry.cpp
+ 
+Building file: ../CppUTestSrc/TestResult.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestResult.d" -MT"CppUTestSrc/TestResult.o" -o "CppUTestSrc/TestResult.o" "../CppUTestSrc/TestResult.cpp"
+Finished building: ../CppUTestSrc/TestResult.cpp
+ 
+Building file: ../CppUTestSrc/TestTestingFixture.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/TestTestingFixture.d" -MT"CppUTestSrc/TestTestingFixture.o" -o "CppUTestSrc/TestTestingFixture.o" "../CppUTestSrc/TestTestingFixture.cpp"
+Finished building: ../CppUTestSrc/TestTestingFixture.cpp
+ 
+Building file: ../CppUTestSrc/Utest.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/Utest.d" -MT"CppUTestSrc/Utest.o" -o "CppUTestSrc/Utest.o" "../CppUTestSrc/Utest.cpp"
+Finished building: ../CppUTestSrc/Utest.cpp
+ 
+Building file: ../CppUTestSrc/UtestPlatform.cpp
+Invoking: GCC C++ Compiler
+g++ -I"/home/chris/DSP_GuitarPedal/Host_CppUTest/CppUTestInc" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"CppUTestSrc/UtestPlatform.d" -MT"CppUTestSrc/UtestPlatform.o" -o "CppUTestSrc/UtestPlatform.o" "../CppUTestSrc/UtestPlatform.cpp"
+Finished building: ../CppUTestSrc/UtestPlatform.cpp
+ 
+Building target: libHost_CppUTest.a
+Invoking: GCC Archiver
+ar -r  "libHost_CppUTest.a"  ./CppUTestSrc/CodeMemoryReportFormatter.o ./CppUTestSrc/CommandLineArguments.o ./CppUTestSrc/CommandLineTestRunner.o ./CppUTestSrc/GTest.o ./CppUTestSrc/IEEE754ExceptionsPlugin.o ./CppUTestSrc/JUnitTestOutput.o ./CppUTestSrc/MemoryLeakDetector.o ./CppUTestSrc/MemoryLeakWarningPlugin.o ./CppUTestSrc/MemoryReportAllocator.o ./CppUTestSrc/MemoryReportFormatter.o ./CppUTestSrc/MemoryReporterPlugin.o ./CppUTestSrc/MockActualCall.o ./CppUTestSrc/MockExpectedCall.o ./CppUTestSrc/MockExpectedCallsList.o ./CppUTestSrc/MockFailure.o ./CppUTestSrc/MockNamedValue.o ./CppUTestSrc/MockSupport.o ./CppUTestSrc/MockSupportPlugin.o ./CppUTestSrc/MockSupport_c.o ./CppUTestSrc/OrderedTest.o ./CppUTestSrc/SimpleMutex.o ./CppUTestSrc/SimpleString.o ./CppUTestSrc/SimpleStringInternalCache.o ./CppUTestSrc/TeamCityTestOutput.o ./CppUTestSrc/TestFailure.o ./CppUTestSrc/TestFilter.o ./CppUTestSrc/TestHarness_c.o ./CppUTestSrc/TestMemoryAllocator.o ./CppUTestSrc/TestOutput.o ./CppUTestSrc/TestPlugin.o ./CppUTestSrc/TestRegistry.o ./CppUTestSrc/TestResult.o ./CppUTestSrc/TestTestingFixture.o ./CppUTestSrc/Utest.o ./CppUTestSrc/UtestPlatform.o   
+ar: creating libHost_CppUTest.a
+Finished building target: libHost_CppUTest.a
+ 
 
-16:19:12 Build Finished. 0 errors, 0 warnings. (took 239ms)
+19:00:59 Build Finished. 0 errors, 0 warnings. (took 10s.382ms)
 

@@ -112,7 +112,7 @@ TEST(AudioBufferInputOutputGroup, AudioBufferInputOutputUint32)
 
     CHECK(result);
 }
-
+/*
 TEST(AudioBufferInputOutputGroup, AudioBufferInputOutputFloat32)
 {
 
@@ -182,3 +182,4 @@ TEST(AudioBufferInputOutputGroup, AudioBufferInputOutputQ32)
 
     CHECK(result);
 }
+*/
