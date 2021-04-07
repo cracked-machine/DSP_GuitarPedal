@@ -21,14 +21,15 @@
 #include "main.h"
 #include "dac.h"
 #include "dma.h"
+#include "i2s.h"
 #include "tim.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "testfilter.hpp"
-#include "testdistortion.hpp"
+
 #include "appmain.hpp"
+#include "test_i2s.hpp"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,11 +97,12 @@ int main(void)
   MX_TIM6_Init();
   MX_DAC1_Init();
   MX_TIM7_Init();
+  MX_I2S2_Init();
+  MX_I2S3_Init();
   /* USER CODE BEGIN 2 */
+  test_i2s();
+  //appmain();
 
-  appmain();
-  //testfilter_main();
-  //testdistortion_main();
   // system base test
   /* USER CODE END 2 */
 
@@ -123,6 +125,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Configure the main internal regulator output voltage
   */
@@ -154,6 +157,14 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /** Initializes the peripherals clocks
+  */
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_I2S;
+  PeriphClkInit.I2sClockSelection = RCC_I2SCLKSOURCE_SYSCLK;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }

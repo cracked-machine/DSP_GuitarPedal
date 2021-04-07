@@ -133,8 +133,8 @@ float Do_Allpass2(float inSample) {
 float doReverb(float inSample) {
 	float newsample = 	(
 						Do_Comb0(inSample)
-						+ Do_Comb1(inSample)
-						+ Do_Comb2(inSample)
+						//+ Do_Comb1(inSample)
+						//+ Do_Comb2(inSample)
 						//+ Do_Comb3(inSample)
 						)
 						/3.0f;

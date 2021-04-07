@@ -1,6 +1,6 @@
-19:24:58 **** Incremental Build of configuration Debug for project G474RE_Main ****
+20:57:02 **** Incremental Build of configuration Debug for project G474RE_Main ****
 make -j4 all 
-arm-none-eabi-g++ "../Application/appmain.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/appmain.d" -MT"Application/appmain.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/appmain.o"
+arm-none-eabi-g++ "../Application/test_i2s.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DUSE_HAL_DRIVER -DSTM32G474xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"/home/chris/DSP_GuitarPedal/G474RE_Main/Application" -I"/home/chris/DSP_GuitarPedal/G474_RTT/RTT" -I/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Application/test_i2s.d" -MT"Application/test_i2s.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Application/test_i2s.o"
 arm-none-eabi-g++ -o "G474RE_Main.elf" @"objects.list"  -larm_cortexM4lf_math -lG474_RTT -mcpu=cortex-m4 -T"/home/chris/DSP_GuitarPedal/G474RE_Main/STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="G474RE_Main.map" -Wl,--gc-sections -static -L/home/chris/CMSIS_5.7.0_Build/CMSIS/DSP/Lib/GCC -L"/home/chris/DSP_GuitarPedal/G474_RTT/Debug" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: G474RE_Main.elf
  
@@ -8,7 +8,7 @@ arm-none-eabi-objdump -h -S  G474RE_Main.elf  > "G474RE_Main.list"
 arm-none-eabi-objcopy  -O binary  G474RE_Main.elf  "G474RE_Main.bin"
 arm-none-eabi-size   G474RE_Main.elf 
    text	   data	    bss	    dec	    hex	filename
- 174036	   1272	  99352	 274660	  430e4	G474RE_Main.elf
+ 174884	    888	   9912	 185684	  2d554	G474RE_Main.elf
 Finished building: default.size.stdout
  
 Finished building: G474RE_Main.bin
@@ -16,5 +16,5 @@ Finished building: G474RE_Main.bin
 Finished building: G474RE_Main.list
  
 
-19:25:00 Build Finished. 0 errors, 0 warnings. (took 2s.351ms)
+20:57:04 Build Finished. 0 errors, 0 warnings. (took 2s.320ms)
 
