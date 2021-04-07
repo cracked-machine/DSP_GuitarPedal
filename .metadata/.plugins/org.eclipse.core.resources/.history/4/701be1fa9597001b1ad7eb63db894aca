@@ -47,7 +47,6 @@
 bool isTimer6Callback = false;
 bool isTimer7Callback = false;
 
-
 // CMSIS DSP
 #include <arm_math.h>
 
@@ -133,10 +132,6 @@ std::array<uint32_t, BLOCK_SIZE> dma_output;
 
 #endif
 
-// prototypes
-void doFilter();
-void doBlinky();
-
 uint8_t togglebit = 0;
 
 void testfilter_main()
@@ -166,18 +161,6 @@ void testfilter_main()
 
 	while(1)
 	{
-		if(isTimer6Callback)
-		{
-			doFilter();
-			isTimer6Callback = false;
-		}
-		if(isTimer7Callback)
-		{
-			doBlinky();
-			isTimer7Callback = false;
-		}
-
-
 
 
 
@@ -189,51 +172,50 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	// Timer callback for DAC trigger
 	if(htim->Instance == TIM6)
 	{
-		isTimer6Callback = true;
+		// wrap the lut_index
+		lut_index = lut_count & ( test_tri_stl.size() - 1 );
+
+
+		// convert to CMSIS DSP friendly 32bit floating point format
+		// Note we only increment within current BLOCK_SIZE
+		for(size_t i = 0; i < BLOCK_SIZE; i++)
+			dsp_input[i] = (float32_t)test_tri_stl[lut_index + i];
+
+		// filter type (or no filter)
+		#ifdef ENABLE_IIR
+			arm_biquad_cascade_df1_f32( &iir_inst_f32, dsp_input.data(), dsp_output.data(), BLOCK_SIZE);
+		#endif
+		#ifdef ENABLE_FIR
+			arm_fir_f32(&s_ch1_f32, dsp_input.data(), dsp_output.data(), BLOCK_SIZE);
+		#endif
+		#ifdef ENABLE_PASSTHRU
+			dsp_output = dsp_input;
+		#endif
+
+		// convert back to DAC friendly 32bit unsigned int format
+		for(size_t i = 0; i < BLOCK_SIZE; i++)
+			dma_output[i] = (uint32_t)dsp_output[i];
+
+		// increment the lookup table by entire block
+		lut_count = lut_count + BLOCK_SIZE;
 	}
 
 	// Timer callback for blinky
 	if(htim->Instance == TIM7)
 	{
-		isTimer7Callback = true;
+		HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 	}
 
 }
 
 void doFilter()
 {
-	// wrap the lut_index
-	lut_index = lut_count & ( test_tri_stl.size() - 1 );
-
-
-	// convert to CMSIS DSP friendly 32bit floating point format
-	// Note we only increment within current BLOCK_SIZE
-	for(size_t i = 0; i < BLOCK_SIZE; i++)
-		dsp_input[i] = (float32_t)test_tri_stl[lut_index + i];
-
-	// filter type (or no filter)
-	#ifdef ENABLE_IIR
-		arm_biquad_cascade_df1_f32( &iir_inst_f32, dsp_input.data(), dsp_output.data(), BLOCK_SIZE);
-	#endif
-	#ifdef ENABLE_FIR
-		arm_fir_f32(&s_ch1_f32, dsp_input.data(), dsp_output.data(), BLOCK_SIZE);
-	#endif
-	#ifdef ENABLE_PASSTHRU
-		dsp_output = dsp_input;
-	#endif
-
-	// convert back to DAC friendly 32bit unsigned int format
-	for(size_t i = 0; i < BLOCK_SIZE; i++)
-		dma_output[i] = (uint32_t)dsp_output[i];
-
-	// increment the lookup table by entire block
-	lut_count = lut_count + BLOCK_SIZE;
 
 }
 
 void doBlinky()
 {
-	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+
 }
 
 #ifdef __cplusplus

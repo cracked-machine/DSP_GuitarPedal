@@ -51,8 +51,8 @@ bool isTimer7Callback = false;
 // CMSIS DSP
 #include <arm_math.h>
 
-#define ENABLE_IIR
-//#define ENABLE_FIR
+//#define ENABLE_IIR
+#define ENABLE_FIR
 //#define ENABLE_PASSTHRU
 
 /*

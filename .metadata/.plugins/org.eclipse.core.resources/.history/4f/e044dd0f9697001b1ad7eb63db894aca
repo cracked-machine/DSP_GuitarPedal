@@ -47,7 +47,6 @@
 bool isTimer6Callback = false;
 bool isTimer7Callback = false;
 
-
 // CMSIS DSP
 #include <arm_math.h>
 
@@ -133,10 +132,6 @@ std::array<uint32_t, BLOCK_SIZE> dma_output;
 
 #endif
 
-// prototypes
-void doFilter();
-void doBlinky();
-
 uint8_t togglebit = 0;
 
 void testfilter_main()
@@ -166,18 +161,6 @@ void testfilter_main()
 
 	while(1)
 	{
-		if(isTimer6Callback)
-		{
-			doFilter();
-			isTimer6Callback = false;
-		}
-		if(isTimer7Callback)
-		{
-			doBlinky();
-			isTimer7Callback = false;
-		}
-
-
 
 
 
@@ -189,13 +172,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	// Timer callback for DAC trigger
 	if(htim->Instance == TIM6)
 	{
-		isTimer6Callback = true;
+		doFilter();
 	}
 
 	// Timer callback for blinky
 	if(htim->Instance == TIM7)
 	{
-		isTimer7Callback = true;
+		doBlinky();
 	}
 
 }

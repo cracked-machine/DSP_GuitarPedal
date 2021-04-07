@@ -51,9 +51,9 @@ bool isTimer7Callback = false;
 // CMSIS DSP
 #include <arm_math.h>
 
-#define ENABLE_IIR
+//#define ENABLE_IIR
 //#define ENABLE_FIR
-//#define ENABLE_PASSTHRU
+#define ENABLE_PASSTHRU
 
 /*
  * TEST DATA
@@ -171,14 +171,13 @@ void testfilter_main()
 			doFilter();
 			isTimer6Callback = false;
 		}
+
+
+
 		if(isTimer7Callback)
-		{
-			doBlinky();
-			isTimer7Callback = false;
-		}
 
 
-
+		isTimer7Callback = false;
 
 
 	}
@@ -189,12 +188,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	// Timer callback for DAC trigger
 	if(htim->Instance == TIM6)
 	{
+
 		isTimer6Callback = true;
+
 	}
 
 	// Timer callback for blinky
 	if(htim->Instance == TIM7)
 	{
+		doBlinky();
 		isTimer7Callback = true;
 	}
 

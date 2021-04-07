@@ -11457,3 +11457,18 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-07 11:49:37.026
 !MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-07 12:41:36.802
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-07 12:42:02.445
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-07 12:44:27.654
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-07 12:44:54.420
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.jlink 1 0 2021-04-07 12:45:26.794
+!MESSAGE Using automatic SWV detection; base: 1440000000; minDiv: 48; maxSWO: 30000000; SWO: 16179775; CPU: 16000000; div: 1
