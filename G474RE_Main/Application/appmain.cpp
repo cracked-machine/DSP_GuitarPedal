@@ -27,21 +27,6 @@
  * 		SOFTWARE.
  */
 
-
-#include <audio_buffer.hpp>
-
-//#include <iir_biquad.hpp>
-
-#include <tests_main.hpp>
-
-#include "appmain.hpp"
-#include "sine_lookup_table.hpp"
-
-// c++ std lib
-#include <iostream>
-#include <memory>
-#include <algorithm>
-
 // STM HAL Framework
 #include "stm32g4xx_hal.h"
 #include "stm32g4xx_hal_tim.h"
@@ -56,157 +41,175 @@
 #include "dac.h"
 #include "gpio.h"
 
+// C++ STL
+#include <array>
+
 // CMSIS DSP
 #include <arm_math.h>
 
-//size_t count = 0;
-//size_t sine_lut_index = 0;
-//size_t lut_index = 0;
+// DSP functions
+#include <testdistortion.hpp>
+#include <testfilter.hpp>
 
-#define TEST_LUT tri_lut
+// set by HAL_TIM_PeriodElapsedCallback to signal work to be done
+bool isTimer6Callback = false;
+bool isTimer7Callback = false;
+
+// enable_passthru overrides the other FX
+bool enable_passthru = false;
+// if enable_passthru is false, at *least one* of the below must be true
+bool enable_pre_distortion = false;
+bool enable_filter = true;
+bool enable_post_distortion = true;
+
+///// TEST DATA
+#define LUT_SIZE 	64
+#define BLOCK_SIZE	LUT_SIZE / 1
+
+// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
+// NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
+std::array<uint32_t,LUT_SIZE> input_u32 {
+
+	128,256,384,512,640,768,896,1024,
+	1152,1280,1408,1536,1664,1792,1920,2048,
+	2175,2303,2431,2559,2687,2815,2943,3071,
+	3199,3327,3455,3583,3711,3839,3967,4095,
+	3967,3839,3711,3583,3455,3327,3199,3071,
+	2943,2815,2687,2559,2431,2303,2175,2048,
+	1920,1792,1664,1536,1408,1280,1152,1024,
+	896,768,640,512,384,256,128,0
+
+};
+
+size_t input_data_count = 0;
+size_t input_data_index = 0;
+
+// used to hold the data whilst it is converted between uint32_t and float32_t
+std::array<float32_t, BLOCK_SIZE>	input_f32;
+std::array<float32_t, BLOCK_SIZE> 	output_f32;
+std::array<uint32_t, BLOCK_SIZE> 	output_u32;
+
+
+// C++ STL
+#include <array>
+
 
 #ifdef __cplusplus
 	extern "C"
 	{
 #endif
 
+void processBlock();
+void doBlinky();
+
+void appmain()
+{
+
+	initFilter();
+
+	// enable dac and its trigger (tim6)
+	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, output_u32.data(), BLOCK_SIZE, DAC_ALIGN_12B_R);
+	TIM6->PSC = 0;
+	TIM6->ARR = 511;
+	HAL_TIM_Base_Start_IT(&htim6);
+
+	// enable timer for blinky
+	TIM7->PSC = 8095;
+	TIM7->ARR = 8095;
+	HAL_TIM_Base_Start_IT(&htim7);
 
 
-
-
-	// settings for output DAC timer to control pitch, offset and amplitude
-	uint32_t timer_arr = 1024;
-	float octave_pitch_down = 1;
-	float offset = 0.0f;
-	float amplitude = 1.0f;
-
-
-	//iir_filter_32u *iir1 = new iir_filter_32u();
-	//uint32_t *iir_output;
-
-	// enable/disable IIR BIQUAD filter here
-	//#define ENABLE_IIR_BIQUAD
-
-//	#define BLOCK_SIZE            1
-//	#define NUM_TAPS              1
-//	arm_biquad_casd_df1_inst_f32 S;
-//	float32_t iir_output[BLOCK_SIZE] = {0};
-
-	/* 	Fc=10KHz, Q=0.707, G=6db, SR=96KHz
-	 *
-		a0 = 0.07222759259637182
-		a1 = 0.14445518519274364
-		a2 = 0.07222759259637182
-		b1 = -1.1091783806868014
-		b2 = 0.39808875107228864
-*/
-/*	const float32_t coeffs[] = {	0.07222759259637182,
-									0.14445518519274364,
-									0.07222759259637182,
-									1.1091783806868014,
-									0.39808875107228864 };
-*/
-	/*	Fc=1KHz, Q=0.707, G=6db, SR=96KHz
-	 *
-	 	a0 = 0.001023210807384899
-		a1 = 0.002046421614769798
-		a2 = 0.001023210807384899
-		b1 = -1.9074888914066748
-		b2 = 0.9115817346362142
-
-	const float32_t coeffs[] = {	0.001023210807384899,
-									0.002046421614769798,
-									0.001023210807384899,
-									1.9074888914066748,
-									0.9115817346362142  };
-*/
-	//static float32_t iirState[BLOCK_SIZE + (NUM_TAPS - 1)];
-
-	//biquad_f32 my_biquad_f32;
-	//biquad_u32 my_biquad_u32;
-
-
-	void appmain()
+	while(1)
 	{
-
-		//arm_biquad_cascade_df1_init_f32(&S, NUM_TAPS, coeffs, iirState);
-		//run_all_tests();
-
-		// clock the data into the double_buffer32 using TIM7
-		TIM7->ARR = timer_arr;
-		HAL_TIM_Base_Start_IT(&htim7);
-
-		// clock the DAC output using TIM6 (see HAL_TIM_PeriodElapsedCallback callback)
-		TIM6->ARR = timer_arr * octave_pitch_down;
-		HAL_TIM_Base_Start_IT(&htim6);
-
-		// set the txBuff pointer as DMA destination
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)t_dbuf.get_txBuf(), 1, DAC_ALIGN_12B_R);
-
-
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)TEST_LUT.data(), TEST_LUT.size(), DAC_ALIGN_12B_R);
-		//HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)iir_output, BLOCK_SIZE, DAC_ALIGN_12B_R);
-
-
-		while(1)
+		if(isTimer6Callback)
 		{
+			processBlock();
+			isTimer6Callback = false;
+		}
+		if(isTimer7Callback)
+		{
+			doBlinky();
+			isTimer7Callback = false;
+		}
+	}
 
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	// Timer callback for DAC trigger
+	if(htim->Instance == TIM6)
+	{
+		isTimer6Callback = true;
+	}
+
+	// Timer callback for blinky
+	if(htim->Instance == TIM7)
+	{
+		isTimer7Callback = true;
+	}
+
+}
+
+void processBlock()
+{
+
+	// wrap the lut_index
+	input_data_index = input_data_count & ( input_u32.size() - 1 );
+
+	// convert to CMSIS DSP friendly 32bit floating point format
+	// Note we only increment within current DISTORTION_BLOCK_SIZE
+	for(size_t i = 0; i < BLOCK_SIZE; i++)
+		input_f32[i] = (float32_t) input_u32[ input_data_index + i ];
+
+	if(enable_passthru)
+	{
+		// just copy input to output
+		output_f32 = input_f32;
+	}
+	else
+	{
+		if(enable_pre_distortion)
+		{
+			for(size_t i = 0; i < BLOCK_SIZE; i++)
+				input_f32[i] = doDistortion(input_f32[i]);
 		}
 
+		if(enable_filter)
+		{
+			// process block with filter
+			doFilter(input_f32.data(), output_f32.data(), BLOCK_SIZE);
+		}
+		else
+		{
+			// no filter
+			output_f32 = input_f32;
+		}
+
+		if(enable_post_distortion)
+		{
+			for(size_t i = 0; i < BLOCK_SIZE; i++)
+				output_f32[i] = doDistortion(output_f32[i]);
+		}
 	}
 
 
+	// convert back to DAC friendly 32bit unsigned int format
+	for(size_t i = 0; i < BLOCK_SIZE; i++)
+		output_u32[i] = (uint32_t)output_f32[i];
 
-/*
-	void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-	{
-		// the receive timer
-		if(htim->Instance == TIM7)
-		{
-			//rest the rx ptr to Buffer A and tx ptr to Buffer B
-			t_dbuf.reset();
+	// increment the lookup table by entire block
+	input_data_count = input_data_count + BLOCK_SIZE;
 
-// BEGIN INCOMING DMA SIMULATION
-			// increment the LUT position (circular)
-			lut_index = count & ( TEST_LUT.size() - 1 );
+}
 
-			// assign new data to the rx buffer
-			*t_dbuf_rxptr = TEST_LUT[lut_index];
-// END INCOMING DMA SIMULATION
+void doBlinky()
+{
+	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+}
 
-			// process the rx buffer data here
-			// *t_dbuf_rxptr = *t_dbuf_rxptr * amplitude;
-			// *t_dbuf_rxptr = *t_dbuf_rxptr + offset;
 
-#ifdef ENABLE_IIR_BIQUAD
-			// IIR Biquad filter
-			float32_t iir_input_f32 = (float32_t) *t_dbuf_rxptr;
-			float32_t iir_output_f32;
-			arm_biquad_cascade_df1_f32( &S, &iir_input_f32, &iir_output_f32, BLOCK_SIZE);
-			*t_dbuf_rxptr = (uint32_t)iir_output_f32;
-#endif
-//			uint32_t out;
-//			my_biquad_u32.process(*t_dbuf_rxptr, &out);
-//			*t_dbuf_rxptr = out;
 
-//			float out = 0;
-//			my_biquad_f32.process((float)*t_dbuf_rxptr, &out);
-//			*t_dbuf_rxptr = (uint32_t)out;
-
-			// swap the rx ptr to Buffer B and tx ptr to Buffer A
-			// before DMA uses the txBuf ptr transfer data to the DAC output register
-			t_dbuf.swap();
-
-			//increment the counter
-			count++;
-		}
-
-		// the DAC transmit timer
-		if(htim->Instance == TIM6)
-		{
-		}
-	}
-*/
 #ifdef __cplusplus
 	}
 #endif

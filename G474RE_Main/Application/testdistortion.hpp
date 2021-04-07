@@ -35,6 +35,7 @@
 	#endif
 
 			void testdistortion_main();
+			float doDistortion (float insample);
 
 	#ifdef __cplusplus
 		}

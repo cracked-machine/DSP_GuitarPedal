@@ -30,15 +30,17 @@
 #define TESTFILTER_HPP_
 
 
+// CMSIS DSP
+#include <arm_math.h>
+
 #ifdef __cplusplus
-
-
 	extern "C"
 	{
-
 #endif
 
 		void testfilter_main();
+		void doFilter(  const float32_t * pSrc, float32_t * pDst, uint32_t blockSize );
+		void initFilter();
 
 #ifdef __cplusplus
 	}

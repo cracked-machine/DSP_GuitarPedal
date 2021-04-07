@@ -26,120 +26,19 @@
  * 		SOFTWARE.
  */
 
-// STM HAL Framework
-#include "stm32g4xx_hal.h"
-#include "stm32g4xx_hal_tim.h"
-#include "stm32g4xx_hal_tim_ex.h"
-#include "stm32g4xx_hal_dac.h"
-#include "stm32g4xx_hal_dac_ex.h"
-#include "stm32g4xx_hal_gpio.h"
-#include "stm32g4xx_hal_gpio_ex.h"
-
-// STM32Cube generated HAL init code
-#include "tim.h"
-#include "dac.h"
-#include "gpio.h"
-
-// C++ STL
-#include <array>
-
-// CMSIS DSP
-#include <arm_math.h>
-
-// set by HAL_TIM_PeriodElapsedCallback to signal work to be done
-bool isDistortionTimer6Callback = false;
-bool isDistortionTimer7Callback = false;
-
-#define ENABLE_DISTORTION
-
-// the limit for the STM32's 12bit DAC
-#define OUTPUT_MAX	4095
-// the amount to clip above and below the signal
-#define CLIPPING	500
-
-///// TEST DATA
-#define DISTORTION_LUT_SIZE 	64
-#define DISTORTION_BLOCK_SIZE	DISTORTION_LUT_SIZE / 1
-
-// https://www.daycounter.com/Calculators/Triangle-Wave-Generator-Calculator.phtml
-// NumPoints=64, MaxAmpl=4095, NumPerRow=8, Dec
-std::array<uint32_t,DISTORTION_LUT_SIZE> distortion_input_u32 {
-
-	128,256,384,512,640,768,896,1024,
-	1152,1280,1408,1536,1664,1792,1920,2048,
-	2175,2303,2431,2559,2687,2815,2943,3071,
-	3199,3327,3455,3583,3711,3839,3967,4095,
-	3967,3839,3711,3583,3455,3327,3199,3071,
-	2943,2815,2687,2559,2431,2303,2175,2048,
-	1920,1792,1664,1536,1408,1280,1152,1024,
-	896,768,640,512,384,256,128,0
-
-};
-
-size_t distortion_input_data_count = 0;
-size_t distortion_input_data_index = 0;
-
-// used to hold the data whilst it is converted between uint32_t and float32_t
-std::array<float32_t, DISTORTION_BLOCK_SIZE>	distortion_input_f32;
-std::array<float32_t, DISTORTION_BLOCK_SIZE> 	distortion_output_f32;
-std::array<uint32_t, DISTORTION_BLOCK_SIZE> 	distortion_output_u32;
-
 
 #ifdef __cplusplus
 	extern "C"
 	{
 #endif
 
+#include <math.h>
+#include "testdistortion.hpp"
 
-float doDistortion (float insample);
-void processBlock();
-void doBlinky();
-
-void testdistortion_main()
-{
-	// enable dac and its trigger (tim6)
-	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, distortion_output_u32.data(), DISTORTION_BLOCK_SIZE, DAC_ALIGN_12B_R);
-	TIM6->PSC = 0;
-	TIM6->ARR = 511;
-	HAL_TIM_Base_Start_IT(&htim6);
-
-	// enable timer for blinky
-	TIM7->PSC = 8095;
-	TIM7->ARR = 8095;
-	HAL_TIM_Base_Start_IT(&htim7);
-
-
-	while(1)
-	{
-		if(isDistortionTimer6Callback)
-		{
-			processBlock();
-			isDistortionTimer6Callback = false;
-		}
-		if(isDistortionTimer7Callback)
-		{
-			doBlinky();
-			isDistortionTimer7Callback = false;
-		}
-	}
-
-}
-
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-	// Timer callback for DAC trigger
-	if(htim->Instance == TIM6)
-	{
-		isDistortionTimer6Callback = true;
-	}
-
-	// Timer callback for blinky
-	if(htim->Instance == TIM7)
-	{
-		isDistortionTimer7Callback = true;
-	}
-
-}
+// the limit for the STM32's 12bit DAC
+#define OUTPUT_MAX	4095
+// the amount to clip above and below the signal
+#define CLIPPING	1000
 
 float doDistortion (float insample) {
 
@@ -153,43 +52,6 @@ float doDistortion (float insample) {
 
 	return insample;
 }
-
-void processBlock()
-{
-
-	// wrap the lut_index
-	distortion_input_data_index = distortion_input_data_count & ( distortion_input_u32.size() - 1 );
-
-	// convert to CMSIS DSP friendly 32bit floating point format
-	// Note we only increment within current DISTORTION_BLOCK_SIZE
-	for(size_t i = 0; i < DISTORTION_BLOCK_SIZE; i++)
-	{
-		distortion_input_f32[i] = (float32_t) distortion_input_u32[ distortion_input_data_index + i ];
-#ifdef ENABLE_DISTORTION
-		distortion_output_f32[i] = doDistortion(distortion_input_f32[i]);
-#endif
-	}
-
-	// passthru - just copy the std::array obj
-#ifndef ENABLE_DISTORTION
-	distortion_output_f32 = distortion_input_f32;
-#endif
-
-	// convert back to DAC friendly 32bit unsigned int format
-	for(size_t i = 0; i < DISTORTION_BLOCK_SIZE; i++)
-		distortion_output_u32[i] = (uint32_t)distortion_output_f32[i];
-
-	// increment the lookup table by entire block
-	distortion_input_data_count = distortion_input_data_count + DISTORTION_BLOCK_SIZE;
-
-}
-
-void doBlinky()
-{
-	HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-}
-
-
 
 
 #ifdef __cplusplus
