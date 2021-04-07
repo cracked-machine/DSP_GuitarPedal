@@ -5,4 +5,4 @@
 //org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.cdt.launch.remoteApplicationLaunchType=org.eclipse.rse.remotecdt.dsf.debug,debug,;
 eclipse.preferences.version=1
 org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="lut_index"/>\n<expression enabled\="true" text\="data_point[0]"/>\n<expression enabled\="true" text\="test_sine[lut_index];"/>\n</watchExpressions>\n
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="dsp_input.data()"/>\n<expression enabled\="true" text\="dsp_output.data()"/>\n<expression enabled\="true" text\="BLOCK_SIZE"/>\n</watchExpressions>\n

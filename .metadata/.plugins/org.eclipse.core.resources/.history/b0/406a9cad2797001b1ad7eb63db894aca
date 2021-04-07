@@ -1,0 +1,97 @@
+/*
+ *  	fir_manager.hpp
+ *
+ *  	Created on: 6 Apr 2021
+ *		
+ * 		MIT License
+ *
+ * 		Copyright (c) [2021] [Chris Sutton]
+ *
+ * 		Permission is hereby granted, free of charge, to any person obtaining a copy
+ * 		of this software and associated documentation files (the "Software"), to deal
+ * 		in the Software without restriction, including without limitation the rights
+ * 		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * 		copies of the Software, and to permit persons to whom the Software is
+ * 		furnished to do so, subject to the following conditions:
+ *
+ * 		The above copyright notice and this permission notice shall be included in all
+ * 		copies or substantial portions of the Software.
+ *
+ * 		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * 		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * 		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * 		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * 		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * 		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * 		SOFTWARE.
+ */
+
+#ifndef FIR_MANAGER_HPP_
+#define FIR_MANAGER_HPP_
+
+// STM HAL Framework
+#include "stm32g4xx_hal.h"
+#include "stm32g4xx_hal_tim.h"
+#include "stm32g4xx_hal_tim_ex.h"
+#include "stm32g4xx_hal_dac.h"
+#include "stm32g4xx_hal_dac_ex.h"
+
+// CMSIS DSP
+#include <arm_math.h>
+
+#include <array>
+
+template <class T, class D,>
+class fir_manager
+{
+	fir_manager(T pTimer, D pDac, std::array<float32_t, NUM_TAPS> pCoeffs)
+	{
+		theTimer = pTimer;
+		theDac = pDac;
+
+		arm_fir_init_f32(	&theFir,
+							NUM_TAPS,
+							(float32_t *)&lpf_fir_coeffs_1khz_f32,
+							(float32_t *)&theState.data(),
+							BLOCK_SIZE);
+
+		coefficients = pCoeffs;
+	}
+
+	void start();
+
+	static const block_size = 1;
+	static const num_taps = 55;
+
+	T theTimer;
+	D theDac;
+
+	std::array<uint32_t, BLOCK_SIZE> input;
+	std::array<uint32_t, BLOCK_SIZE> output;
+
+	std::array<float32_t, NUM_TAPS> coefficients;
+
+	// LPF FIR data for fc=1(KHz) fs=48 N=55
+	std::array<float32_t, NUM_TAPS> lpf_fir_coeffs_1khz_f32 { -0.000324f, -0.000208f, -0.000072f, 0.000119f, 0.000403f, 0.000822f, 0.001417f, 0.002225f, 0.003281f, 0.004611f, 0.006232f, 0.008153f, 0.010369f, 0.012863f, 0.015606f, 0.018557f, 0.021663f, 0.024861f, 0.028083f, 0.031251f, 0.034287f, 0.037113f, 0.039654f, 0.041838f, 0.043606f, 0.044906f, 0.045702f, 0.045970f, 0.045702f, 0.044906f, 0.043606f, 0.041838f, 0.039654f, 0.037113f, 0.034287f, 0.031251f, 0.028083f, 0.024861f, 0.021663f, 0.018557f, 0.015606f, 0.012863f, 0.010369f, 0.008153f, 0.006232f, 0.004611f, 0.003281f, 0.002225f, 0.001417f, 0.000822f, 0.000403f, 0.000119f, -0.000072f, -0.000208f, -0.000324f };
+//	float32_t lpf_fir_coeffs_1khz_f32[NUM_TAPS] = {
+//		-0.000324f, -0.000208f, -0.000072f, 0.000119f, 0.000403f, 0.000822f, 0.001417f, 0.002225f, 0.003281f, 0.004611f, 0.006232f, 0.008153f, 0.010369f, 0.012863f, 0.015606f, 0.018557f, 0.021663f, 0.024861f, 0.028083f, 0.031251f, 0.034287f, 0.037113f, 0.039654f, 0.041838f, 0.043606f, 0.044906f, 0.045702f, 0.045970f, 0.045702f, 0.044906f, 0.043606f, 0.041838f, 0.039654f, 0.037113f, 0.034287f, 0.031251f, 0.028083f, 0.024861f, 0.021663f, 0.018557f, 0.015606f, 0.012863f, 0.010369f, 0.008153f, 0.006232f, 0.004611f, 0.003281f, 0.002225f, 0.001417f, 0.000822f, 0.000403f, 0.000119f, -0.000072f, -0.000208f, -0.000324f
+//	};
+
+	arm_fir_instance_f32 theFir;
+	std::array<float32_t, BLOCK_SIZE + (NUM_TAPS - 1)> theState;
+
+
+};
+
+template <class T, class D, size_t BLOCK_SIZE, size_t NUM_TAPS>
+void fir_manager<T, D, BLOCK_SIZE, NUM_TAPS>::start()
+{
+	HAL_DAC_Start_DMA(&theDac, DAC_CHANNEL_1, (uint32_t*)output.data(), output.size(), DAC_ALIGN_12B_R);
+	HAL_TIM_Base_Start_IT(&theTimer);
+
+}
+
+
+typedef fir_manager<TIM_HandleTypeDef, DAC_HandleTypeDef, 1, 55> my_fir_manager;
+
+#endif /* FIR_MANAGER_HPP_ */
