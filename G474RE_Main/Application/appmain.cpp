@@ -50,17 +50,23 @@
 // DSP functions
 #include <testdistortion.hpp>
 #include <testfilter.hpp>
+#include <testreverb.hpp>
 
 // set by HAL_TIM_PeriodElapsedCallback to signal work to be done
 bool isTimer6Callback = false;
 bool isTimer7Callback = false;
 
 // enable_passthru overrides the other FX
-bool enable_passthru = false;
+bool enable_passthru = true;
 // if enable_passthru is false, at *least one* of the below must be true
 bool enable_pre_distortion = false;
-bool enable_filter = true;
-bool enable_post_distortion = true;
+bool enable_filter = false;
+bool enable_post_distortion = false;
+bool enable_post_reverb = false;
+bool enable_pre_reverb_gain = false;
+
+// convenience gain attribute
+#define PRE_REVERB_GAIN 0.4
 
 ///// TEST DATA
 #define LUT_SIZE 	64
@@ -104,7 +110,7 @@ void doBlinky();
 
 void appmain()
 {
-
+	initReverb();
 	initFilter();
 
 	// enable dac and its trigger (tim6)
@@ -191,6 +197,20 @@ void processBlock()
 			for(size_t i = 0; i < BLOCK_SIZE; i++)
 				output_f32[i] = doDistortion(output_f32[i]);
 		}
+
+		if(enable_pre_reverb_gain)
+		{
+			for(size_t i = 0; i < BLOCK_SIZE; i++)
+				output_f32[i] = output_f32[i] * PRE_REVERB_GAIN;
+		}
+
+		if(enable_post_reverb)
+		{
+			for(size_t i = 0; i < BLOCK_SIZE; i++)
+				output_f32[i] = doReverb(output_f32[i]);
+		}
+
+
 	}
 
 

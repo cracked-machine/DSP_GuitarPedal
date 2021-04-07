@@ -34,7 +34,8 @@
 	{
 #endif
 
-		void testreverb_main();
+		float doReverb(float inSample);
+		void initReverb();
 
 #ifdef __cplusplus
 	}

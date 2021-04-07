@@ -1,6 +1,6 @@
-12:41:26 **** Incremental Build of configuration Debug for project LinuxGCC_Tests ****
+16:19:12 **** Incremental Build of configuration Debug for project LinuxGCC_Tests ****
 make all 
 make: Nothing to be done for 'all'.
 
-12:41:26 Build Finished. 0 errors, 0 warnings. (took 212ms)
+16:19:13 Build Finished. 0 errors, 0 warnings. (took 270ms)
 
